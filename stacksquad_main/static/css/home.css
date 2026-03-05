@@ -1203,3 +1203,46 @@ footer {
         display: none;
     }
 }
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-title {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #0a223a;
+    border-radius: 8px;
+    padding: 10px 0;
+    width: 220px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background: #133a5e;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}

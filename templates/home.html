@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> {{hero_data.page_title}} </title> <!--StackSquads Media Group – Digital Marketing Firm-->
+    <title> {{hero_data.page_title}} </title> <!--StackSquads  Group – Digital Marketing Firm-->
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;600;700&display=swap"
         rel="stylesheet">
@@ -15,12 +15,27 @@
 <body>
 
     <nav id="navbar">
-        <div class="nav-logo">StackSquads<span>MEDIA GROUP</span></div>
+        <a href="{% url 'home' %}">
+            <div class="nav-logo">StackSquads<span> GROUP</span></div>
+        </a>
         <div class="nav-links">
-            <div class="dropdown">Services</div>
+            <div class="dropdown">
+                <a href="#" class="dropdown-title">
+                    Services
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="#">Web Design & Development</a>
+                    <a href="#">SEO</a>
+                    <a href="#">Google Ads</a>
+                    <a href="#">Social Marketing</a>
+                    <a href="#">Video Marketing</a>
+                    <a href="#">Public Relations</a>
+                </div>
+            </div>
             <!-- <a href="#">Portfolio</a> -->
-            <a href="#">Contact</a>
-            <a href="#" class="btn-cta">Free Consultation</a>
+            <a href="{% url 'contact_us' %}">Contact</a>
+            <a href="{% url 'contact_us' %}" class="btn-cta">Free Consultation</a>
         </div>
     </nav>
 
@@ -28,10 +43,12 @@
         <canvas id="hero-canvas"></canvas>
         <div class="hero-content">
             <div class="hero-tag">✦ Digital Marketing Agency ✦</div>
-            <h1><span class="hl"> {{hero_data.hero_title}} </span></h1> <!--Digital marketing firm dedicated to your  success.-->
-            <p> {{hero_data.hero_body}} </p> <!--We pride ourselves on our commitment to staying up-to-date with the latest trends and best practices in digital marketing.-->
+            <h1><span class="hl"> {{hero_data.hero_title}} </span></h1>
+            <!--Digital marketing firm dedicated to your  success.-->
+            <p> {{hero_data.hero_body}} </p>
+            <!--We pride ourselves on our commitment to staying up-to-date with the latest trends and best practices in digital marketing.-->
             <div class="btn-wrap">
-                <a href="#" class="btn-primary">Get Started →</a>
+                <a href="{% url 'contact_us' %}" class="btn-primary">Get Started →</a>
                 <div class="btn-pulse"></div>
             </div>
         </div>
@@ -79,8 +96,10 @@
 
     <section class="section grid-bg">
         <p class="section-label">Our Approach</p>
-        <h2 class="section-title"> {{approach_data.approach_title}} </h2> <!--Why Choose StackSquads Media Group for Digital Media Solutions?-->
-        <p class="section-sub"> {{approach_data.approach_body}} </p> <!--At StackSquads Media Group, we optimize media buys and enhance strategies with top-tier tools, ensuring maximum reach and performance across platforms.-->
+        <h2 class="section-title"> {{approach_data.approach_title}} </h2>
+        <!--Why Choose StackSquads  Group for Digital  Solutions?-->
+        <p class="section-sub"> {{approach_data.approach_body}} </p>
+        <!--At StackSquads  Group, we optimize  buys and enhance strategies with top-tier tools, ensuring maximum reach and performance across platforms.-->
         <div class="features-grid">
             <div class="feature">
                 <div class="feature-icon">📊</div>
@@ -99,8 +118,8 @@
             </div>
             <div class="feature">
                 <div class="feature-icon">📡</div>
-                <h4>Media Buying</h4>
-                <p>Strategic media buys maximizing your ROI and reach across every channel.</p>
+                <h4> Buying</h4>
+                <p>Strategic buys maximizing your ROI and reach across every channel.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">🔧</div>
@@ -118,7 +137,7 @@
     <section class="section solutions">
         <p class="section-label">What We Offer</p>
         <h2 class="section-title">Solutions Tailored to your Business</h2>
-        <p class="section-sub">At StackSquads Media Group, we empower your business to grow with customized digital
+        <p class="section-sub">At StackSquads Group, we empower your business to grow with customized digital
             marketing strategies designed for success.</p>
         <div class="services-grid">
             <div class="service-card">
@@ -151,7 +170,7 @@
                 <div class="shine"></div>
                 <div class="service-icon">📱</div>
                 <div class="service-info">
-                    <h4>Paid Advertising on Social Media</h4>
+                    <h4>Paid Advertising on Social </h4>
                     <p>High-performing paid social campaigns on Facebook, Instagram, TikTok, and more.</p>
                 </div>
             </div>
@@ -168,8 +187,8 @@
                 <div class="shine"></div>
                 <div class="service-icon">📣</div>
                 <div class="service-info">
-                    <h4>Social Media Marketing</h4>
-                    <p>Strategic organic social media management that builds brand awareness and lasting loyalty.</p>
+                    <h4>Social Marketing</h4>
+                    <p>Strategic organic social management that builds brand awareness and lasting loyalty.</p>
                 </div>
             </div>
             <div class="service-card">
@@ -190,7 +209,7 @@
                 </div>
             </div>
         </div>
-        <div class="solutions-cta"><a href="#" class="btn-primary">Get Started →</a></div>
+        <div class="solutions-cta"><a href="{% url 'contact_us' %}" class="btn-primary">Get Started →</a></div>
     </section>
 
     <section class="testimonials grid-bg">
@@ -203,7 +222,7 @@
                 <div class="testi-card">
                     <p class="quote">He delivers every single one of my projects as soon as possible! I was hesitant at
                         first, but they nailed it. StackSquads is a professional — I think he may be the best I've
-                        experienced. I will continue using StackSquads Media Group for the rest of my career.</p>
+                        experienced. I will continue using StackSquads Group for the rest of my career.</p>
                     <div class="testi-author">
                         <div class="avatar" style="background:#0d7377;">LK</div>
                         <div>
@@ -279,17 +298,20 @@
     <section class="cta-section grid-bg">
         <div class="cta-box">
             <h2>Ready to elevate your business and<br>unlock new growth?</h2>
-            <p>StackSquads Media Group offers a comprehensive suite of digital marketing services to help you establish
+            <p>StackSquads Group offers a comprehensive suite of digital marketing services to help you establish
                 a
                 strong online presence, attract and retain customers, and achieve your growth goals.</p>
-            <a href="#" class="btn-dark">📅 Read Our Growth Report — Get Started</a>
+            <a href="{% url 'contact_us' %}" class="btn-dark">📅 Read Our Growth Report — Get Started</a>
         </div>
     </section>
 
     <footer>
         <div class="footer-top">
             <div class="footer-links">
-                <a href="#">About AMG</a><a href="#">Contact Us</a><a href="#">Services</a><a href="#">Careers</a>
+                <a href="{% url 'about_us' %}">About AMG</a>
+                <a href="{% url 'contact_us' %}">Contact Us</a>
+                <a href="#">Services</a>
+                <a href="{% url 'career' %}">Careers</a>
             </div>
             <div class="footer-socials">
                 <div class="social-icon">f</div>
@@ -299,8 +321,8 @@
         </div>
         <div class="footer-bottom">
             <div class="footer-logo">StackSquads<br><span
-                    style="font-size:.55rem;letter-spacing:4px;color:var(--gray);">MEDIA GROUP</span></div>
-            <div class="footer-copy">© Copyright 2024 StackSquads Media Group. All rights reserved.</div>
+                    style="font-size:.55rem;letter-spacing:4px;color:var(--gray);"> GROUP</span></div>
+            <div class="footer-copy">© Copyright 2024 StackSquads Group. All rights reserved.</div>
         </div>
     </footer>
     <script src="{% static 'js/home.js' %}"></script>

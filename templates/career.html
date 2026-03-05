@@ -1,0 +1,208 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers – Anthony Media Group</title>
+    <link rel="stylesheet" href="{% static 'css/career.css' %}">
+</head>
+
+<body>
+
+    <nav>
+        <a href="{% url 'home' %}" class="nav-logo">StackSquads<span> GROUP</span></a>
+        <div class="nav-links">
+            <div class="dropdown">
+                <a href="#" class="dropdown-title">Services</a>
+
+                <div class="dropdown-menu">
+                    <a href="#">Web Design & Development</a>
+                    <a href="#">SEO</a>
+                    <a href="#">Google Ads</a>
+                    <a href="#">Social Marketing</a>
+                    <a href="#">Video Marketing</a>
+                    <a href="#">Public Relations</a>
+                </div>
+            </div>
+            <!-- <a href="#">Portfolio</a> -->
+            <a href="{% url 'contact_us' %}">Contact</a>
+            <a href="{% url 'contact_us' %}" class="btn-cta">Free Consultation</a>
+        </div>
+    </nav>
+
+    <div class="page">
+        <div class="main">
+
+            <div class="page-header">
+                <h1>Join Our Team</h1>
+                <p>Let's collaborate to elevate your brand and drive meaningful digital growth — reach out to us today,
+                    and together we'll create strategies that deliver results and take your business to the next level.
+                </p>
+            </div>
+
+            <div class="open-count">Open Positions (9)</div>
+
+            <div class="job-list">
+
+                <div class="job-card" data-key="designer">
+                    <div>
+                        <h3>Web Designer</h3>
+                        <div class="job-meta">
+                            <span>Figma Designer</span><span class="dot">•</span>
+                            <span>Remote Work</span><span class="dot">•</span>
+                            <span>Full time or Part time</span>
+                        </div>
+                    </div>
+                    <div class="arrow-btn">→</div>
+                </div>
+
+                <div class="job-card" data-key="developer">
+                    <div>
+                        <h3>Web Developer</h3>
+                        <div class="job-meta">
+                            <span>WordPress Developer</span><span class="dot">•</span>
+                            <span>Remote Work</span><span class="dot">•</span>
+                            <span>Part time</span>
+                        </div>
+                    </div>
+                    <div class="arrow-btn">→</div>
+                </div>
+
+                <div class="job-card" data-key="writer">
+                    <div>
+                        <h3>Content Writer</h3>
+                        <div class="job-meta">
+                            <span>Website Content</span><span class="dot">•</span>
+                            <span>Remote Work</span><span class="dot">•</span>
+                            <span>Full time or Part time</span>
+                        </div>
+                    </div>
+                    <div class="arrow-btn">→</div>
+                </div>
+
+                <div class="job-card" data-key="social">
+                    <div>
+                        <h3>Social Media Specialist</h3>
+                        <div class="job-meta">
+                            <span>Social Media Expert</span><span class="dot">•</span>
+                            <span>Remote Work</span><span class="dot">•</span>
+                            <span>Full time or Part time</span>
+                        </div>
+                    </div>
+                    <div class="arrow-btn">→</div>
+                </div>
+
+                <div class="job-card" data-key="sales">
+                    <div>
+                        <h3>Sales and Business Development</h3>
+                        <div class="job-meta">
+                            <span>Sales Expert</span><span class="dot">•</span>
+                            <span>Glendale, CA</span><span class="dot">•</span>
+                            <span>Part time</span>
+                        </div>
+                    </div>
+                    <div class="arrow-btn">→</div>
+                </div>
+
+                <div class="job-card" data-key="seo">
+                    <div>
+                        <h3>SEO Specialist</h3>
+                        <div class="job-meta">
+                            <span>SEO &amp; Content</span><span class="dot">•</span>
+                            <span>Remote Work</span><span class="dot">•</span>
+                            <span>Full time or Part time</span>
+                        </div>
+                    </div>
+                    <div class="arrow-btn">→</div>
+                </div>
+
+                <div class="job-card" data-key="paid">
+                    <div>
+                        <h3>Paid Media Manager</h3>
+                        <div class="job-meta">
+                            <span>Google &amp; Meta Ads</span><span class="dot">•</span>
+                            <span>Remote Work</span><span class="dot">•</span>
+                            <span>Full time</span>
+                        </div>
+                    </div>
+                    <div class="arrow-btn">→</div>
+                </div>
+
+                <div class="job-card" data-key="video">
+                    <div>
+                        <h3>Video Editor &amp; Producer</h3>
+                        <div class="job-meta">
+                            <span>Video Production</span><span class="dot">•</span>
+                            <span>Remote Work</span><span class="dot">•</span>
+                            <span>Part time</span>
+                        </div>
+                    </div>
+                    <div class="arrow-btn">→</div>
+                </div>
+
+                <div class="job-card" data-key="account">
+                    <div>
+                        <h3>Account Manager</h3>
+                        <div class="job-meta">
+                            <span>Client Relations</span><span class="dot">•</span>
+                            <span>Glendale, CA</span><span class="dot">•</span>
+                            <span>Full time</span>
+                        </div>
+                    </div>
+                    <div class="arrow-btn">→</div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer>
+            <div class="ft-top">
+                <div class="ft-links">
+                    <a href="{% url 'about_us' %}">About AMG</a>
+                    <!-- <a href="#">Portfolio</a> -->
+                    <a href="{% url 'contact_us' %}">Contact Us</a>
+                    <a href="#">Services</a>
+                    <a href="{% url 'career' %}" class="active">Careers</a>
+                </div>
+                <div class="ft-socials">
+                    <div class="s-icon">ig</div>
+                    <div class="s-icon">yt</div>
+                    <div class="s-icon">tk</div>
+                </div>
+            </div>
+            <div class="ft-bottom">
+                <div class="ft-logo">ANTHONY<small>MEDIA GROUP</small></div>
+                <div class="ft-copy">© Copyright 2025 Anthony Media Group. All rights reserved.</div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div class="modal">
+            <button class="modal-close" id="mClose">✕</button>
+            <div class="m-eyebrow">Open Position</div>
+            <div class="m-title" id="mTitle"></div>
+            <div class="m-pills" id="mPills"></div>
+            <div class="m-divider"></div>
+            <div class="m-section">
+                <h4>About the Role</h4>
+                <p id="mDesc"></p>
+            </div>
+            <div class="m-section">
+                <h4>What You'll Do</h4>
+                <ul id="mDuties"></ul>
+            </div>
+            <div class="m-section">
+                <h4>What We're Looking For</h4>
+                <ul id="mReqs"></ul>
+            </div>
+            <a href="{% url 'contact_us' %}" class="m-apply" id="mApply">Apply for this Position →</a>
+        </div>
+    </div>
+
+    <script src="{% static 'js/career.js' %}"></script>
+</body>
+
+</html>

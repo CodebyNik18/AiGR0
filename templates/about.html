@@ -1,0 +1,261 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us – StackSquads Group</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
+
+<body>
+
+    <nav>
+        <a href="{% url 'home' %}" class="nav-logo">StackSquads<span> GROUP</span></a>
+        <div class="nav-links">
+            <div class="dropdown">
+                <a href="#" class="dropdown-title">
+                    Services
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="#">Web Design & Development</a>
+                    <a href="#">SEO</a>
+                    <a href="#">Google Ads</a>
+                    <a href="#">Social Marketing</a>
+                    <a href="#">Video Marketing</a>
+                    <a href="#">Public Relations</a>
+                </div>
+            </div>
+            <!-- <a href="#">Portfolio</a> -->
+            <a href="{% url 'contact_us' %}">Contact</a>
+            <a href="{% url 'contact_us' %}" class="btn-cta">Free Consultation</a>
+        </div>
+    </nav>
+
+    <section class="hero grid-bg">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-inner">
+            <div class="hero-left">
+                <div class="hero-eyebrow">✦ About StackSquads Group ✦</div>
+                <h1>We help businesses grow through <em>smart marketing.</em></h1>
+                <p>We're a full-service digital marketing agency dedicated to one thing — delivering real, measurable
+                    results for our clients. No fluff, no guesswork. Just strategy, creativity, and execution that
+                    works.</p>
+                <a href="{% url 'contact_us' %}" class="btn-primary">Work With Us →</a>
+            </div>
+            <div class="hero-right">
+                <div class="brand-block">
+                    <div class="brand-name">StackSquads<br><span></span> GROUP</div>
+                    <div class="brand-sub">Digital Marketing Agency</div>
+                    <div class="brand-divider"></div>
+                    <p class="brand-desc">Founded on the belief that every business deserves world-class marketing —
+                        regardless of size or budget. We bring enterprise-level strategy to businesses ready to grow.
+                    </p>
+                    <div class="brand-tags">
+                        <span class="tag-pill">SEO</span>
+                        <span class="tag-pill">Paid Ads</span>
+                        <span class="tag-pill">Social </span>
+                        <span class="tag-pill">Web Design</span>
+                        <span class="tag-pill">Video</span>
+                        <span class="tag-pill">PR</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="believe">
+        <div class="section-head">
+            <p class="section-label">Our Philosophy</p>
+            <h2 class="section-title">What We Believe In</h2>
+            <p class="section-sub">Great marketing isn't luck. It's the result of clear thinking, bold creativity, and a
+                relentless commitment to what actually works for your business.</p>
+        </div>
+        <div class="believe-grid">
+            <div class="believe-card">
+                <span class="believe-icon">🎯</span>
+                <h3>Strategy Before Tactics</h3>
+                <p>We never jump straight to running ads or posting content. Every campaign starts with a deep
+                    understanding of your business, your audience, and your competition — so every move we make is
+                    purposeful.</p>
+            </div>
+            <div class="believe-card">
+                <span class="believe-icon">📊</span>
+                <h3>Data Over Assumptions</h3>
+                <p>We make decisions based on numbers, not gut feelings. Every campaign we run is tracked, measured, and
+                    optimized continuously — because the best marketing is always improving.</p>
+            </div>
+            <div class="believe-card">
+                <span class="believe-icon">✨</span>
+                <h3>Creativity Wins Attention</h3>
+                <p>In a world of endless content, boring gets ignored. We combine sharp strategy with bold, original
+                    creative work to make your brand impossible to scroll past.</p>
+            </div>
+            <div class="believe-card">
+                <span class="believe-icon">🔍</span>
+                <h3>Transparency Is Everything</h3>
+                <p>You'll always know exactly what we're doing, why we're doing it, and how it's performing. No smoke
+                    and mirrors — just honest reporting and open communication at every step.</p>
+            </div>
+            <div class="believe-card">
+                <span class="believe-icon">⚡</span>
+                <h3>Speed Matters</h3>
+                <p>The digital landscape moves fast. We stay ahead of platform changes, algorithm updates, and new
+                    trends — so your business always has a competitive edge, not a catch-up problem.</p>
+            </div>
+            <div class="believe-card">
+                <span class="believe-icon">🤝</span>
+                <h3>Your Growth Is Our Goal</h3>
+                <p>We don't just want to run your campaigns — we want to understand your business deeply enough to help
+                    you scale it. When you win, we win. It's that simple.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission grid-bg">
+        <div class="mission-inner">
+            <div class="mission-text">
+                <span class="tag">Our Mission</span>
+                <h2>Empowering businesses to thrive in the digital world</h2>
+                <p>StackSquads Group exists to level the playing field. For too long, world-class digital marketing
+                    has been reserved for big brands with massive budgets. We believe every business — from the local
+                    shop to the growing startup — deserves the same quality of strategy, creativity, and execution.</p>
+                <p>We're built around one idea: that when a business grows, the people behind it grow too. That's why we
+                    pour everything we have into every client we take on.</p>
+                <div class="mission-quote">
+                    "We don't just run campaigns. We build the foundation for long-term, sustainable business growth —
+                    one strategy at a time."
+                    <cite>— StackSquads Group</cite>
+                </div>
+            </div>
+            <div class="mission-visual">
+                <div class="mission-boxes">
+                    <div class="m-box">
+                        <span class="m-box-icon">🌐</span>
+                        <h4>Full-Service Agency</h4>
+                        <p>Everything your brand needs under one roof — strategy to execution.</p>
+                    </div>
+                    <div class="m-box">
+                        <span class="m-box-icon">🔒</span>
+                        <h4>No Long-Term Lock-ins</h4>
+                        <p>We earn your business every month by delivering results you can see.</p>
+                    </div>
+                    <div class="m-box">
+                        <span class="m-box-icon">📍</span>
+                        <h4>California Based</h4>
+                        <p>Proudly serving clients across the US and internationally.</p>
+                    </div>
+                    <div class="m-box">
+                        <span class="m-box-icon">🏆</span>
+                        <h4>Results-Driven</h4>
+                        <p>Every decision, every dollar, every campaign tied to your growth.</p>
+                    </div>
+                    <div class="m-box m-box-wide">
+                        <span class="m-box-icon">💬</span>
+                        <div>
+                            <h4>Always Reachable</h4>
+                            <p>Real people, real communication — your dedicated team is always available when you need
+                                them.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="approach">
+        <div class="section-head">
+            <p class="section-label">How We Work</p>
+            <h2 class="section-title">Our Approach</h2>
+            <p class="section-sub">A clear, repeatable process that turns your business goals into campaigns that
+                consistently deliver.</p>
+        </div>
+        <div class="approach-inner">
+            <div class="approach-steps">
+                <div class="step">
+                    <div class="step-num">01</div>
+                    <div class="step-body">
+                        <h4>Discovery & Deep Dive</h4>
+                        <p>We start by learning everything about your business — your goals, your audience, your
+                            competitors, and what's been tried before. This foundation shapes every decision we make
+                            going forward.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">02</div>
+                    <div class="step-body">
+                        <h4>Custom Strategy Development</h4>
+                        <p>No two businesses are the same, so no two strategies are either. We build a tailored roadmap
+                            that outlines exactly which channels, tactics, and creative approaches will drive the best
+                            results for you specifically.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">03</div>
+                    <div class="step-body">
+                        <h4>Creative Production & Launch</h4>
+                        <p>Our creative team brings the strategy to life — from compelling ad copy and scroll-stopping
+                            visuals to high-converting landing pages and video content. Then we launch with precision.
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">04</div>
+                    <div class="step-body">
+                        <h4>Continuous Optimization</h4>
+                        <p>We monitor every campaign in real-time, making data-backed adjustments to improve performance
+                            week over week. We never set it and forget it — we're always looking for ways to do better.
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">05</div>
+                    <div class="step-body">
+                        <h4>Reporting & Growth Planning</h4>
+                        <p>You get clear, honest reports that show exactly what's working and what's next. We use
+                            results to inform smarter decisions and map out the next phase of your growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section grid-bg">
+        <div class="cta-box">
+            <h2>Ready to grow your business<br>with a team that truly cares?</h2>
+            <p>Book a free consultation and let's talk about where your business is today and where you want to take it.
+                No pressure, no pitch — just an honest conversation.</p>
+            <a href="{% url 'contact_us' %}" class="btn-dark">📅 Book a Free Consultation</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-links">
+                <a href="{% url 'about_us' %}" class="active">About AMG</a>
+                <!-- <a href="#">Portfolio</a> -->
+                <a href="{% url 'contact_us' %}">Contact Us</a>
+                <a href="#">Services</a>
+                <a href="{% url 'career' %}">Careers</a>
+            </div>
+            <div class="footer-socials">
+                <div class="social-icon">f</div>
+                <div class="social-icon">in</div>
+                <div class="social-icon">▶</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-logo">StackSquads<br><span
+                    style="font-size:.55rem;letter-spacing:4px;color:var(--gray);"> GROUP</span></div>
+            <div class="footer-copy">© Copyright 2024 StackSquads Group. All rights reserved.</div>
+        </div>
+    </footer>
+    <script src="{% static 'js/about.js' %}"></script>
+</body>
+
+</html>
