@@ -87,64 +87,100 @@
                 <h2>Tell us about<br><em>your project</em></h2>
             </div>
 
-            <form id="cf" novalidate>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+            <form method="post" action="{% url 'contact_us' %}" id="cf">
+                {% csrf_token %}
 
                 <div class="row-2">
                     <div class="fld">
-                        <input type="text" id="fname" placeholder=" ">
-                        <label for="fname">Your Name</label>
-                        <div class="fld-bar"></div>
-                        <div class="err-msg" id="fnameErr">Name is required.</div>
+                        <input name="name" type="text" id="fname" placeholder=" ">
+                        <label for="fname">Your Name *</label>
                     </div>
+
                     <div class="fld">
-                        <input type="email" id="femail" placeholder=" ">
-                        <label for="femail">Email Address</label>
-                        <div class="fld-bar"></div>
-                        <div class="err-msg" id="femailErr">Enter a valid email.</div>
+                        <input name="email" type="email" id="femail" placeholder=" ">
+                        <label for="femail">Email Address *</label>
                     </div>
                 </div>
 
                 <div class="row-2">
                     <div class="fld">
-                        <input type="tel" id="fphone" placeholder=" ">
-                        <label for="fphone">Phone Number</label>
-                        <div class="fld-bar"></div>
-                        <div class="err-msg" id="fphoneErr">Phone is required.</div>
+                        <input name="phone" type="tel" id="fphone" placeholder=" ">
+                        <label for="fphone">Phone Number *</label>
                     </div>
+
                     <div class="fld">
-                        <input type="text" id="fcompany" placeholder=" ">
+                        <input name="company_name" type="text" id="fcompany" placeholder=" ">
                         <label for="fcompany">Company</label>
-                        <div class="fld-bar"></div>
                     </div>
                 </div>
 
                 <div class="svc-block">
-                    <span class="svc-lbl">Services I'm interested in</span>
+                    <span class="svc-lbl">Services I'm interested in *</span>
                     <div class="pills">
-                        <div class="pill"><input type="checkbox" id="p1"><label for="p1">Web Design</label></div>
-                        <div class="pill"><input type="checkbox" id="p2"><label for="p2">SEO</label></div>
-                        <div class="pill"><input type="checkbox" id="p3"><label for="p3">Email &amp; SMS</label></div>
-                        <div class="pill"><input type="checkbox" id="p4"><label for="p4">Meta Ads</label></div>
-                        <div class="pill"><input type="checkbox" id="p5"><label for="p5">Google Ads</label></div>
-                        <div class="pill"><input type="checkbox" id="p6"><label for="p6">Social Media</label></div>
-                        <div class="pill"><input type="checkbox" id="p7"><label for="p7">Video Marketing</label></div>
-                        <div class="pill"><input type="checkbox" id="p8"><label for="p8">Public Relations</label></div>
-                        <div class="pill"><input type="checkbox" id="p9"><label for="p9">Other</label></div>
+
+                        <div class="pill">
+                            <input type="checkbox" name="interested_service" value="Web Design" id="p1">
+                            <label for="p1">Web Design</label>
+                        </div>
+
+                        <div class="pill">
+                            <input type="checkbox" name="interested_service" value="SEO" id="p2">
+                            <label for="p2">SEO</label>
+                        </div>
+
+                        <div class="pill">
+                            <input type="checkbox" name="interested_service" value="Email & SMS" id="p3">
+                            <label for="p3">Email & SMS</label>
+                        </div>
+
+                        <div class="pill">
+                            <input type="checkbox" name="interested_service" value="Meta Ads" id="p4">
+                            <label for="p4">Meta Ads</label>
+                        </div>
+
+                        <div class="pill">
+                            <input type="checkbox" name="interested_service" value="Google Ads" id="p5">
+                            <label for="p5">Google Ads</label>
+                        </div>
+
+                        <div class="pill">
+                            <input type="checkbox" name="interested_service" value="Social Media" id="p6">
+                            <label for="p6">Social Media</label>
+                        </div>
+
+                        <div class="pill">
+                            <input type="checkbox" name="interested_service" value="Video Marketing" id="p7">
+                            <label for="p7">Video Marketing</label>
+                        </div>
+
+                        <div class="pill">
+                            <input type="checkbox" name="interested_service" value="Public Relations" id="p8">
+                            <label for="p8">Public Relations</label>
+                        </div>
+
+                        <div class="pill">
+                            <input type="checkbox" name="interested_service" value="Other" id="p9">
+                            <label for="p9">Other</label>
+                        </div>
+
                     </div>
                 </div>
 
                 <div class="fld area">
                     <span class="area-label">Message</span>
-                    <textarea id="fmsg" placeholder="Describe your goals, timeline, or anything we should know…"
-                        rows="4"></textarea>
+                    <textarea name="message" id="fmsg"
+                        placeholder="Describe your goals, timeline, or anything we should know…" rows="4"></textarea>
                 </div>
 
                 <div class="terms-row">
-                    <input type="checkbox" id="fterms">
-                    <span>I agree to Anthony Media Group's Terms of Service and Privacy
-                            Policy.</span>
+                    <input name="terms_conditions" type="checkbox" id="fterms">
+                    <span>I agree to Anthony Media Group's Terms of Service and Privacy Policy.</span>
                 </div>
-                <div class="terms-err-msg" id="ftermsErr">Please accept the terms to continue.</div>
 
                 <div class="submit-row">
                     <button type="submit" class="btn-send" id="fsubmit">
@@ -152,12 +188,6 @@
                         <span class="arrow">→</span>
                     </button>
                     <span class="send-note">Response within 1 business day</span>
-                </div>
-
-                <div class="success-card" id="fsuccess">
-                    <div class="s-title">Message <span>received.</span></div>
-                    <p>Thank you for reaching out. A member of our team will review your message and be in touch with
-                        you very shortly.</p>
                 </div>
 
             </form>
