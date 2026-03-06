@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony Media Group – Digital Marketing Firm</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&family=Barlow+Condensed:ital,wght@0,300;0,600;0,700;0,900;1,300&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ══════════════════════════════════════════════════
+   RESET & TOKENS
+══════════════════════════════════════════════════ */
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <a href="{% url 'home' %}" class="nav-logo">ANTHONY<span>MEDIA GROUP</span></a>
+        <div class="nav-links">
+            <div class="dropdown-wrap">
+                <a href="{% url 'services' %}" class="nav-drop">Services</a>
+                <div class="dropdown-menu">
+                    <a href="{% url 'web_service' %}">Web Design &amp; Development</a>
+                    <a href="{% url 'seo_service' %}">SEO</a>
+                    <a href="{% url 'google_ad_service' %}">Google Ads</a>
+                    <a href="{% url 'social_service' %}">Social Marketing</a>
+                    <a href="{% url 'video_service' %}">Video Marketing</a>
+                    <a href="{% url 'public_service' %}">Public Relations</a>
+                </div>
+            </div>
+            <a href="{% url 'contact_us' %}">Contact</a>
+            <a href="{% url 'contact_us' %}" class="btn-cta">Free Consultation</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero grid-bg">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-tag">
+                <span class="dot"></span>
+                Digital Marketing Agency
+            </div>
+            <h1>Digital marketing firm<br>dedicated to your <span class="hl">success.</span></h1>
+            <p>We pride ourselves on staying ahead of the latest trends and best practices in digital marketing —
+                turning strategy into measurable, lasting growth for your business.</p>
+            <div class="btn-wrap">
+                <a href="{% url 'contact_us' %}" class="btn-primary">Get Started →</a>
+                <div class="btn-pulse"></div>
+            </div>
+        </div>
+        <div class="grid-floor"></div>
+    </section>
+
+    <!-- TRUSTED -->
+    <section class="trusted">
+        <p class="trusted-label">Trusted by the best in the industry.</p>
+        <div class="logos-wrap">
+            <div class="logos-track">
+                <div class="logo-item">Donnée Im Dieu</div>
+                <div class="logo-item">Prus Pasta</div>
+                <div class="logo-item">TOPIKAL</div>
+                <div class="logo-item">🚗 CARWASH</div>
+                <div class="logo-item">SK KHACHIKYAN</div>
+                <div class="logo-item">◆</div>
+                <div class="logo-item">Donnée Im Dieu</div>
+                <div class="logo-item">Prus Pasta</div>
+                <div class="logo-item">TOPIKAL</div>
+                <div class="logo-item">🚗 CARWASH</div>
+                <div class="logo-item">SK KHACHIKYAN</div>
+                <div class="logo-item">◆</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-bar">
+        <div class="stat">
+            <div class="stat-num" data-target="250">0</div>
+            <div class="stat-label">Clients Served</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num" data-target="98">0</div>
+            <div class="stat-label">% Satisfaction</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num" data-target="12">0</div>
+            <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num" data-target="5">0</div>
+            <div class="stat-label">× Avg. ROI</div>
+        </div>
+    </div>
+
+    <!-- WHY CHOOSE -->
+    <section class="section grid-bg">
+        <p class="section-label">Our Approach</p>
+        <h2 class="section-title">Why Choose <span class="grad">Anthony Media Group</span><br>for Digital Media
+            Solutions?</h2>
+        <p class="section-sub">We optimize media buys and enhance strategies with top-tier tools, ensuring maximum reach
+            and performance across every platform.</p>
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <h4>Data Tracking</h4>
+                <p>Precision analytics measuring every touchpoint across your campaigns in real time.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h4>Performance Assessment</h4>
+                <p>In-depth evaluation to identify and unlock growth opportunities fast.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h4>Strategic Targeting</h4>
+                <p>Pinpoint your ideal customers with advanced multi-platform targeting.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📡</div>
+                <h4>Media Buying</h4>
+                <p>Strategic media buys maximizing your ROI and reach across every channel.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔧</div>
+                <h4>Campaign Optimization</h4>
+                <p>Continuous campaign tuning keeping performance at absolute peak 24/7.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🤝</div>
+                <h4>Client Support</h4>
+                <p>Dedicated support team committed to your success every step of the way.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTIONS -->
+    <section class="section solutions">
+        <p class="section-label">What We Offer</p>
+        <h2 class="section-title">Solutions <span class="grad">Tailored</span> to Your Business</h2>
+        <p class="section-sub">We empower your business to grow with customized digital marketing strategies designed
+            specifically for your goals and audience.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="shine"></div>
+                <div class="card-num">01</div>
+                <div class="service-icon">🖥️</div>
+                <div class="service-info">
+                    <h4>Web Design &amp; Development</h4>
+                    <p>Stunning, conversion-focused websites built to represent your brand and generate measurable
+                        results.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="shine"></div>
+                <div class="card-num">02</div>
+                <div class="service-icon">🤖</div>
+                <div class="service-info">
+                    <h4>Lead Automation &amp; Management</h4>
+                    <p>Automated lead funnels and CRM integrations keeping prospects engaged and moving through your
+                        pipeline.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="shine"></div>
+                <div class="card-num">03</div>
+                <div class="service-icon">🔍</div>
+                <div class="service-info">
+                    <h4>Search Engine Optimization</h4>
+                    <p>Rank higher on Google and drive qualified organic traffic with our proven SEO strategies.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="shine"></div>
+                <div class="card-num">04</div>
+                <div class="service-icon">📱</div>
+                <div class="service-info">
+                    <h4>Paid Advertising on Social Media</h4>
+                    <p>High-performing paid social campaigns on Facebook, Instagram, TikTok, and more.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="shine"></div>
+                <div class="card-num">05</div>
+                <div class="service-icon">💰</div>
+                <div class="service-info">
+                    <h4>Paid Advertising on Google Ads</h4>
+                    <p>Expert Google Ads management putting your business in front of customers who are ready to buy.
+                    </p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="shine"></div>
+                <div class="card-num">06</div>
+                <div class="service-icon">📣</div>
+                <div class="service-info">
+                    <h4>Social Media Marketing</h4>
+                    <p>Strategic organic social media management that builds brand awareness and lasting loyalty.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="shine"></div>
+                <div class="card-num">07</div>
+                <div class="service-icon">🎬</div>
+                <div class="service-info">
+                    <h4>Video Production &amp; Marketing</h4>
+                    <p>Professional video content creation and distribution that captures attention and drives
+                        engagement.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="shine"></div>
+                <div class="card-num">08</div>
+                <div class="service-icon">📰</div>
+                <div class="service-info">
+                    <h4>Public Relations</h4>
+                    <p>Strategic PR campaigns that elevate your brand's reputation and build lasting public trust.</p>
+                </div>
+            </div>
+        </div>
+        <div class="solutions-cta"><a href="{% url 'services' %}" class="btn-primary">Explore All Services →</a></div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials grid-bg">
+        <div class="testi-header">
+            <h2>Don't just take our <span class="grad">word</span> for it</h2>
+            <p>Real results from real clients — here's what they have to say</p>
+        </div>
+        <div class="testi-viewport">
+            <div class="testi-track" id="testiTrack">
+
+                <div class="testi-card">
+                    <div class="testi-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                    </div>
+                    <div class="testi-quote-icon">"</div>
+                    <p class="quote">He delivers every single project as soon as possible! I was hesitant at first, but
+                        they nailed it. Anthony is a professional — I think he may be the best I've experienced. I will
+                        continue using Anthony Media Group for the rest of my career.</p>
+                    <div class="testi-divider"></div>
+                    <div class="testi-author">
+                        <div class="avatar" style="background:linear-gradient(135deg,#0d7377,#0d9ba1);">LK</div>
+                        <div>
+                            <div class="author-name">Lara K.</div>
+                            <div class="author-loc">Owner, Shade Hub</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="testi-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                    </div>
+                    <div class="testi-quote-icon">"</div>
+                    <p class="quote">Where do I begin? The amazing treatment I got was outstanding! Tony made it very
+                        simple, making my website exactly how I wanted it. I just love how it was perfectly put
+                        together. Thank you tons! Couldn't have done it without you!</p>
+                    <div class="testi-divider"></div>
+                    <div class="testi-author">
+                        <div class="avatar" style="background:linear-gradient(135deg,#1a6b5a,#27a080);">NZ</div>
+                        <div>
+                            <div class="author-name">Ninya Z.</div>
+                            <div class="author-loc">San Diego, CA</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <div class="testi-stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                    </div>
+                    <div class="testi-quote-icon">"</div>
+                    <p class="quote">Tony and his staff have gone above and beyond. They were very accommodating and
+                        attentive to customization — making sure fonts, ideas, and formatting were exactly as desired. I
+                        couldn't be happier!</p>
+                    <div class="testi-divider"></div>
+                    <div class="testi-author">
+                        <div class="avatar" style="background:linear-gradient(135deg,#4a3a8c,#7c5cfc);">AS</div>
+                        <div>
+                            <div class="author-name">American Savings</div>
+                            <div class="author-loc">Sacramento/Roseville, CA</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="testi-nav">
+            <button class="testi-btn" id="testiPrev">←</button>
+            <button class="testi-btn" id="testiNext">→</button>
+        </div>
+    </section>
+
+    <!-- SUCCESS STORIES -->
+    <section class="stories">
+        <p class="section-label">Case Studies</p>
+        <h2 class="section-title"><span class="grad">Results</span> That Speak for Themselves</h2>
+        <p class="section-sub">Real campaigns, real numbers — here's what we've delivered for our clients.</p>
+
+        <!-- Metric cards row -->
+        <div class="stories-grid">
+            <div class="metric-card">
+                <div class="metric-icon">📈</div>
+                <div class="metric-num">8×</div>
+                <div class="metric-label">Average ROAS</div>
+                <div class="metric-sub">Across all ad campaigns</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">🎯</div>
+                <div class="metric-num">340%</div>
+                <div class="metric-label">Avg. Traffic Increase</div>
+                <div class="metric-sub">Within 90 days of SEO</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">💬</div>
+                <div class="metric-num">98%</div>
+                <div class="metric-label">Client Satisfaction</div>
+                <div class="metric-sub">Based on client surveys</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">🚀</div>
+                <div class="metric-num">250+</div>
+                <div class="metric-label">Brands Grown</div>
+                <div class="metric-sub">Since 2013</div>
+            </div>
+        </div>
+
+        <!-- Story video/case cards row -->
+        <div class="story-cards-row">
+            <div class="story-card" style="background:linear-gradient(135deg,#0a1e40,#0d3060);">
+                <div class="story-overlay"></div>
+                <div class="story-card-inner"
+                    style="font-size:2rem;font-weight:900;color:#fff;letter-spacing:3px;text-align:center;line-height:1.2;position:relative;z-index:1;">
+                    VTL<br><span style="font-size:.6rem;font-weight:400;letter-spacing:3px;opacity:.7;">VICTORY TAX
+                        LAWYERS</span>
+                </div>
+                <div class="story-tag">Case Study</div>
+                <div class="story-label">300% Lead Increase</div>
+            </div>
+            <div class="story-card" style="background:linear-gradient(135deg,#1a0e2a,#3d1a6a);">
+                <div class="story-overlay"></div>
+                <div class="play-btn">
+                    <div class="play-circle">▶</div>
+                </div>
+                <div class="story-tag">Video</div>
+                <div class="story-label">Client Testimonial</div>
+            </div>
+            <div class="story-card" style="background:linear-gradient(135deg,#1a2a0a,#2e5010);">
+                <div class="story-overlay"></div>
+                <div class="play-btn">
+                    <div class="play-circle">▶</div>
+                </div>
+                <div class="story-tag">Video</div>
+                <div class="story-label">Restaurant Campaign — 5× ROI</div>
+            </div>
+        </div>
+
+        <!-- View all CTA -->
+        <div style="text-align:center;margin-top:3rem;position:relative;z-index:1;">
+            <a href="#" class="btn-ghost"
+                style="display:inline-flex;align-items:center;gap:.5rem;padding:.82rem 2rem;border-radius:7px;border:1px solid rgba(255,255,255,.15);color:rgba(238,244,255,.65);font-size:.85rem;font-weight:600;text-decoration:none;transition:all .28s;">
+                View Full Portfolio →
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section grid-bg">
+        <div class="cta-outer">
+            <div class="cta-box">
+                <div class="cta-eyebrow">✦ Free Consultation</div>
+                <h2>Ready to elevate your business<br>and <span class="grad">unlock new growth?</span></h2>
+                <p>Anthony Media Group offers a full suite of digital marketing services — from web design to paid ads,
+                    SEO to PR — everything you need to dominate your market.</p>
+                <div class="cta-btns">
+                    <a href="{% url 'contact_us' %}" class="btn-dark">📅 Book Free Consultation</a>
+                    <a href="{% url 'services' %}" class="btn-ghost">Explore Our Services →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-links">
+                <a href="#">About AMG</a>
+                <a href="#">Portfolio</a>
+                <a href="{% url 'contact_us' %}">Contact Us</a>
+                <a href="{% url 'services' %}">Services</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="footer-socials">
+                <div class="social-icon">f</div>
+                <div class="social-icon">in</div>
+                <div class="social-icon">▶</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-logo">ANTHONY<br><span
+                    style="font-size:.52rem;letter-spacing:4.5px;color:var(--gray);font-weight:300;">MEDIA GROUP</span>
+            </div>
+            <div class="footer-copy">© Copyright 2025 Anthony Media Group. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        /* ── NAV SCROLL ── */
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', scrollY > 50);
+        });
+
+        /* ── HERO PARTICLE CANVAS ── */
+        const canvas = document.getElementById('hero-canvas');
+        const ctx = canvas.getContext('2d');
+        let W, H;
+        function resize() { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+        resize(); window.addEventListener('resize', resize);
+
+        const COLOURS = ['rgba(0,212,255,', 'rgba(124,92,252,', 'rgba(0,229,160,', 'rgba(255,79,163,'];
+
+        class Dot {
+            constructor() {
+                this.x = Math.random() * W; this.y = Math.random() * H;
+                this.vx = (Math.random() - .5) * .35; this.vy = (Math.random() - .5) * .35;
+                this.r = Math.random() * 1.8 + .5;
+                this.a = Math.random() * .5 + .12;
+                this.c = COLOURS[Math.floor(Math.random() * COLOURS.length)];
+            }
+            tick() { this.x += this.vx; this.y += this.vy; if (this.x < 0 || this.x > W) this.vx *= -1; if (this.y < 0 || this.y > H) this.vy *= -1; }
+            draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2); ctx.fillStyle = this.c + this.a + ')'; ctx.fill(); }
+        }
+
+        const dots = Array.from({ length: 75 }, () => new Dot());
+
+        function drawLines() {
+            for (let i = 0; i < dots.length; i++) for (let j = i + 1; j < dots.length; j++) {
+                const dx = dots[i].x - dots[j].x, dy = dots[i].y - dots[j].y, d = Math.sqrt(dx * dx + dy * dy);
+                if (d < 115) {
+                    ctx.beginPath(); ctx.moveTo(dots[i].x, dots[i].y); ctx.lineTo(dots[j].x, dots[j].y);
+                    ctx.strokeStyle = `rgba(0,212,255,${.1 * (1 - d / 115)})`; ctx.lineWidth = .7; ctx.stroke();
+                }
+            }
+        }
+
+        (function animDots() {
+            ctx.clearRect(0, 0, W, H);
+            dots.forEach(d => { d.tick(); d.draw(); });
+            drawLines();
+            requestAnimationFrame(animDots);
+        })();
+
+        /* ── SCROLL REVEAL ── */
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll(
+            '.section-label,.section-title,.section-sub,.feature,.service-card,.testi-card,.story-card,.metric-card,.cta-outer,.stat,.testi-header h2'
+        ).forEach((el, i) => {
+            const parent = el.closest('.features-grid,.services-grid,.stats-bar,.testi-track,.stories-grid,.story-cards-row');
+            if (parent) {
+                const idx = Array.from(parent.children).indexOf(el);
+                const d = (idx * 80) + 'ms';
+                el.style.transitionDelay = d + ',' + d;
+            }
+            obs.observe(el);
+        });
+
+        /* ── COUNTERS ── */
+        const cntObs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    const el = e.target, target = +el.dataset.target;
+                    let start = null;
+                    const step = ts => {
+                        if (!start) start = ts;
+                        const p = Math.min((ts - start) / 1900, 1), ease = 1 - Math.pow(1 - p, 3);
+                        el.textContent = Math.floor(ease * target);
+                        if (p < 1) requestAnimationFrame(step); else el.textContent = target;
+                    };
+                    requestAnimationFrame(step);
+                    cntObs.unobserve(el);
+                }
+            });
+        }, { threshold: .5 });
+        document.querySelectorAll('.stat-num[data-target]').forEach(el => cntObs.observe(el));
+
+        /* ── TESTIMONIAL SLIDER (mobile only) ── */
+        const track = document.getElementById('testiTrack');
+        const tCards = document.querySelectorAll('.testi-card');
+        let tIdx = 0;
+        function slideTo(n) {
+            if (window.innerWidth > 768) return;
+            tIdx = Math.max(0, Math.min(n, tCards.length - 1));
+            track.style.transform = `translateX(${-tIdx * (tCards[0].offsetWidth + 20.8)}px)`;
+        }
+        document.getElementById('testiNext').onclick = () => slideTo(tIdx + 1);
+        document.getElementById('testiPrev').onclick = () => slideTo(tIdx - 1);
+        window.addEventListener('resize', () => { if (window.innerWidth > 768) { track.style.transform = ''; tIdx = 0; } });
+
+        /* ── SERVICE CARD TILT ── */
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const r = card.getBoundingClientRect();
+                const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+                card.style.transform = `perspective(800px) rotateX(${-y * 5}deg) rotateY(${x * 5}deg) translateY(-4px)`;
+            });
+            card.addEventListener('mouseleave', () => card.style.transform = '');
+        });
+
+        /* ── MAGNETIC BUTTONS ── */
+        document.querySelectorAll('.btn-primary,.btn-cta,.btn-dark').forEach(btn => {
+            btn.addEventListener('mousemove', e => {
+                const r = btn.getBoundingClientRect();
+                btn.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .08}px,${(e.clientY - r.top - r.height / 2) * .08}px)`;
+            });
+            btn.addEventListener('mouseleave', () => btn.style.transform = '');
+        });
+    </script>
+</body>
+
+</html>
