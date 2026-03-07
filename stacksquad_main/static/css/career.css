@@ -64,13 +64,14 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
-    height: 64px;
+    height: 75px;
     background: rgba(6, 15, 30, .97);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(0, 212, 255, .1);
 }
 
 .nav-logo {
+    margin-top: 15px;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
@@ -81,21 +82,35 @@ nav {
     line-height: 1.15;
     animation: fadeDown .7s .1s both;
 
-    height:75px;
-    width:auto;
-    display:block;
-    filter: drop-shadow(0 0 6px rgba(0,212,255,0.3));
+    height: 75px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.3));
 
 }
-#navbar a{
-    display:flex;
-    align-items:center;
+
+#navbar a {
+    display: flex;
+    align-items: center;
 }
-#navbar{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:10px 40px;
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+
+#navbar a {
+    display: flex;
+    align-items: center;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
 }
 
 .nav-logo span {
@@ -163,7 +178,7 @@ nav {
 
 .btn-cta {
     background: var(--cyan);
-    color:#ffffff !important;
+    color: #ffffff !important;
     padding: .44rem 1.2rem;
     border-radius: 4px;
     font-size: .78rem;
@@ -261,9 +276,9 @@ nav {
     transform: translateY(0);
 }
 
-.job-card:hover{
+.job-card:hover {
     background: rgba(12, 35, 60, 0.9);
-    box-shadow: 0 10px 35px rgba(0,0,0,0.45);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
     border-left-color: #00d4ff;
     transform: translateY(-3px);
 }
@@ -271,13 +286,13 @@ nav {
 .job-card h3 {
     font-size: .97rem;
     font-weight: 700;
-    color:#f1f5f9;
+    color: #f1f5f9;
     margin-bottom: .28rem;
 }
 
 .job-meta {
     font-size: .78rem;
-    color:#94a3b8;
+    color: #94a3b8;
     display: flex;
     flex-wrap: wrap;
     gap: .3rem .5rem;

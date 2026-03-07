@@ -57,13 +57,14 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
-    height: 62px;
+    height: 75px;
     background: rgba(6, 15, 30, .94);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(0, 212, 255, .1);
 }
 
 .nav-logo {
+    margin-top: 15px;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
@@ -79,6 +80,18 @@ nav {
     display: block;
     filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.3));
 
+}
+
+#navbar a {
+    display: flex;
+    align-items: center;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
 }
 
 #navbar a {
@@ -1112,6 +1125,7 @@ footer {
 }
 
 .dropdown-title {
+    margin-top: 15px;
     color: white;
     text-decoration: none;
     padding: 10px;

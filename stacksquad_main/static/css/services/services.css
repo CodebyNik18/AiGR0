@@ -64,13 +64,14 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
-    height: 64px;
+    height: 75px;
     background: rgba(6, 15, 30, .97);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(0, 212, 255, .1);
 }
 
 .nav-logo {
+    margin-top: 15px;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
@@ -81,21 +82,23 @@ nav {
     line-height: 1.15;
     animation: fadeDown .7s .1s both;
 
-    height:75px;
-    width:auto;
-    display:block;
-    filter: drop-shadow(0 0 6px rgba(0,212,255,0.3));
+    height: 75px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.3));
 
 }
-#navbar a{
-    display:flex;
-    align-items:center;
+
+#navbar a {
+    display: flex;
+    align-items: center;
 }
-#navbar{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:10px 40px;
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
 }
 
 .nav-logo span {
@@ -163,7 +166,7 @@ nav {
 
 .btn-cta {
     background: var(--cyan);
-    color:#ffffff !important;
+    color: #ffffff !important;
     padding: .44rem 1.2rem;
     border-radius: 4px;
     font-size: .78rem;
@@ -738,8 +741,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1.5rem;
     flex-wrap: wrap;
-    gap: 1.2rem;
     margin-bottom: 1.4rem;
 }
 
@@ -782,7 +785,8 @@ footer {
 
 .ft-socials {
     display: flex;
-    gap: .7rem;
+    gap: .8rem;
+    margin-left: auto;
 }
 
 .s-icon {
