@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us – StackSquads Group</title>
+    <title>About Us – AiGRO Group</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;600;700;900&display=swap"
         rel="stylesheet">
@@ -16,7 +16,7 @@
 
     <nav id="navbar">
         <a href="{% url 'home' %}">
-            <div class="nav-logo">StackSquads<span> GROUP</span></div>
+            <img src="{% static 'images/aigro1.png' %}" class="nav-logo" alt="AIGRO Logo">
         </a>
         <div class="nav-links">
             <div class="dropdown">
@@ -43,7 +43,7 @@
         <canvas id="hero-canvas"></canvas>
         <div class="hero-inner">
             <div class="hero-left">
-                <div class="hero-eyebrow">✦ About StackSquads Group ✦</div>
+                <div class="hero-eyebrow">✦ About AiGRO Group ✦</div>
                 <h1>We help businesses grow through <em>smart marketing.</em></h1>
                 <p>We're a full-service digital marketing agency dedicated to one thing — delivering real, measurable
                     results for our clients. No fluff, no guesswork. Just strategy, creativity, and execution that
@@ -52,7 +52,7 @@
             </div>
             <div class="hero-right">
                 <div class="brand-block">
-                    <div class="brand-name">StackSquads<br><span></span> GROUP</div>
+                    <div class="brand-name">AiGRO<br><span></span> GROUP</div>
                     <div class="brand-sub">Digital Marketing Agency</div>
                     <div class="brand-divider"></div>
                     <p class="brand-desc">Founded on the belief that every business deserves world-class marketing —
@@ -124,7 +124,7 @@
             <div class="mission-text">
                 <span class="tag">Our Mission</span>
                 <h2>Empowering businesses to thrive in the digital world</h2>
-                <p>StackSquads Group exists to level the playing field. For too long, world-class digital marketing
+                <p>AiGRO Group exists to level the playing field. For too long, world-class digital marketing
                     has been reserved for big brands with massive budgets. We believe every business — from the local
                     shop to the growing startup — deserves the same quality of strategy, creativity, and execution.</p>
                 <p>We're built around one idea: that when a business grows, the people behind it grow too. That's why we
@@ -132,7 +132,7 @@
                 <div class="mission-quote">
                     "We don't just run campaigns. We build the foundation for long-term, sustainable business growth —
                     one strategy at a time."
-                    <cite>— StackSquads Group</cite>
+                    <cite>— AiGRO Group</cite>
                 </div>
             </div>
             <div class="mission-visual">
@@ -239,7 +239,7 @@
     <footer>
         <div class="footer-top">
             <div class="footer-links">
-                <a href="{% url 'about_us' %}" class="active">About SSG</a>
+                <a href="{% url 'about_us' %}" class="active">About AiGRO</a>
                 <!-- <a href="#">Portfolio</a> -->
                 <a href="{% url 'contact_us' %}">Contact Us</a>
                 <a href="{% url 'services' %}">Services</a>
@@ -252,9 +252,9 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="footer-logo">StackSquads<br><span
+            <div class="footer-logo">AiGRO<br><span
                     style="font-size:.55rem;letter-spacing:4px;color:var(--gray);"> GROUP</span></div>
-            <div class="footer-copy">© Copyright 2024 StackSquads Group. All rights reserved.</div>
+            <div class="footer-copy">© Copyright 2024 AiGRO Group. All rights reserved.</div>
         </div>
     </footer>
     <script src="{% static 'js/about.js' %}"></script>

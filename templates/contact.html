@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — StackSquads  Group</title>
+    <title>Contact — AiGRO Group</title>
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -16,7 +16,7 @@
 
     <nav id="navbar">
         <a href="{% url 'home' %}">
-            <div class="nav-logo">StackSquads<span> GROUP</span></div>
+            <img src="{% static 'images/aigro1.png' %}" class="nav-logo" alt="AIGRO Logo">
         </a>
         <div class="nav-r">
             <div class="dropdown">
@@ -88,9 +88,9 @@
             </div>
 
             {% if messages %}
-                {% for message in messages %}
-                    <div class="alert">{{ message }}</div>
-                {% endfor %}
+            {% for message in messages %}
+            <div class="alert">{{ message }}</div>
+            {% endfor %}
             {% endif %}
             <form method="post" action="{% url 'contact_us' %}" id="cf">
                 {% csrf_token %}
@@ -179,7 +179,7 @@
 
                 <div class="terms-row">
                     <input name="terms_conditions" type="checkbox" id="fterms">
-                    <span>I agree to StackSquads  Group's Terms of Service and Privacy Policy.</span>
+                    <span>I agree to AiGRO Group's Terms of Service and Privacy Policy.</span>
                 </div>
 
                 <div class="submit-row">
@@ -197,7 +197,7 @@
 
     <footer>
         <div class="ft-links">
-            <a href="{% url 'about_us' %}" class="active">About SSG</a>
+            <a href="{% url 'about_us' %}" class="active">About AiGRO</a>
             <!-- <a href="#">Portfolio</a> -->
             <a href="{% url 'contact_us' %}">Contact Us</a>
             <a href="{% url 'services' %}">Services</a>
@@ -209,7 +209,7 @@
                 <a href="#" class="ft-s">yt</a>
                 <a href="#" class="ft-s">tk</a>
             </div> -->
-            <span class="ft-copy">© 2025 StackSquads  Group</span>
+            <span class="ft-copy">© 2025 AiGRO Group</span>
         </div>
     </footer>
     <script src="{% static 'js/contact.js' %}"></script>

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from website.models import HeroSection, ApproachSection
+from website.models import Home_HeroSection, Home_ApproachSection
 from django.http import HttpResponse
 from django.contrib import messages
 from services.models import ConsultationRequest
@@ -8,8 +8,8 @@ from django.conf import settings
 
 
 def home(request):
-    hero_data = HeroSection.objects.first()
-    approach_data = ApproachSection.objects.first()
+    hero_data = Home_HeroSection.objects.first()
+    approach_data = Home_ApproachSection.objects.first()
     context = {
         'hero_data': hero_data,
         'approach_data': approach_data

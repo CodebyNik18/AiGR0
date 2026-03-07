@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import HeroSection, ApproachSection
+from .models import Home_HeroSection, Home_ApproachSection
 
 
 class HeroAdmin(admin.ModelAdmin):
@@ -13,5 +13,5 @@ class ApproachAdmin(admin.ModelAdmin):
     ]
     
     
-admin.site.register(HeroSection, HeroAdmin)
-admin.site.register(ApproachSection, ApproachAdmin)
+admin.site.register(Home_HeroSection, HeroAdmin)
+admin.site.register(Home_ApproachSection, ApproachAdmin)

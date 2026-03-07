@@ -116,6 +116,22 @@ nav.scrolled {
     text-transform: uppercase;
     line-height: 1.15;
     animation: fadeDown .7s .1s both;
+
+    height:75px;
+    width:auto;
+    display:block;
+    filter: drop-shadow(0 0 6px rgba(0,212,255,0.3));
+
+}
+#navbar a{
+    display:flex;
+    align-items:center;
+}
+#navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 40px;
 }
 
 .nav-logo span {
@@ -185,7 +201,7 @@ nav.scrolled {
 
 .btn-cta {
     background: var(--g-cyan-violet);
-    color:#ffffff !important;
+    color: #ffffff !important;
     padding: .48rem 1.3rem;
     border-radius: 5px;
     font-size: .78rem;
@@ -679,7 +695,7 @@ nav.scrolled {
 }
 
 .section-sub {
-    color:#cbd5e1;
+    color: #cbd5e1;
     font-size: .9rem;
     font-weight: 300;
     text-align: center;
@@ -1129,7 +1145,7 @@ nav.scrolled {
 
 .service-info p {
     font-size: .78rem;
-    color:var(--muted);
+    color: var(--muted);
     line-height: 1.65;
 }
 

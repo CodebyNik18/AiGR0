@@ -26,4 +26,5 @@ urlpatterns = [
     path('contact-us/', views.contactus, name='contact_us'),
     path('careers/', views.careers, name='career'),
     path('services/', include('services.urls')),
+    # path('portfolio/', include('portfolio.urls')),
 ]

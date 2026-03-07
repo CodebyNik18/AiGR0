@@ -65,13 +65,32 @@ nav {
 
 .nav-logo {
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    letter-spacing: 2px;
-    color: #fff;
-    line-height: 1.1;
-    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: var(--white);
     text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1.15;
+    animation: fadeDown .7s .1s both;
+
+    height: 75px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.3));
+
+}
+
+#navbar a {
+    display: flex;
+    align-items: center;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
 }
 
 .nav-logo span {
@@ -134,7 +153,7 @@ nav {
 
 .btn-cta {
     background: var(--cyan);
-    color:#ffffff !important;
+    color: #ffffff !important;
     padding: .45rem 1.2rem;
     border-radius: 4px;
     font-size: .8rem;
@@ -400,25 +419,24 @@ nav {
 }
 
 /* WHAT WE BELIEVE */
-.believe{
+.believe {
     position: relative;
-    background: linear-gradient(
-        180deg,
-        #071c33 0%,
-        #081f38 40%,
-        #071a2f 100%
-    );
+    background: linear-gradient(180deg,
+            #071c33 0%,
+            #081f38 40%,
+            #071a2f 100%);
 }
-.believe::before{
-    content:"";
-    position:absolute;
-    width:700px;
-    height:700px;
-    background: radial-gradient(circle, rgba(0,180,255,0.12), transparent 70%);
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-40%);
-    pointer-events:none;
+
+.believe::before {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(0, 180, 255, 0.12), transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    pointer-events: none;
 }
 
 .section-head {

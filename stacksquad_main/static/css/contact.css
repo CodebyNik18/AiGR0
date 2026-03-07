@@ -158,13 +158,31 @@ a {
 }
 
 .nav-logo {
-    font-family: 'DM Serif Display', serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.2rem;
-    letter-spacing: 0.02em;
+    font-weight: 700;
+    letter-spacing: 2.5px;
     color: var(--white);
-    transition: color 0.25s;
-    position: relative;
-    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1.15;
+    animation: fadeDown .7s .1s both;
+
+    height:75px;
+    width:auto;
+    display:block;
+    filter: drop-shadow(0 0 6px rgba(0,212,255,0.3));
+
+}
+#navbar a{
+    display:flex;
+    align-items:center;
+}
+#navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 40px;
 }
 
 .nav-logo span {
