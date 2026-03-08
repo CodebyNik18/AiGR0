@@ -15,9 +15,14 @@
         <a href="{% url 'home' %}">
             <img src="{% static 'images/aigro1.png' %}" class="nav-logo" alt="AIGRO Logo">
         </a>
-        <div class="nav-links">
+                <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
             <div class="dropdown">
-                <a href="{% url 'services' %}" class="dropdown-title">
+                <a href="{% url 'services' %}" class="dropdown-title" aria-haspopup="true" aria-expanded="false">
                     Services
                 </a>
 
@@ -341,6 +346,7 @@
     </div>
 
     <script src="{% static 'js/services/services.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
 </body>
 
 </html>
