@@ -23,7 +23,8 @@
         <a href="{% url 'home' %}">
             <img src="{% static 'images/aigro1.png' %}" class="nav-logo" alt="AIGRO Logo">
         </a>
-                <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+            aria-controls="nav-links">
             <span></span>
             <span></span>
             <span></span>
@@ -233,55 +234,64 @@
         </div>
         <div class="solutions-cta"><a href="{% url 'contact_us' %}" class="btn-primary">Get Started →</a></div>
     </section>
-
     <section class="testimonials grid-bg">
-        <div class="testi-header">
-            <h2>Don't just take our word for it</h2>
-            <p>Read what our clients have to say</p>
-        </div>
-        <div class="testi-viewport">
-            <div class="testi-track" id="testiTrack">
-                <div class="testi-card">
-                    <p class="quote">He delivers every single one of my projects as soon as possible! I was hesitant at
-                        first, but they nailed it. AiGRO is a professional — I think he may be the best I've
-                        experienced. I will continue using AiGRO Group for the rest of my career.</p>
-                    <div class="testi-author">
-                        <div class="avatar" style="background:#0d7377;">LK</div>
-                        <div>
-                            <div class="author-name">Lara K.</div>
-                            <div class="author-loc">Owner, Shade Hub</div>
+        <div class="testi-layout">
+            <div class="testi-side">
+                <div class="testi-header">
+                    <h2>Don't just take our word for it</h2>
+                    <p>Read what our clients have to say</p>
+                </div>
+
+                <div class="testi-nav">
+                    <button class="testi-btn" id="testiPrev" aria-label="Previous review">&larr;</button>
+                    <button class="testi-btn" id="testiNext" aria-label="Next review">&rarr;</button>
+                    <div class="testi-dots" id="testiDots"></div>
+                    <span class="testi-counter"><span id="testiCurrent">1</span> / <span id="testiTotal">3</span></span>
+                </div>
+            </div>
+
+            <div class="testi-viewport">
+                <div class="testi-track" id="testiTrack">
+                    <div class="testi-card">
+                        <p class="quote">He delivers every single one of my projects as soon as possible! I was hesitant at
+                            first, but they nailed it. AiGRO is a professional &mdash; I think he may be the best I've
+                            experienced. I will continue using AiGRO Group for the rest of my career.</p>
+                        <div class="testi-author">
+                            <div class="avatar" style="background:linear-gradient(135deg,#0d7377,#0d9ba1);">LK</div>
+                            <div>
+                                <div class="author-name">Lara K.</div>
+                                <div class="author-loc">Owner, Shade Hub</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="testi-card">
-                    <p class="quote">Where do I begin? The amazing treatment I got was outstanding! Tony made it very
-                        simple showing me the ins and outs, making my website exactly how I wanted it. I just love how
-                        it was perfectly put together. Thank you tons! Couldn't have done it without you!</p>
-                    <div class="testi-author">
-                        <div class="avatar" style="background:#1a6b5a;">NZ</div>
-                        <div>
-                            <div class="author-name">Ninya Z.</div>
-                            <div class="author-loc">San Diego, CA</div>
+
+                    <div class="testi-card">
+                        <p class="quote">Where do I begin? The amazing treatment I got was outstanding! Tony made it very
+                            simple showing me the ins and outs, making my website exactly how I wanted it. I just love how
+                            it was perfectly put together. Thank you tons! Couldn't have done it without you!</p>
+                        <div class="testi-author">
+                            <div class="avatar" style="background:linear-gradient(135deg,#1a6b5a,#27a080);">NZ</div>
+                            <div>
+                                <div class="author-name">Ninya Z.</div>
+                                <div class="author-loc">San Diego, CA</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="testi-card">
-                    <p class="quote">Tony and his Staff have gone above and beyond in catering to my website needs. They
-                        have been very accommodating and attentive to customization, making sure fonts, ideas, and
-                        formatting were exactly as desired. I couldn't be happier!</p>
-                    <div class="testi-author">
-                        <div class="avatar" style="background:#4a3a8c;">AS</div>
-                        <div>
-                            <div class="author-name">American Savings Z.</div>
-                            <div class="author-loc">Sacramento/Roseville, CA</div>
+
+                    <div class="testi-card">
+                        <p class="quote">Tony and his Staff have gone above and beyond in catering to my website needs. They
+                            have been very accommodating and attentive to customization, making sure fonts, ideas, and
+                            formatting were exactly as desired. I couldn't be happier!</p>
+                        <div class="testi-author">
+                            <div class="avatar" style="background:linear-gradient(135deg,#4a3a8c,#7c5cfc);">AS</div>
+                            <div>
+                                <div class="author-name">American Savings Z.</div>
+                                <div class="author-loc">Sacramento/Roseville, CA</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="testi-nav">
-            <button class="testi-btn" id="testiPrev">←</button>
-            <button class="testi-btn" id="testiNext">→</button>
         </div>
     </section>
 
@@ -330,6 +340,7 @@
     <footer>
         <div class="footer-top">
             <div class="footer-links">
+                <a href="{% url 'home' %}">HomePage</a>
                 <a href="{% url 'about_us' %}">About AiGRO</a>
                 <a href="{% url 'contact_us' %}">Contact Us</a>
                 <a href="{% url 'services' %}">Services</a>
