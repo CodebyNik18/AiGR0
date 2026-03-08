@@ -55,3 +55,20 @@ class Home_ApproachSection(models.Model):
     
 #     def __str__(self):
 #         return self.career_title
+
+
+# class FAQ(models.Model):
+#     ADMIN_SERVICE_CHOICE = [
+#         ('WDD', 'Web Design Dev'),
+#         ('SEO', 'Search Engine Optimization'),
+#         ('GA', 'Google Ads'),
+#         ('SM', 'Social Marketing'),
+#         ('VM', 'Video Marketing'),
+#         ('PR', 'Public Relations'),
+#     ]
+    
+#     services = models.CharField(choices=ADMIN_SERVICE_CHOICE)
+#     question = models.CharField(max_length=250)
+#     answer = models.CharField(max_length=300)
+#     created_at = models.DateTimeField(auto_now=True)
+#     updated_at = models.DateTimeField(auto_now_add=True)
