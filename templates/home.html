@@ -5,7 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if hero_data %}
     <title> {{hero_data.page_title}} </title> <!--AiGRO  Group – Digital Marketing Firm-->
+    {% else %}
+    <title> AiGRO Group – Digital Marketing Firm </title>
+    {% endif %}
     <link rel="icon" type="image/png" href="{% static 'images/aigrow.png' %}">
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;600;700&display=swap"
@@ -44,10 +48,16 @@
         <canvas id="hero-canvas"></canvas>
         <div class="hero-content">
             <div class="hero-tag">✦ Digital Marketing Agency ✦</div>
+            {% if hero_data %}
             <h1><span> {{hero_data.hero_title}} </span></h1>
             <!--Digital marketing firm dedicated to your  success.-->
             <p> {{hero_data.hero_body}} </p>
             <!--We pride ourselves on our commitment to staying up-to-date with the latest trends and best practices in digital marketing.-->
+            {% else %}
+            <h1><span> Digital marketing firm dedicated to your success. </span></h1>
+            <p> We pride ourselves on our commitment to staying up-to-date with the latest trends and best practices in
+                digital marketing.</p>
+            {% endif %}
             <div class="btn-wrap">
                 <a href="{% url 'contact_us' %}" class="btn-primary">Get Started →</a>
                 <div class="btn-pulse"></div>
@@ -97,10 +107,16 @@
 
     <section class="section grid-bg">
         <p class="section-label">Our Approach</p>
+        {% if hero_data %}
         <h2 class="section-title"> {{approach_data.approach_title}} </h2>
         <!--Why Choose AiGRO  Group for Digital  Solutions?-->
         <p class="section-sub"> {{approach_data.approach_body}} </p>
         <!--At AiGRO  Group, we optimize  buys and enhance strategies with top-tier tools, ensuring maximum reach and performance across platforms.-->
+        {% else %}
+        <h2 class="section-title">Why Choose AiGRO Group for Digital Solutions?</h2>
+        <p class="section-sub"> {{approach_data.approach_body}} At AiGRO Group, we optimize buys and enhance strategies
+            with top-tier tools, ensuring maximum reach and performance across platforms.</p>
+        {% endif %}
         <div class="features-grid">
             <div class="feature">
                 <div class="feature-icon">📊</div>
@@ -321,8 +337,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="footer-logo">AiGRO<br><span
-                    style="font-size:.55rem;letter-spacing:4px;color:var(--gray);"> GROUP</span></div>
+            <div class="footer-logo">AiGRO<br><span style="font-size:.55rem;letter-spacing:4px;color:var(--gray);">
+                    GROUP</span></div>
             <div class="footer-copy">© Copyright 2024 AiGRO Group. All rights reserved.</div>
         </div>
     </footer>
