@@ -12,6 +12,8 @@
     --navy2: #08142a;
     --navy3: #0b1c36;
     --card: #0c1e34;
+    --layout-max-width: 1320px;
+    --layout-side-padding: clamp(16px, 3.8vw, 44px);
 
     /* Vibrant accent palette */
     --cyan: #00d4ff;
@@ -92,7 +94,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5%;
+    padding: 0;
     height: 75px;
     background: rgba(3, 8, 16, 0);
     backdrop-filter: blur(0);
@@ -134,9 +136,12 @@ nav.scrolled {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 40px;
+    width: min(var(--layout-max-width), calc(100% - (var(--layout-side-padding) * 2)));
+    margin-inline: auto;
+    padding: 10px 0;
     position: relative;
     z-index: 1000;
+    gap: 1rem;
 }
 
 .nav-logo span {
@@ -2032,7 +2037,7 @@ nav.scrolled {
 footer {
     background: var(--ink);
     border-top: 1px solid rgba(0, 212, 255, .07);
-    padding: 3rem 5% 1.8rem;
+    padding: 3rem 0 1.8rem;
 }
 
 .footer-top {
@@ -2040,13 +2045,15 @@ footer {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1.2rem;
     margin-bottom: 2rem;
+    width: min(var(--layout-max-width), calc(100% - (var(--layout-side-padding) * 2)));
+    margin-inline: auto;
 }
 
 .footer-links {
     display: flex;
-    gap: 2.2rem;
+    gap: 1.4rem;
     flex-wrap: wrap;
 }
 
@@ -2112,6 +2119,8 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
+    width: min(var(--layout-max-width), calc(100% - (var(--layout-side-padding) * 2)));
+    margin-inline: auto;
 }
 
 .footer-logo {
@@ -2275,7 +2284,7 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 12px 15px;
+        padding: 12px 0;
     }
 
     .nav-links {
@@ -2340,7 +2349,7 @@ body.menu-open {
 
 @media (max-width: 992px) {
     #navbar {
-        padding: 0 14px !important;
+        padding: 0 !important;
         z-index: 1000;
     }
 
