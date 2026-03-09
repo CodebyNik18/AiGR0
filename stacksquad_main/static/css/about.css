@@ -1425,3 +1425,36 @@ footer {
         display: none;
     }
 }
+
+/* Shared Global Alignment: Navbar + Footer */
+:root {
+    --layout-max-width: 1320px;
+    --layout-side-padding: 16px;
+    --layout-inline-padding: max(var(--layout-side-padding), calc((100vw - var(--layout-max-width)) / 2));
+    --layout-link-gap: clamp(1rem, 1.9vw, 1.45rem);
+}
+
+#navbar {
+    padding-inline: var(--layout-inline-padding) !important;
+}
+
+footer {
+    padding-inline: var(--layout-inline-padding) !important;
+}
+
+.nav-links,
+.nav-r {
+    gap: var(--layout-link-gap);
+}
+
+.footer-links,
+.ft-links {
+    gap: var(--layout-link-gap);
+}
+
+@media (max-width: 768px) {
+    #navbar,
+    footer {
+        padding-inline: max(14px, var(--layout-side-padding)) !important;
+    }
+}
