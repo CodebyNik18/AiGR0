@@ -813,6 +813,7 @@ footer {
 .ft-bottom {
     border-top: 1px solid rgba(255, 255, 255, .06);
     padding-top: 1.1rem;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1183,4 +1184,14 @@ footer {
     footer {
         padding-inline: max(14px, var(--layout-side-padding)) !important;
     }
+}
+
+/* Footer links white across pages */
+.footer-links a,
+.ft-links a,
+.footer-links a:hover,
+.ft-links a:hover,
+.footer-links a.active,
+.ft-links a.active {
+    color: #ffffff !important;
 }

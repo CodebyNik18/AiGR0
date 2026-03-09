@@ -1248,12 +1248,12 @@ nav.scrolled {
 }
 
 #testiNext {
-    border: 1px solid rgba(0, 212, 255, .65);
+    border: none;
 }
 
 .testi-btn:hover {
     color: var(--cyan);
-    background: rgba(0, 212, 255, .1);
+    background: transparent;
 }
 
 .testi-btn:disabled {
@@ -2521,4 +2521,14 @@ body.menu-open {
     .hero-left h1 {
         font-size: clamp(1.85rem, 9vw, 2.6rem) !important;
     }
+}
+
+/* Footer links white across pages */
+.footer-links a,
+.ft-links a,
+.footer-links a:hover,
+.ft-links a:hover,
+.footer-links a.active,
+.ft-links a.active {
+    color: #ffffff !important;
 }
