@@ -966,6 +966,7 @@ footer {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
+    color: white;
 }
 
 .footer-links a {
@@ -1040,7 +1041,7 @@ footer {
 
 .footer-copy {
     font-size: 0.72rem;
-    color: var(--gray);
+    color: white;
 }
 
 @keyframes fadeUp {

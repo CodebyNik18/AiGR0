@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% if hero_data %}
-    <title> {{hero_data.page_title}} </title> <!--AiGRO  Group – Digital Marketing Firm-->
+    <title> {{hero_data.page_title}} </title> <!--AiGR0  Group – Digital Marketing Firm-->
     {% else %}
-    <title> AiGRO Group – Digital Marketing Firm </title>
+    <title> AiGR0 Group – Digital Marketing Firm </title>
     {% endif %}
-    <link rel="icon" type="image/png" href="{% static 'images/aigrow.png' %}">
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;600;700&display=swap"
         rel="stylesheet">
+    <link rel="icon" type="image/png" href="{% static 'images/aigro1.png' %}">
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 
@@ -21,7 +21,7 @@
 
     <nav id="navbar">
         <a href="{% url 'home' %}">
-            <img src="{% static 'images/aigro1.png' %}" class="nav-logo" alt="AIGRO Logo">
+            <img src="{% static 'images/aigro1.png' %}" class="nav-logo" alt="AiGR0 Logo">
         </a>
         <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
             aria-controls="nav-links">
@@ -115,44 +115,50 @@
         <p class="section-label">Our Approach</p>
         {% if hero_data %}
         <h2 class="section-title"> {{approach_data.approach_title}} </h2>
-        <!--Why Choose AiGRO  Group for Digital  Solutions?-->
+        <!--Why Choose AiGR0  Group for Digital  Solutions?-->
         <p class="section-sub"> {{approach_data.approach_body}} </p>
-        <!--At AiGRO  Group, we optimize  buys and enhance strategies with top-tier tools, ensuring maximum reach and performance across platforms.-->
+        <!--At AiGR0  Group, we optimize  buys and enhance strategies with top-tier tools, ensuring maximum reach and performance across platforms.-->
         {% else %}
-        <h2 class="section-title">Why Choose AiGRO Group for Digital Solutions?</h2>
-        <p class="section-sub"> {{approach_data.approach_body}} At AiGRO Group, we optimize buys and enhance strategies
+        <h2 class="section-title">Why Choose AiGR0 Group for Digital Solutions?</h2>
+        <p class="section-sub"> {{approach_data.approach_body}} At AiGR0 Group, we optimize buys and enhance strategies
             with top-tier tools, ensuring maximum reach and performance across platforms.</p>
         {% endif %}
         <div class="features-grid">
             <div class="feature">
                 <div class="feature-icon">📊</div>
                 <h4>Data Tracking</h4>
-                <p>Precision analytics measuring every touchpoint across your campaigns in real time.</p>
+                <p>Track campaign performance with advanced marketing analytics and real-time data insights across all
+                    paid media channels.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">⚡</div>
                 <h4>Performance Assessment</h4>
-                <p>In-depth evaluation to identify and unlock growth opportunities fast.</p>
+                <p>Analyze campaign data to measure ROI, identify growth opportunities, and improve overall advertising
+                    performance.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">🎯</div>
                 <h4>Strategic Targeting</h4>
-                <p>Pinpoint your ideal customers with advanced multi-platform targeting.</p>
+                <p>Reach the right audience using data-driven targeting across Google Ads, social media, and
+                    programmatic platforms.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">📡</div>
                 <h4> Buying</h4>
-                <p>Strategic buys maximizing your ROI and reach across every channel.</p>
+                <p>Strategic media buying that maximizes ad reach, improves cost efficiency, and delivers higher return
+                    on ad spend.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">🔧</div>
                 <h4>Campaign Optimization</h4>
-                <p>Continuous campaign tuning keeping performance at absolute peak 24/7.</p>
+                <p>Continuously optimize PPC and paid media campaigns using testing, data insights, and performance
+                    monitoring.</p>
             </div>
             <div class="feature">
                 <div class="feature-icon">🤝</div>
                 <h4>Client Support</h4>
-                <p>Dedicated support team committed to your success every step of the way.</p>
+                <p>Dedicated support ensuring smooth campaign execution, clear reporting, and long-term advertising
+                    success.</p>
             </div>
         </div>
     </section>
@@ -160,7 +166,7 @@
     <section class="section solutions">
         <p class="section-label">What We Offer</p>
         <h2 class="section-title">Solutions Tailored to your Business</h2>
-        <p class="section-sub">At AiGRO Group, we empower your business to grow with customized digital
+        <p class="section-sub">At AiGR0 Group, we empower your business to grow with customized digital
             marketing strategies designed for success.</p>
         <div class="services-grid">
             <div class="service-card">
@@ -253,9 +259,11 @@
             <div class="testi-viewport">
                 <div class="testi-track" id="testiTrack">
                     <div class="testi-card">
-                        <p class="quote">He delivers every single one of my projects as soon as possible! I was hesitant at
-                            first, but they nailed it. AiGRO is a professional &mdash; I think he may be the best I've
-                            experienced. I will continue using AiGRO Group for the rest of my career.</p>
+                        <div class="rv-stars">★★★★★</div>
+                        <p class="quote">He delivers every single one of my projects as soon as possible! I was hesitant
+                            at
+                            first, but they nailed it. AiGR0 is a professional &mdash; I think he may be the best I've
+                            experienced. I will continue using AiGR0 Group for the rest of my career.</p>
                         <div class="testi-author">
                             <div class="avatar" style="background:linear-gradient(135deg,#0d7377,#0d9ba1);">LK</div>
                             <div>
@@ -266,8 +274,11 @@
                     </div>
 
                     <div class="testi-card">
-                        <p class="quote">Where do I begin? The amazing treatment I got was outstanding! Tony made it very
-                            simple showing me the ins and outs, making my website exactly how I wanted it. I just love how
+                        <div class="rv-stars">★★★★★</div>
+                        <p class="quote">Where do I begin? The amazing treatment I got was outstanding! Tony made it
+                            very
+                            simple showing me the ins and outs, making my website exactly how I wanted it. I just love
+                            how
                             it was perfectly put together. Thank you tons! Couldn't have done it without you!</p>
                         <div class="testi-author">
                             <div class="avatar" style="background:linear-gradient(135deg,#1a6b5a,#27a080);">NZ</div>
@@ -279,7 +290,9 @@
                     </div>
 
                     <div class="testi-card">
-                        <p class="quote">Tony and his Staff have gone above and beyond in catering to my website needs. They
+                        <div class="rv-stars">★★★★★</div>
+                        <p class="quote">Tony and his Staff have gone above and beyond in catering to my website needs.
+                            They
                             have been very accommodating and attentive to customization, making sure fonts, ideas, and
                             formatting were exactly as desired. I couldn't be happier!</p>
                         <div class="testi-author">
@@ -287,6 +300,48 @@
                             <div>
                                 <div class="author-name">American Savings Z.</div>
                                 <div class="author-loc">Sacramento/Roseville, CA</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testi-card">
+                        <div class="rv-stars">★★★★★</div>
+                        <p class="quote">"This agency was super helpful and very responsive to all my questions. I felt
+                            that they heard me and were able to help bring out the best in my business with their social
+                            ads. Arianna set clear goals...</p>
+                        <div class="testi-author">
+                            <div class="avatar" style="background:linear-gradient(135deg,#4a3a8c,#7c5cfc);">AS</div>
+                            <div>
+                                <div class="author-name">John I.</div>
+                                <div class="author-loc">Australia</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testi-card">
+                        <div class="rv-stars">★★★★★</div>
+                        <p class="quote">"I want to thank Anuj for helping me improve my digital IQ and significantly
+                            boosting my sales. Their expertise in digital marketing has been invaluable — from improving
+                            campaigns to better targeting and optimization...</p>
+                        <div class="testi-author">
+                            <div class="avatar" style="background:linear-gradient(135deg,#4a3a8c,#7c5cfc);">AS</div>
+                            <div>
+                                <div class="author-name">Zack</div>
+                                <div class="author-loc">Canada</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testi-card">
+                        <div class="rv-stars">★★★★★</div>
+                        <p class="quote">"One of the most helpful experiences I've ever had working with an agency. True
+                            problem solvers with a kind attitude! Had the best time working through some things. Huge
+                            shoutout and thanks to Rochelle and Mark!"</p>
+                        <div class="testi-author">
+                            <div class="avatar" style="background:linear-gradient(135deg,#4a3a8c,#7c5cfc);">AS</div>
+                            <div>
+                                <div class="author-name">Frank R.</div>
+                                <div class="author-loc">Malaysia</div>
                             </div>
                         </div>
                     </div>
@@ -330,7 +385,7 @@
     <section class="cta-section grid-bg">
         <div class="cta-box">
             <h2>Ready to elevate your business and<br>unlock new growth?</h2>
-            <p>AiGRO Group offers a comprehensive suite of digital marketing services to help you establish
+            <p>AiGR0 Group offers a comprehensive suite of digital marketing services to help you establish
                 a
                 strong online presence, attract and retain customers, and achieve your growth goals.</p>
             <a href="{% url 'contact_us' %}" class="btn-dark">📅 Read Our Growth Report — Get Started</a>
@@ -340,8 +395,8 @@
     <footer>
         <div class="footer-top">
             <div class="footer-links">
-                <a href="{% url 'home' %}">HomePage</a>
-                <a href="{% url 'about_us' %}">About AiGRO</a>
+                <!-- <a href="{% url 'home' %}">HomePage</a> -->
+                <a href="{% url 'about_us' %}">About AiGR0</a>
                 <a href="{% url 'contact_us' %}">Contact Us</a>
                 <a href="{% url 'services' %}">Services</a>
                 <a href="{% url 'career' %}">Careers</a>
@@ -353,9 +408,9 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="footer-logo">AiGRO<br><span style="font-size:.55rem;letter-spacing:4px;color:var(--gray);">
-                    GROUP</span></div>
-            <div class="footer-copy">© Copyright 2024 AiGRO Group. All rights reserved.</div>
+            <div class="footer-logo">AiGR0<br><span
+                    style="font-size:.55rem;letter-spacing:4px;color:var(--gray);"></span></div>
+            <div class="footer-copy">© Copyright 2024 AiGR0 Group. All rights reserved.</div>
         </div>
     </footer>
     <script src="{% static 'js/home.js' %}"></script>

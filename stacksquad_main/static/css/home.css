@@ -1303,7 +1303,7 @@ nav.scrolled {
 
 .testi-card {
     flex: 0 0 clamp(380px, 31vw, 450px);
-    background: #ececef;
+    background: #ececf0d2;
     border-radius: 9px;
     border: 1px solid rgba(7, 27, 49, .06);
     box-shadow: 0 12px 30px rgba(0, 0, 0, .14);
@@ -1336,7 +1336,7 @@ nav.scrolled {
 .quote {
     font-size: 1.03rem;
     line-height: 1.55;
-    color: rgba(6, 34, 63, .72);
+    color: rgb(0, 0, 0);
     margin-bottom: 1.8rem;
 }
 
@@ -1345,7 +1345,11 @@ nav.scrolled {
     align-items: center;
     gap: .9rem;
 }
-
+.rv-stars {
+    color: #f59e0b;
+    display: flex;
+    gap: 2px;
+}
 .avatar {
     width: 52px;
     height: 52px;
@@ -2058,7 +2062,7 @@ footer {
 }
 
 .footer-links a {
-    color: var(--gray);
+    color: white;
     font-size: .8rem;
     text-decoration: none;
     position: relative;
@@ -2128,12 +2132,12 @@ footer {
     font-size: 1.15rem;
     font-weight: 700;
     letter-spacing: 2.5px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .footer-copy {
     font-size: .72rem;
-    color: rgba(238, 244, 255, .22);
+    color: white;
     letter-spacing: .3px;
 }
 

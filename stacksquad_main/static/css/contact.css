@@ -1020,6 +1020,7 @@ footer::before {
 .ft-links {
     display: flex;
     gap: 32px;
+    color: white;
 }
 
 .ft-links a {
@@ -1062,7 +1063,7 @@ footer::before {
 
 .ft-copy {
     font-size: 0.78rem;
-    color: var(--muted);
+    color: white;
     letter-spacing: 0.04em;
 }
 
