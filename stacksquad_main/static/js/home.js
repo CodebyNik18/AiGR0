@@ -138,6 +138,7 @@ document.querySelectorAll('.stat-num[data-target]').forEach((el) => cntObs.obser
     const total = cards.length;
     let idx = 0;
     let startX = 0;
+    let maxIndex = 0;
 
     if (!total) return;
 
@@ -152,24 +153,36 @@ document.querySelectorAll('.stat-num[data-target]').forEach((el) => cntObs.obser
         dotsWrap.appendChild(dot);
     });
 
-    const getMaxOffset = () => Math.max(0, track.scrollWidth - viewport.clientWidth);
+    const getTrackGap = () => {
+        const styles = window.getComputedStyle(track);
+        return Number.parseFloat(styles.gap || '0') || 0;
+    };
+
+    const getCardStep = () => {
+        if (!cards[0]) return 0;
+        return cards[0].getBoundingClientRect().width + getTrackGap();
+    };
 
     const render = () => {
-        const maxOffset = getMaxOffset();
-        const offset = total > 1 ? (maxOffset * idx) / (total - 1) : 0;
+        const maxOffset = Math.max(0, track.scrollWidth - viewport.clientWidth);
+        const step = getCardStep();
+        maxIndex = step > 0 ? Math.ceil(maxOffset / step) : 0;
+        idx = Math.max(0, Math.min(idx, maxIndex));
+
+        const offset = Math.min(maxOffset, idx * step);
         track.style.transform = `translateX(-${offset}px)`;
 
         [...dotsWrap.children].forEach((dot, i) => {
             dot.classList.toggle('active', i === idx);
         });
 
-        curEl.textContent = String(idx + 1);
+        curEl.textContent = String(Math.min(idx + 1, total));
         btnPrev.disabled = idx === 0;
-        btnNext.disabled = idx === total - 1 || maxOffset <= 1;
+        btnNext.disabled = idx >= maxIndex || maxOffset <= 1;
     };
 
     function goTo(n) {
-        idx = Math.max(0, Math.min(n, total - 1));
+        idx = Math.max(0, Math.min(n, maxIndex));
         render();
     }
 
