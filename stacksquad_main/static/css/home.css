@@ -1345,11 +1345,13 @@ nav.scrolled {
     align-items: center;
     gap: .9rem;
 }
+
 .rv-stars {
     color: #f59e0b;
     display: flex;
     gap: 2px;
 }
+
 .avatar {
     width: 52px;
     height: 52px;
@@ -1451,6 +1453,7 @@ nav.scrolled {
         margin-left: 0;
     }
 }
+
 .stories {
     background: var(--navy3);
     padding: 116px 5%;
@@ -2531,4 +2534,29 @@ body.menu-open {
 .footer-links a.active,
 .ft-links a.active {
     color: #ffffff !important;
+}
+
+/* ── Hero height fix — paste at very bottom, replace previous fix ── */
+.hero {
+    min-height: unset;
+    padding-top: clamp(60px, 7vh, 120px);
+    padding-bottom: clamp(30px, 5vh, 80px);
+}
+
+.hero h1 {
+    font-size: clamp(1.9rem, 4.8vw, 4.5rem);
+    margin-bottom: clamp(.5rem, 1.5vh, 1.5rem);
+}
+
+.hero p {
+    margin-bottom: clamp(.8rem, 2vh, 2.4rem);
+}
+
+.hero-tag {
+    margin-bottom: clamp(.6rem, 1.5vh, 1.6rem);
+}
+
+.trusted {
+    padding-top: clamp(20px, 3vh, 55px);
+    padding-bottom: clamp(20px, 3vh, 55px);
 }
