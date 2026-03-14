@@ -2895,6 +2895,7 @@ footer {
 /* The actual logo image */
 .logo-wrap .logo-img,
 .logo-wrap img {
+    margin-top: 25px;
     height: 125px;
     display: block;
     position: relative;
@@ -2910,7 +2911,7 @@ footer {
 .logo-wrap:hover img {
     transform: translateY(-4px) scale(1.07);
     filter:
-        drop-shadow(0 0 10px rgba(244, 124, 32, .65)) drop-shadow(0 0 24px rgba(244, 124, 32, .30));
+        drop-shadow(0 0 10px rgba(238, 106, 5, 0.348)) drop-shadow(0 0 24px rgba(239, 107, 6, 0.3));
 }
 
 /* Click press */
@@ -2921,21 +2922,6 @@ footer {
     transition: transform .1s, filter .1s;
 }
 
-/* ── Expanding ripple ring ── */
-.logo-ring {
-    position: absolute;
-    inset: -4px;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0;
-    transition: none;
-}
-
-.logo-wrap:hover .logo-ring {
-    animation: logoRipple .55s ease-out forwards;
-}
 
 @keyframes logoRipple {
     0% {
@@ -2951,29 +2937,6 @@ footer {
         opacity: 0;
         transform: scale(1.35);
     }
-}
-
-/* ── White shimmer sweep ── */
-.logo-shine {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 8px;
-    background: linear-gradient(110deg,
-            transparent 25%,
-            rgba(255, 255, 255, .55) 50%,
-            transparent 75%);
-    pointer-events: none;
-    z-index: 3;
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: none;
-}
-
-.logo-wrap:hover .logo-shine {
-    animation: logoShimmer .5s .05s ease forwards;
 }
 
 @keyframes logoShimmer {

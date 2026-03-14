@@ -8,7 +8,7 @@ def googleadservice(request):
 
 
 def publicservice(request):
-    return render(request=request, template_name='public_service.html')
+    return render(request=request, template_name='creative_graphic.html')
 
 
 def seoservice(request):
