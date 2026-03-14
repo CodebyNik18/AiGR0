@@ -2851,3 +2851,168 @@ footer {
     transform: translateY(-3px) scale(1.12);
     box-shadow: 0 6px 20px rgba(244, 124, 32, .25);
 }
+
+/* ================================================================
+   LOGO HOVER ANIMATION — Guaranteed working
+   Paste at the bottom of any page CSS
+   ================================================================ */
+
+/* ── Wrap the logo tag with this structure in HTML:
+   <a href="/" class="nav-logo logo-wrap">
+       <img src="your-logo.png" class="logo-img" />
+       <span class="logo-ring"></span>
+       <span class="logo-shine"></span>
+   </a>
+   ──────────────────────────────────────────────── */
+
+/* Wrapper */
+.logo-wrap {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* The actual logo image */
+.logo-wrap .logo-img,
+.logo-wrap img {
+    height: 125px;
+    display: block;
+    position: relative;
+    z-index: 2;
+    transition:
+        transform .38s cubic-bezier(.34, 1.56, .64, 1),
+        filter .38s ease;
+    transform-origin: center bottom;
+}
+
+/* Hover: lift + bounce + orange glow */
+.logo-wrap:hover .logo-img,
+.logo-wrap:hover img {
+    transform: translateY(-4px) scale(1.07);
+    filter:
+        drop-shadow(0 0 10px rgba(244, 124, 32, .65)) drop-shadow(0 0 24px rgba(244, 124, 32, .30));
+}
+
+/* Click press */
+.logo-wrap:active .logo-img,
+.logo-wrap:active img {
+    transform: scale(.95) translateY(0px);
+    filter: drop-shadow(0 0 5px rgba(244, 124, 32, .4));
+    transition: transform .1s, filter .1s;
+}
+
+/* ── Expanding ripple ring ── */
+.logo-ring {
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: none;
+}
+
+.logo-wrap:hover .logo-ring {
+    animation: logoRipple .55s ease-out forwards;
+}
+
+@keyframes logoRipple {
+    0% {
+        inset: 0px;
+        border-color: rgba(244, 124, 32, .8);
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        inset: -14px;
+        border-color: rgba(244, 124, 32, 0);
+        opacity: 0;
+        transform: scale(1.35);
+    }
+}
+
+/* ── White shimmer sweep ── */
+.logo-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px;
+    background: linear-gradient(110deg,
+            transparent 25%,
+            rgba(255, 255, 255, .55) 50%,
+            transparent 75%);
+    pointer-events: none;
+    z-index: 3;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: none;
+}
+
+.logo-wrap:hover .logo-shine {
+    animation: logoShimmer .5s .05s ease forwards;
+}
+
+@keyframes logoShimmer {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) skewX(-10deg);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(200%) skewX(-10deg);
+    }
+}
+
+/* ── Orange dot that pops in under logo ── */
+.logo-dot {
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #f47c20;
+    pointer-events: none;
+    z-index: 4;
+    transform: translateX(-50%) scale(0);
+    transition: transform .3s cubic-bezier(.34, 1.56, .64, 1);
+    box-shadow: 0 0 8px rgba(244, 124, 32, .6);
+}
+
+.logo-wrap:hover .logo-dot {
+    transform: translateX(-50%) scale(1);
+}
+
+/* ── Page-load bounce-in (fires once) ── */
+@keyframes logoBounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(.7) translateY(-8px);
+    }
+
+    65% {
+        opacity: 1;
+        transform: scale(1.08) translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.logo-wrap .logo-img,
+.logo-wrap img {
+    animation: logoBounceIn .7s .2s cubic-bezier(.34, 1.56, .64, 1) both;
+}
