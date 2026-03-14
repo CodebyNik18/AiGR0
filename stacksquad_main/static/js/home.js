@@ -237,3 +237,4 @@ document.querySelectorAll('.btn-primary,.btn-cta,.btn-dark').forEach((btn) => {
 document.querySelectorAll('a[href="#"]').forEach((a) => {
     a.addEventListener('click', (event) => event.preventDefault());
 });
+

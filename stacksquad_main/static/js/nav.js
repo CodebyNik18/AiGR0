@@ -1,5 +1,6 @@
 (() => {
     const body = document.body;
+    const navbar = document.getElementById('navbar');
     const navLinks = document.getElementById('nav-links');
     const menuToggle = document.querySelector('.menu-toggle');
     const dropdown = navLinks ? navLinks.querySelector('.dropdown') : null;
@@ -7,6 +8,21 @@
     const mobileQuery = window.matchMedia('(max-width: 992px)');
 
     const isMobile = () => mobileQuery.matches;
+    const syncNavOffset = () => {
+        if (!navbar) {
+            return;
+        }
+
+        const navHeight = Math.round(navbar.getBoundingClientRect().height || navbar.offsetHeight || 72);
+        document.documentElement.style.setProperty('--nav-offset', `${navHeight}px`);
+    };
+
+    syncNavOffset();
+    window.addEventListener('resize', syncNavOffset);
+
+    if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', syncNavOffset);
+    }
 
     const closeDropdown = () => {
         if (!dropdown || !dropdownTitle) {
@@ -29,6 +45,7 @@
 
     if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', () => {
+            syncNavOffset();
             const shouldOpen = !navLinks.classList.contains('open');
             navLinks.classList.toggle('open', shouldOpen);
             menuToggle.classList.toggle('open', shouldOpen);
@@ -73,6 +90,7 @@
         });
 
         const onBreakpointChange = () => {
+            syncNavOffset();
             if (!isMobile()) {
                 closeMenu();
             }
