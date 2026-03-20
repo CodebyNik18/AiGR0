@@ -1447,7 +1447,7 @@ footer {
 }
 
 .ft-links a {
-    color: rgba(255, 255, 255, .55) !important;
+    color: white !important;
     font-size: .78rem;
     text-decoration: none;
     position: relative;

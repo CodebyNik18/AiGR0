@@ -966,11 +966,11 @@ footer {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
-    color: white;
+    color: white !important;
 }
 
 .footer-links a {
-    color: var(--gray);
+    color: white !important;
     font-size: 0.8rem;
     text-decoration: none;
     position: relative;
@@ -999,6 +999,7 @@ footer {
 .footer-socials {
     display: flex;
     gap: 0.8rem;
+    color: white;
 }
 
 .social-icon {
@@ -1010,7 +1011,7 @@ footer {
     align-items: center;
     justify-content: center;
     font-size: 0.75rem;
-    color: var(--gray);
+    color: white;
     cursor: pointer;
     transition: all 0.25s;
 }
@@ -2463,10 +2464,11 @@ footer {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
+    color: white;
 }
 
 .footer-links a {
-    color: rgba(255, 255, 255, .55) !important;
+    color: white !important;
     font-size: .8rem;
     text-decoration: none;
     position: relative;
@@ -2594,6 +2596,7 @@ footer {
 .footer-links,
 .ft-links {
     gap: var(--layout-link-gap);
+    color: white;
 }
 
 /* ── RESPONSIVE ─────────────────────────────────────────── */
