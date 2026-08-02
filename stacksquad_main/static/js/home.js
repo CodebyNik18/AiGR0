@@ -43,7 +43,7 @@ if (canvas) {
             draw() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(0,212,255,${this.a})`;
+                ctx.fillStyle = `rgba(244,124,32,${this.a})`;
                 ctx.fill();
             }
         }
@@ -60,7 +60,7 @@ if (canvas) {
                         ctx.beginPath();
                         ctx.moveTo(dots[i].x, dots[i].y);
                         ctx.lineTo(dots[j].x, dots[j].y);
-                        ctx.strokeStyle = `rgba(0,212,255,${0.13 * (1 - d / 115)})`;
+                        ctx.strokeStyle = `rgba(244,124,32,${0.13 * (1 - d / 115)})`;
                         ctx.lineWidth = 0.8;
                         ctx.stroke();
                     }
@@ -237,4 +237,3 @@ document.querySelectorAll('.btn-primary,.btn-cta,.btn-dark').forEach((btn) => {
 document.querySelectorAll('a[href="#"]').forEach((a) => {
     a.addEventListener('click', (event) => event.preventDefault());
 });
-

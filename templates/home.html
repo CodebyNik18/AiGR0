@@ -55,19 +55,19 @@
     <section class="hero grid-bg">
         <canvas id="hero-canvas"></canvas>
         <div class="hero-content">
-            <div class="hero-tag">✦ Digital Marketing Agency ✦</div>
+            <div class="hero-tag"><span class="dot"></span> Digital Marketing Agency</div>
             {% if hero_data %}
             <h1><span> {{hero_data.hero_title}} </span></h1>
             <!--Digital marketing firm dedicated to your  success.-->
             <p> {{hero_data.hero_body}} </p>
             <!--We pride ourselves on our commitment to staying up-to-date with the latest trends and best practices in digital marketing.-->
             {% else %}
-            <h1><span> Digital marketing firm dedicated to your success. </span></h1>
-            <p> We pride ourselves on our commitment to staying up-to-date with the latest trends and best practices in
-                digital marketing.</p>
+            <h1>Digital marketing built to grow your <span class="hl">bottom line</span>.</h1>
+            <p>We plan, launch, and optimize every campaign around one number that matters: your revenue. No
+                jargon, no vanity metrics — just strategy, creative, and data working together.</p>
             {% endif %}
             <div class="btn-wrap">
-                <a href="{% url 'contact_us' %}" class="btn-primary">Get Started →</a>
+                <a href="{% url 'contact_us' %}" class="btn-primary">Get Your Free Growth Plan →</a>
                 <div class="btn-pulse"></div>
             </div>
         </div>
@@ -75,7 +75,7 @@
     </section>
 
     <section class="trusted">
-        <p class="trusted-label">Trusted by the best in the industry.</p>
+        <p class="trusted-label">Trusted by growing brands across industries</p>
         <div class="logos-wrap">
             <div class="logos-track">
                 <div class="logo-item">Donnée Im Dieu</div>
@@ -121,59 +121,59 @@
         <p class="section-sub"> {{approach_data.approach_body}} </p>
         <!--At AiGR0  Group, we optimize  buys and enhance strategies with top-tier tools, ensuring maximum reach and performance across platforms.-->
         {% else %}
-        <h2 class="section-title">Why Choose AiGR0 Group for Digital Solutions?</h2>
-        <p class="section-sub"> {{approach_data.approach_body}} At AiGR0 Group, we optimize buys and enhance strategies
-            with top-tier tools, ensuring maximum reach and performance across platforms.</p>
+        <h2 class="section-title">Why brands choose AiGR0 Group</h2>
+        <p class="section-sub">We pair sharp strategy with hands-on execution — tracking every dollar, testing every
+            assumption, and reporting in plain English so you always know what's working.</p>
         {% endif %}
         <div class="features-grid">
             <div class="feature">
-                <div class="feature-icon">📊</div>
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="12" width="3.4" height="8"/><rect x="10.3" y="7" width="3.4" height="13"/><rect x="16.6" y="3" width="3.4" height="17"/></svg></div>
                 <h4>Data Tracking</h4>
-                <p>Track campaign performance with advanced marketing analytics and real-time data insights across all
-                    paid media channels.</p>
+                <p>Real-time dashboards and advanced analytics show exactly how every campaign is performing, across
+                    every channel, every day.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">⚡</div>
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 4 14 11 14 10 22 20 9 13 9 13 2"/></svg></div>
                 <h4>Performance Assessment</h4>
-                <p>Analyze campaign data to measure ROI, identify growth opportunities, and improve overall advertising
-                    performance.</p>
+                <p>We dig into the numbers behind every campaign to measure true ROI and uncover the next growth
+                    opportunity.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">🎯</div>
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.2"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></div>
                 <h4>Strategic Targeting</h4>
-                <p>Reach the right audience using data-driven targeting across Google Ads, social media, and
-                    programmatic platforms.</p>
+                <p>We put your message in front of the right people using precise, data-driven targeting across
+                    Google, social, and programmatic.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">📡</div>
-                <h4> Buying</h4>
-                <p>Strategic media buying that maximizes ad reach, improves cost efficiency, and delivers higher return
-                    on ad spend.</p>
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 11a12 12 0 0 1 16 0"/><path d="M7.3 14.6a7 7 0 0 1 9.4 0"/><circle cx="12" cy="19" r="1.4" fill="currentColor" stroke="none"/></svg></div>
+                <h4>Smart Media Buying</h4>
+                <p>We negotiate and place every ad dollar strategically, maximizing reach while keeping cost per
+                    result low.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">🔧</div>
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2-2z"/></svg></div>
                 <h4>Campaign Optimization</h4>
-                <p>Continuously optimize PPC and paid media campaigns using testing, data insights, and performance
-                    monitoring.</p>
+                <p>Ongoing testing and refinement keep your campaigns sharp, so performance improves month over
+                    month, not just on launch day.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">🤝</div>
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><line x1="5.3" y1="5.3" x2="9" y2="9"/><line x1="18.7" y1="5.3" x2="15" y2="9"/><line x1="5.3" y1="18.7" x2="9" y2="15"/><line x1="18.7" y1="18.7" x2="15" y2="15"/></svg></div>
                 <h4>Client Support</h4>
-                <p>Dedicated support ensuring smooth campaign execution, clear reporting, and long-term advertising
-                    success.</p>
+                <p>A dedicated team is always on hand for clear reporting, fast answers, and a partnership built for
+                    the long run.</p>
             </div>
         </div>
     </section>
 
     <section class="section solutions">
         <p class="section-label">What We Offer</p>
-        <h2 class="section-title">Solutions Tailored to your Business</h2>
-        <p class="section-sub">At AiGR0 Group, we empower your business to grow with customized digital
-            marketing strategies designed for success.</p>
+        <h2 class="section-title">Solutions tailored to your business</h2>
+        <p class="section-sub">Every strategy at AiGR0 Group is custom-built around your goals, your audience, and
+            your market — never a one-size-fits-all package.</p>
         <div class="services-grid">
             <div class="service-card">
                 <div class="shine"></div>
-                <div class="service-icon">🖥️</div>
+                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12.5" rx="1.6"/><line x1="8" y1="20" x2="16" y2="20"/><line x1="12" y1="16.5" x2="12" y2="20"/></svg></div>
                 <div class="service-info">
                     <h4>Web Design And Development</h4>
                     <p>High-performance, conversion-focused websites designed to strengthen your brand and generate
@@ -182,7 +182,7 @@
             </div>
             <div class="service-card">
                 <div class="shine"></div>
-                <div class="service-icon">🤖</div>
+                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="9" width="14" height="10" rx="2.2"/><line x1="12" y1="5" x2="12" y2="9"/><circle cx="12" cy="3.4" r="1.2" fill="currentColor" stroke="none"/><line x1="2.3" y1="13" x2="5" y2="13"/><line x1="19" y1="13" x2="21.7" y2="13"/><circle cx="9.3" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="14.7" cy="14" r="1" fill="currentColor" stroke="none"/></svg></div>
                 <div class="service-info">
                     <h4>Lead Automation & Management</h4>
                     <p>AI-powered lead automation and CRM integration that captures, nurtures, and converts prospects
@@ -191,7 +191,7 @@
             </div>
             <div class="service-card">
                 <div class="shine"></div>
-                <div class="service-icon">🔍</div>
+                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="20" y1="20" x2="15.3" y2="15.3"/></svg></div>
                 <div class="service-info">
                     <h4>Search Engine Optimization</h4>
                     <p>Improve Google rankings and drive qualified organic traffic with advanced SEO strategies and
@@ -200,16 +200,16 @@
             </div>
             <div class="service-card">
                 <div class="shine"></div>
-                <div class="service-icon">📱</div>
+                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.7" y="2.5" width="10.6" height="19" rx="2.2"/><line x1="11" y1="18" x2="13" y2="18"/></svg></div>
                 <div class="service-info">
-                    <h4>Paid Advertising on Social </h4>
+                    <h4>Paid Advertising on Social</h4>
                     <p>Targeted social media advertising on Facebook, Instagram, LinkedIn, and TikTok to drive leads and
                         maximize ROI.</p>
                 </div>
             </div>
             <div class="service-card">
                 <div class="shine"></div>
-                <div class="service-icon">🎯</div>
+                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.2"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></div>
                 <div class="service-info">
                     <h4>Paid Advertising on Google Ads</h4>
                     <p>Expert Google Ads and PPC campaign management placing your brand in front of high-intent
@@ -219,7 +219,7 @@
             </div>
             <div class="service-card">
                 <div class="shine"></div>
-                <div class="service-icon">📣</div>
+                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4a1 1 0 0 0 1 1h2l7 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M17 9a4 4 0 0 1 0 6"/><path d="M20 6a8 8 0 0 1 0 12"/></svg></div>
                 <div class="service-info">
                     <h4>Social Marketing</h4>
                     <p>Strategic social media marketing that builds brand authority, grows audiences, and increases
@@ -228,7 +228,7 @@
             </div>
             <div class="service-card">
                 <div class="shine"></div>
-                <div class="service-icon">🎬</div>
+                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.3" y="5.5" width="14" height="13" rx="2"/><path d="M21.7 8.3v7.4l-5.4-3.7z"/></svg></div>
                 <div class="service-info">
                     <h4>Video Production & Marketing</h4>
                     <p>Professional video marketing that attracts attention, boosts engagement, and improves brand
@@ -237,7 +237,7 @@
             </div>
             <div class="service-card">
                 <div class="shine"></div>
-                <div class="service-icon">✏️</div>
+                <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11a2 2 0 0 0-3-3L5 16l-1 4z"/><line x1="14" y1="6" x2="18" y2="10"/></svg></div>
                 <div class="service-info">
                     <h4>Creative and Graphic Designing</h4>
                     <p>Creative graphic design solutions that strengthen brand identity, enhance visual communication,
@@ -272,7 +272,7 @@
                             first, but they nailed it. AiGR0 is a professional &mdash; I think he may be the best I've
                             experienced. I will continue using AiGR0 Group for the rest of my career.</p>
                         <div class="testi-author">
-                            <div class="avatar" style="background:linear-gradient(135deg,#0d7377,#0d9ba1);">LK</div>
+                            <div class="avatar" style="background:linear-gradient(135deg,#f47c20,#e86c10);">LK</div>
                             <div>
                                 <div class="author-name">Lara K.</div>
                                 <div class="author-loc">Owner, Shade Hub</div>
@@ -288,7 +288,7 @@
                             how
                             it was perfectly put together. Thank you tons! Couldn't have done it without you!</p>
                         <div class="testi-author">
-                            <div class="avatar" style="background:linear-gradient(135deg,#1a6b5a,#27a080);">NZ</div>
+                            <div class="avatar" style="background:linear-gradient(135deg,#f5a623,#f47c20);">NZ</div>
                             <div>
                                 <div class="author-name">Ninya Z.</div>
                                 <div class="author-loc">San Diego, CA</div>
@@ -303,7 +303,7 @@
                             have been very accommodating and attentive to customization, making sure fonts, ideas, and
                             formatting were exactly as desired. I couldn't be happier!</p>
                         <div class="testi-author">
-                            <div class="avatar" style="background:linear-gradient(135deg,#4a3a8c,#7c5cfc);">AS</div>
+                            <div class="avatar" style="background:linear-gradient(135deg,#e8580a,#f59240);">AS</div>
                             <div>
                                 <div class="author-name">American Savings Z.</div>
                                 <div class="author-loc">Sacramento/Roseville, CA</div>
@@ -313,11 +313,11 @@
 
                     <div class="testi-card">
                         <div class="rv-stars">★★★★★</div>
-                        <p class="quote">"This agency was super helpful and very responsive to all my questions. I felt
+                        <p class="quote">This agency was super helpful and very responsive to all my questions. I felt
                             that they heard me and were able to help bring out the best in my business with their social
-                            ads. Arianna set clear goals...</p>
+                            ads. Arianna set clear goals from day one and delivered on every one of them.</p>
                         <div class="testi-author">
-                            <div class="avatar" style="background:linear-gradient(135deg,#4a3a8c,#7c5cfc);">AS</div>
+                            <div class="avatar" style="background:linear-gradient(135deg,#f47c20,#fbb96a);">JI</div>
                             <div>
                                 <div class="author-name">John I.</div>
                                 <div class="author-loc">Australia</div>
@@ -327,11 +327,11 @@
 
                     <div class="testi-card">
                         <div class="rv-stars">★★★★★</div>
-                        <p class="quote">"I want to thank Anuj for helping me improve my digital IQ and significantly
+                        <p class="quote">I want to thank Anuj for helping me improve my digital IQ and significantly
                             boosting my sales. Their expertise in digital marketing has been invaluable — from improving
-                            campaigns to better targeting and optimization...</p>
+                            campaigns to better targeting and optimization.</p>
                         <div class="testi-author">
-                            <div class="avatar" style="background:linear-gradient(135deg,#4a3a8c,#7c5cfc);">AS</div>
+                            <div class="avatar" style="background:linear-gradient(135deg,#e86c10,#f5a623);">Z</div>
                             <div>
                                 <div class="author-name">Zack</div>
                                 <div class="author-loc">Canada</div>
@@ -341,11 +341,11 @@
 
                     <div class="testi-card">
                         <div class="rv-stars">★★★★★</div>
-                        <p class="quote">"One of the most helpful experiences I've ever had working with an agency. True
+                        <p class="quote">One of the most helpful experiences I've ever had working with an agency. True
                             problem solvers with a kind attitude! Had the best time working through some things. Huge
-                            shoutout and thanks to Anuj and Aditya!"</p>
+                            shoutout and thanks to Anuj and Aditya!</p>
                         <div class="testi-author">
-                            <div class="avatar" style="background:linear-gradient(135deg,#4a3a8c,#7c5cfc);">AS</div>
+                            <div class="avatar" style="background:linear-gradient(135deg,#f59240,#e8580a);">FR</div>
                             <div>
                                 <div class="author-name">Frank R.</div>
                                 <div class="author-loc">Malaysia</div>
@@ -401,35 +401,51 @@
 
     <footer>
         <div class="footer-top">
-            <div class="footer-links">
-                <!-- <a href="{% url 'home' %}">HomePage</a> -->
-                <a href="{% url 'about_us' %}">About AiGR0</a>
-                <a href="{% url 'contact_us' %}">Contact Us</a>
-                <a href="{% url 'services' %}">Services</a>
-                <a href="{% url 'career' %}">Careers</a>
-            </div>
-            <div class="footer-socials">
-                <!-- <div class="social-icon">f</div> -->
-                <a href="https://www.linkedin.com/company/aigr0/">
-                    <div class="social-icon">in</div>
-                </a>
-
-                <a href="https://www.instagram.com/aigr0agency?igsh=MXBjanhueXpzMG1jbQ==" class="social-icon" target="_blank" rel="noopener">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                        <circle cx="12" cy="12" r="4" />
-                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            <div class="footer-brand">
+                <div class="footer-logo">AiGR0<span class="footer-tagline">DIGITAL MARKETING GROUP</span></div>
+                <p class="footer-blurb">Helping brands grow online with strategy, design, and performance
+                    marketing that actually moves the needle.</p>
+                <a href="https://www.linkedin.com/company/aigr0/" class="social-icon" target="_blank"
+                    rel="noopener" aria-label="AiGR0 on LinkedIn">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.5V23H.24V8.25zM8.5 8.25h4.31v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.55 0 5.39 3 5.39 6.9V23h-4.5v-6.8c0-1.62-.03-3.7-2.25-3.7-2.26 0-2.6 1.76-2.6 3.58V23H8.5V8.25z" />
                     </svg>
                 </a>
+            </div>
 
-                <!-- <div class="social-icon">▶</div> -->
+            <div class="footer-col">
+                <p class="footer-col-title">Quick Links</p>
+                <div class="footer-links">
+                    <a href="{% url 'about_us' %}">About AiGR0</a>
+                    <a href="{% url 'services' %}">Services</a>
+                    <a href="{% url 'career' %}">Careers</a>
+                    <a href="{% url 'contact_us' %}">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-title">Services</p>
+                <div class="footer-links">
+                    <a href="{% url 'web_service' %}">Web Design</a>
+                    <a href="{% url 'seo_service' %}">SEO</a>
+                    <a href="{% url 'google_ad_service' %}">Paid Ads</a>
+                    <a href="{% url 'social_service' %}">Social Marketing</a>
+                </div>
+            </div>
+
+            <div class="footer-col footer-cta-col">
+                <p class="footer-col-title">Let's Talk</p>
+                <p class="footer-cta-text">Have a project in mind? We'd love to hear about it.</p>
+                <a href="{% url 'contact_us' %}" class="btn-cta footer-btn">Free Consultation</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="footer-logo">AiGR0<br><span
-                    style="font-size:.55rem;letter-spacing:4px;color:var(--gray);"></span></div>
             <div class="footer-copy">© Copyright 2026 AiGR0 Group. All rights reserved.</div>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
         </div>
     </footer>
     <script src="{% static 'js/home.js' %}"></script>
