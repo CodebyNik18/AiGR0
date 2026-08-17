@@ -1,0 +1,287 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbots & Voice AI – AiGR0 Group</title>
+    <link rel="stylesheet" href="{% static 'css/services/ai_chatbots_voice.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/typography.css' %}">
+</head>
+
+<body>
+    <nav id="navbar">
+        <a href="{% url 'home' %}" class="nav-logo logo-wrap">
+            <img src="{% static 'images/aigro2.png' %}" class="logo-img" />
+            <!-- <span class="logo-ring"></span>
+            <span class="logo-shine"></span> -->
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+            aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <div class="dropdown">
+                <a href="{% url 'services' %}" class="dropdown-title" aria-haspopup="true" aria-expanded="false">
+                    Services
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="{% url 'ai_agents_automation' %}">AI Agents & Automation</a>
+                    <a href="{% url 'ai_chatbots_voice' %}">AI Chatbots & Voice AI</a>
+                    <a href="{% url 'ai_powered_marketing' %}">AI-Powered Marketing</a>
+                    <a href="{% url 'ai_development' %}">AI Development</a>
+                    <a href="{% url 'performance_marketing' %}">Performance Marketing</a>
+                </div>
+            </div>
+            <!-- <a href="#">Portfolio</a> -->
+            <a href="{% url 'contact_us' %}">Contact</a>
+            <a href="{% url 'contact_us' %}" class="btn-cta">Free Consultation</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-inner">
+            <div class="hero-left">
+                <div class="breadcrumb">Services <span>›</span> AI Chatbots & Voice AI</div>
+                <div class="hero-eye">Service 08</div>
+                <h1>AI Chatbots &<br><em>Voice AI</em></h1>
+                <p>We build AI chatbots and voice agents that talk to your customers like a real team member —
+                    answering questions, qualifying leads, and resolving support issues over chat, WhatsApp, and
+                    phone calls, 24 hours a day.</p>
+                <div class="hero-btns"><a href="{% url 'contact_us' %}" class="btn-primary">Get Started →</a><a
+                        href="{% url 'services' %}" class="btn-outline">All Services</a></div>
+            </div>
+            <div class="hero-right">
+                <div class="mockup-window">
+
+                    <div class="mockup-body">
+
+                        <h3 style="color:var(--cyan); margin-bottom:1rem;">
+                            What Our Chatbot & Voice AI Strategy Includes
+                        </h3>
+
+                        <p style="color:var(--gray); font-size:.9rem; margin-bottom:1rem; line-height:1.7;">
+                            Our chatbot and voice AI strategies focus on training agents on your real business
+                            knowledge, deploying them where your customers already are, and making sure every
+                            conversation feels natural, accurate, and on-brand.
+                        </p>
+
+                        <ul style="color:var(--gray); font-size:.85rem; line-height:1.9;">
+                            <p>✔ AI customer-support bots</p>
+                            <p>✔ WhatsApp AI</p>
+                            <p>✔ RAG chatbots trained on your data</p>
+                            <p>✔ Voice AI agents</p>
+                            <p>✔ Retell AI integrations</p>
+                            <p>✔ 24/7 automated conversations</p>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section">
+        <p class="section-label">What's Included</p>
+        <h2 class="section-title">Full-funnel chatbot & voice AI deployment</h2>
+        <p class="section-sub">From strategy to build to ongoing tuning — we handle every part of your AI chatbot
+            and voice agent so your team can focus on running the business.</p>
+        <div class="included-grid">
+            <div class="inc-card"><span class="inc-icon">🤖</span>
+                <h4>AI Customer-Support Bots</h4>
+                <p>Chatbots that instantly answer customer questions, resolve common issues, and escalate to a
+                    human only when it truly matters — cutting response times to seconds.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">💬</span>
+                <h4>WhatsApp AI</h4>
+                <p>AI agents deployed directly inside WhatsApp to handle support, bookings, and sales conversations
+                    where your customers are already messaging.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">📚</span>
+                <h4>RAG Chatbots</h4>
+                <p>Retrieval-augmented chatbots trained on your documents, FAQs, and product data — giving accurate,
+                    up-to-date answers instead of generic responses.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">🎙️</span>
+                <h4>Voice AI Agents</h4>
+                <p>Natural-sounding AI voice agents that answer inbound calls, qualify leads, and handle routine
+                    phone support without a customer ever waiting on hold.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">🔌</span>
+                <h4>Retell AI Integrations</h4>
+                <p>Voice AI built and deployed on Retell AI, connected to your phone lines and business systems for
+                    reliable, production-ready call handling.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">📊</span>
+                <h4>Conversation Analytics</h4>
+                <p>Full visibility into every chat and call — transcripts, resolution rates, and insights so you
+                    always know how your AI agents are performing.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="process-bg">
+        <div class="section">
+            <p class="section-label">Our Process</p>
+            <h2 class="section-title">How we build agents that customers actually trust</h2>
+            <p class="section-sub">A structured approach that gets your chatbot or voice agent talking like your
+                best team member from day one.</p>
+            <div class="process-list">
+                <div class="process-step">
+                    <div class="ps-num">01</div>
+                    <div class="ps-body">
+                        <h4>Discovery & Conversation Mapping</h4>
+                        <p>We map out your most common customer questions, support flows, and call scenarios to
+                            design an agent that actually fits how your business communicates.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">02</div>
+                    <div class="ps-body">
+                        <h4>Knowledge Base & RAG Setup</h4>
+                        <p>We organize your documents, FAQs, and product data into a retrieval system so your bot
+                            answers with real, accurate information every time.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">03</div>
+                    <div class="ps-body">
+                        <h4>Bot & Voice Agent Build</h4>
+                        <p>We build and configure your chatbot, WhatsApp AI, or Retell voice agent — tone, scripts,
+                            and escalation logic all tailored to your brand.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">04</div>
+                    <div class="ps-body">
+                        <h4>Testing & Training</h4>
+                        <p>We run real conversation and call scenarios through the agent, refining responses and
+                            voice quality until it feels natural and reliable.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">05</div>
+                    <div class="ps-body">
+                        <h4>Launch & Continuous Optimization</h4>
+                        <p>We deploy your agent live and keep monitoring conversations, tuning responses and
+                            expanding capabilities as your business needs grow.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <p class="section-label">Tools & Platforms</p>
+        <h2 class="section-title">What we use to build your AI agents</h2>
+        <div class="tools-flex">
+            <div class="tool-chip">🎙️ Retell AI</div>
+            <div class="tool-chip">🧠 OpenAI API</div>
+            <div class="tool-chip">🦜 LangChain</div>
+            <div class="tool-chip">📚 Vector Databases (RAG)</div>
+            <div class="tool-chip">💬 WhatsApp Business API</div>
+            <div class="tool-chip">☎️ Twilio</div>
+            <div class="tool-chip">🔗 n8n / Make</div>
+            <div class="tool-chip">📊 Conversation Analytics</div>
+        </div>
+    </div>
+
+    <div class="process-bg">
+        <div class="section">
+            <p class="section-label">Common Questions</p>
+            <h2 class="section-title">AI Chatbots & Voice AI FAQ</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-q">How long does it take to build a chatbot or voice agent? <span
+                            class="faq-arrow">▾</span></div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">A standard support chatbot or WhatsApp AI typically takes 1–2
+                            weeks. A custom RAG chatbot or Retell voice agent generally takes 3–4 weeks depending on
+                            the complexity of your knowledge base and call flows.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Will it sound natural, not robotic? <span class="faq-arrow">▾</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Yes. We tune tone, pacing, and phrasing for both chat and voice
+                            agents so conversations feel natural and on-brand, not like a generic scripted bot.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Can it integrate with WhatsApp or our existing phone system? <span
+                            class="faq-arrow">▾</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Yes — we connect directly to WhatsApp Business API and to your
+                            existing phone lines through Retell AI and Twilio, so there's no need to change your
+                            current numbers or systems.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">What happens when the bot doesn't know the answer? <span
+                            class="faq-arrow">▾</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Every agent is built with clear escalation logic — when a question
+                            falls outside its knowledge or confidence, it hands the conversation off to a human
+                            teammate instead of guessing.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section grid-bg">
+        <div class="cta-box">
+            <h2>Ready to grow your business<br>with a team that truly cares?</h2>
+            <p>Book a free consultation and let's talk about where your business is today and where you want to take it.
+                No pressure, no pitch — just an honest conversation.</p>
+            <a href="{% url 'contact_us' %}" class="btn-dark">📅 Book a Free Consultation</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo">AiGR0<span class="footer-tagline">AI &amp; DIGITAL MARKETING GROUP</span></div>
+                <p class="footer-blurb">Helping brands grow with AI-powered systems, strategy, and performance marketing that actually moves the needle.</p>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-title">Quick Links</p>
+                <div class="footer-links">
+                    <a href="{% url 'about_us' %}">About AiGR0</a>
+                    <a href="{% url 'services' %}" class="active">Services</a>
+                    <a href="{% url 'career' %}">Careers</a>
+                    <a href="{% url 'contact_us' %}">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-col footer-connect">
+                <p class="footer-col-title">Connect</p>
+                <a href="https://www.linkedin.com/company/aigr0/" class="social-icon" target="_blank"
+                    rel="noopener" aria-label="AiGR0 on LinkedIn">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.5V23H.24V8.25zM8.5 8.25h4.31v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.55 0 5.39 3 5.39 6.9V23h-4.5v-6.8c0-1.62-.03-3.7-2.25-3.7-2.26 0-2.6 1.76-2.6 3.58V23H8.5V8.25z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="ft-bottom">
+            <div class="ft-logo">AiGR0<small> GROUP</small></div>
+            <div class="ft-copy">© Copyright 2026 AiGR0 Group. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/services/ai_chatbots_voice.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+</body>
+
+</html>

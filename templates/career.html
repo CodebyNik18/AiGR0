@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers – AiGR0 Group</title>
     <link rel="stylesheet" href="{% static 'css/career.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/typography.css' %}">
 </head>
 
 <body>
@@ -30,12 +32,11 @@
                 </a>
 
                 <div class="dropdown-menu">
-                    <a href="{% url 'web_service' %}">Web Design & Development</a>
-                    <a href="{% url 'seo_service' %}">SEO</a>
-                    <a href="{% url 'google_ad_service' %}">Paid Ads</a>
-                    <a href="{% url 'social_service' %}">Social Marketing</a>
-                    <a href="{% url 'video_service' %}">Video Marketing</a>
-                    <a href="{% url 'public_service' %}">Creative and Graphic Designing</a>
+                    <a href="{% url 'ai_agents_automation' %}">AI Agents & Automation</a>
+                    <a href="{% url 'ai_chatbots_voice' %}">AI Chatbots & Voice AI</a>
+                    <a href="{% url 'ai_powered_marketing' %}">AI-Powered Marketing</a>
+                    <a href="{% url 'ai_development' %}">AI Development</a>
+                    <a href="{% url 'performance_marketing' %}">Performance Marketing</a>
                 </div>
             </div>
             <!-- <a href="#">Portfolio</a> -->
@@ -49,8 +50,9 @@
 
             <div class="page-header">
                 <h1>Join Our Team</h1>
-                <p>Let's collaborate to elevate your brand and drive meaningful digital growth — reach out to us today,
-                    and together we'll create strategies that deliver results and take your business to the next level.
+                <p>Let's collaborate to elevate your brand and drive meaningful AI-powered growth — reach out to us
+                    today, and together we'll create systems and strategies that deliver results and take your
+                    business to the next level.
                 </p>
             </div>
 
@@ -60,9 +62,9 @@
 
                 <div class="job-card" data-key="designer">
                     <div>
-                        <h3>Web Designer</h3>
+                        <h3>AI Automation Engineer</h3>
                         <div class="job-meta">
-                            <span>Figma Designer</span><span class="dot">•</span>
+                            <span>Workflow & Agent Automation</span><span class="dot">•</span>
                             <span>Remote Work</span><span class="dot">•</span>
                             <span>Full time or Part time</span>
                         </div>
@@ -72,11 +74,11 @@
 
                 <div class="job-card" data-key="developer">
                     <div>
-                        <h3>Web Developer</h3>
+                        <h3>AI Chatbot & Voice AI Developer</h3>
                         <div class="job-meta">
-                            <span>WordPress Developer</span><span class="dot">•</span>
+                            <span>Conversational AI</span><span class="dot">•</span>
                             <span>Remote Work</span><span class="dot">•</span>
-                            <span>Part time</span>
+                            <span>Full time</span>
                         </div>
                     </div>
                     <div class="arrow-btn">→</div>
@@ -86,7 +88,7 @@
                     <div>
                         <h3>Content Writer</h3>
                         <div class="job-meta">
-                            <span>Website Content</span><span class="dot">•</span>
+                            <span>AI & Marketing Content</span><span class="dot">•</span>
                             <span>Remote Work</span><span class="dot">•</span>
                             <span>Full time or Part time</span>
                         </div>
@@ -96,9 +98,9 @@
 
                 <div class="job-card" data-key="social">
                     <div>
-                        <h3>Social Specialist</h3>
+                        <h3>AI Marketing Strategist</h3>
                         <div class="job-meta">
-                            <span>Social Expert</span><span class="dot">•</span>
+                            <span>AI-Powered Campaigns</span><span class="dot">•</span>
                             <span>Remote Work</span><span class="dot">•</span>
                             <span>Full time or Part time</span>
                         </div>
@@ -120,9 +122,9 @@
 
                 <div class="job-card" data-key="seo">
                     <div>
-                        <h3>SEO Specialist</h3>
+                        <h3>AI Software Developer</h3>
                         <div class="job-meta">
-                            <span>SEO &amp; Content</span><span class="dot">•</span>
+                            <span>LLM Integrations & APIs</span><span class="dot">•</span>
                             <span>Remote Work</span><span class="dot">•</span>
                             <span>Full time or Part time</span>
                         </div>
@@ -132,7 +134,7 @@
 
                 <div class="job-card" data-key="paid">
                     <div>
-                        <h3>Paid Manager</h3>
+                        <h3>Performance Marketing Manager</h3>
                         <div class="job-meta">
                             <span>Google &amp; Meta Ads</span><span class="dot">•</span>
                             <span>Remote Work</span><span class="dot">•</span>
@@ -146,7 +148,7 @@
                     <div>
                         <h3>Video Editor &amp; Producer</h3>
                         <div class="job-meta">
-                            <span>Video Production</span><span class="dot">•</span>
+                            <span>Content Production</span><span class="dot">•</span>
                             <span>Remote Work</span><span class="dot">•</span>
                             <span>Part time</span>
                         </div>
@@ -169,29 +171,24 @@
             </div>
         </div>
 
-        <footer>
-            <div class="ft-top">
-                <div class="ft-links">
-                    <!-- <a href="{% url 'home' %}">HomePage</a> -->
-                    <a href="{% url 'about_us' %}">About AiGR0</a>
-                    <!-- <a href="#">Portfolio</a> -->
-                    <a href="{% url 'contact_us' %}">Contact Us</a>
-                    <a href="{% url 'services' %}">Services</a>
-                    <a href="{% url 'career' %}" class="active">Careers</a>
+        <footer class="site-footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">AiGR0<span class="footer-tagline">AI &amp; DIGITAL MARKETING GROUP</span></div>
+                    <p class="footer-blurb">Helping brands grow with AI-powered systems, strategy, and performance marketing that actually moves the needle.</p>
                 </div>
-                <div class="ft-socials">
-                    <a href="https://www.linkedin.com/company/aigr0/">
-                        <div class="social-icon">in</div>
-                    </a>
-                    <a href="https://www.instagram.com/aigr0agency?igsh=MXBjanhueXpzMG1jbQ==" class="social-icon"
-                        target="_blank" rel="noopener">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                            <circle cx="12" cy="12" r="4" />
-                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-                        </svg>
-                    </a>
+                <div class="footer-col">
+                    <p class="footer-col-title">Quick Links</p>
+                    <div class="footer-links">
+                        <a href="{% url 'about_us' %}">About AiGR0</a>
+                        <a href="{% url 'services' %}">Services</a>
+                        <a href="{% url 'career' %}" class="active">Careers</a>
+                        <a href="{% url 'contact_us' %}">Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-col footer-connect">
+                    <p class="footer-col-title">Connect</p>
+                    <a href="https://www.linkedin.com/company/aigr0/" class="social-icon" target="_blank" rel="noopener" aria-label="AiGR0 on LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.5V23H.24V8.25zM8.5 8.25h4.31v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.55 0 5.39 3 5.39 6.9V23h-4.5v-6.8c0-1.62-.03-3.7-2.25-3.7-2.26 0-2.6 1.76-2.6 3.58V23H8.5V8.25z" /></svg></a>
                 </div>
             </div>
             <div class="ft-bottom">

@@ -1,0 +1,275 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Marketing – AiGR0 Group</title>
+    <link rel="stylesheet" href="{% static 'css/services/performance_marketing.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/typography.css' %}">
+</head>
+
+<body>
+    <nav id="navbar">
+        <a href="{% url 'home' %}" class="nav-logo logo-wrap">
+            <img src="{% static 'images/aigro2.png' %}" class="logo-img" />
+            <!-- <span class="logo-ring"></span>
+            <span class="logo-shine"></span> -->
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+            aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <div class="dropdown">
+                <a href="{% url 'services' %}" class="dropdown-title" aria-haspopup="true" aria-expanded="false">
+                    Services
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="{% url 'ai_agents_automation' %}">AI Agents & Automation</a>
+                    <a href="{% url 'ai_chatbots_voice' %}">AI Chatbots & Voice AI</a>
+                    <a href="{% url 'ai_powered_marketing' %}">AI-Powered Marketing</a>
+                    <a href="{% url 'ai_development' %}">AI Development</a>
+                    <a href="{% url 'performance_marketing' %}">Performance Marketing</a>
+                </div>
+            </div>
+            <!-- <a href="#">Portfolio</a> -->
+            <a href="{% url 'contact_us' %}">Contact</a>
+            <a href="{% url 'contact_us' %}" class="btn-cta">Free Consultation</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-inner">
+            <div class="hero-left">
+                <div class="breadcrumb">Services <span>›</span> Performance Marketing</div>
+                <div class="hero-eye">Service 11</div>
+                <h1>Performance <br><em>Marketing</em></h1>
+                <p>We run full-funnel paid media across Google Ads, Meta Ads, and Performance Max — engineered
+                    around conversions and ROAS, not vanity metrics, so every dollar of spend is accountable to
+                    real business results.</p>
+                <div class="hero-btns">
+                    <a href="{% url 'contact_us' %}" class="btn-primary">Get Started →</a>
+                    <a href="{% url 'services' %}" class="btn-outline">All Services</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="mockup-window">
+
+                    <div class="mockup-body">
+
+                        <h3 style="color:var(--cyan); margin-bottom:1rem;">
+                            Performance Marketing Strategy
+                        </h3>
+
+                        <p style="color:var(--gray); font-size:.9rem; margin-bottom:1rem; line-height:1.7;">
+                            We help brands turn ad spend into predictable revenue through data-driven campaigns
+                            across every major paid channel, tracked and optimized against the metrics that
+                            actually matter.
+                        </p>
+
+                        <ul style="color:var(--gray); font-size:.85rem; line-height:1.9;">
+                            <p>✔ Google Ads campaign management</p>
+                            <p>✔ Meta Ads (Facebook & Instagram)</p>
+                            <p>✔ Performance Max campaigns</p>
+                            <p>✔ PPC / SEM strategy</p>
+                            <p>✔ Conversion tracking & optimization</p>
+                            <p>✔ Cross-channel budget allocation</p>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+    </section>
+    <div class="section">
+        <p class="section-label">What's Included</p>
+        <h2 class="section-title">Everything you need to scale paid performance</h2>
+        <p class="section-sub">From strategy to setup to daily optimization — we handle every channel and every
+            dollar of your paid media budget so you can focus on running your business.</p>
+        <div class="included-grid">
+            <div class="inc-card"><span class="inc-icon">🅶</span>
+                <h4>Google Ads</h4>
+                <p>Search, Display, and Shopping campaigns built to capture high-intent buyers exactly when
+                    they're ready to convert.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">📘</span>
+                <h4>Meta Ads</h4>
+                <p>Facebook and Instagram campaigns that combine sharp creative with precise targeting to drive
+                    conversions at scale.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">🚀</span>
+                <h4>Performance Max</h4>
+                <p>Google's automated, cross-network campaigns configured and fed with the right signals to
+                    maximize conversions across Search, Display, YouTube, and Gmail.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">🔍</span>
+                <h4>PPC / SEM</h4>
+                <p>Strategic pay-per-click and search engine marketing built on rigorous keyword and audience
+                    research, not guesswork.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">📊</span>
+                <h4>Conversion Tracking & Optimization</h4>
+                <p>Full pixel and conversion setup across every channel, so we always know exactly which spend is
+                    driving real revenue.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">💰</span>
+                <h4>Cross-Channel Budget Allocation</h4>
+                <p>We continuously shift budget toward the channels and campaigns delivering the best return,
+                    instead of splitting spend evenly by default.</p>
+            </div>
+        </div>
+    </div>
+    <div class="process-bg">
+        <div class="section">
+            <p class="section-label">Our Process</p>
+            <h2 class="section-title">How we run winning performance campaigns</h2>
+            <p class="section-sub">A structured, data-driven approach that eliminates wasted spend and maximizes
+                return from day one.</p>
+            <div class="process-list">
+                <div class="process-step">
+                    <div class="ps-num">01</div>
+                    <div class="ps-body">
+                        <h4>Account Audit & Channel Strategy</h4>
+                        <p>We audit your existing accounts (or start fresh) and decide which channels — Google,
+                            Meta, or both — will drive the strongest return for your budget.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">02</div>
+                    <div class="ps-body">
+                        <h4>Campaign Build & Setup</h4>
+                        <p>We build every campaign with precision — targeting, bidding strategy, Performance Max
+                            feeds, and conversion tracking all configured correctly from day one.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">03</div>
+                    <div class="ps-body">
+                        <h4>Creative & Ad Copy</h4>
+                        <p>We produce high-converting ad copy and creative assets tailored to each platform's
+                            format and audience expectations.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">04</div>
+                    <div class="ps-body">
+                        <h4>Launch & Monitor</h4>
+                        <p>We launch campaigns and monitor performance daily — watching for early signals and
+                            making rapid adjustments to protect your budget.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">05</div>
+                    <div class="ps-body">
+                        <h4>Optimize & Scale</h4>
+                        <p>We continuously test, refine, and reallocate budget toward what's working — cutting
+                            waste and scaling the campaigns driving real conversions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <p class="section-label">Platforms & Tools</p>
+        <h2 class="section-title">What we use to run your campaigns</h2>
+        <div class="tools-flex">
+            <div class="tool-chip">🅶 Google Ads</div>
+            <div class="tool-chip">📘 Meta Ads Manager</div>
+            <div class="tool-chip">🚀 Performance Max</div>
+            <div class="tool-chip">📊 Google Analytics 4</div>
+            <div class="tool-chip">🎯 Google Tag Manager</div>
+            <div class="tool-chip">🛒 Google Merchant Center</div>
+            <div class="tool-chip">📈 Looker Studio</div>
+            <div class="tool-chip">🎯 Meta Pixel</div>
+        </div>
+    </div>
+    <div class="process-bg">
+        <div class="section">
+            <p class="section-label">Common Questions</p>
+            <h2 class="section-title">Performance Marketing FAQ</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-q">How much should I budget for performance marketing? <span
+                            class="faq-arrow">▾</span></div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">It depends on your industry, competition, and goals. We work with
+                            budgets as low as $1,000/month across channels for local businesses and scale up for
+                            competitive national campaigns. We'll recommend a realistic budget in your free
+                            consultation.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">How quickly will I see results? <span class="faq-arrow">▾</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Paid campaigns can drive traffic and conversions from day one.
+                            Most accounts see meaningful performance improvements within the first 2–4 weeks as we
+                            gather data and optimize.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Do you manage Google and Meta together or separately? <span
+                            class="faq-arrow">▾</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Together, as one connected strategy. We look at performance
+                            across channels holistically and shift budget to whichever is driving the strongest
+                            return, rather than managing each in isolation.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Will I have access to my own ad accounts? <span class="faq-arrow">▾</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Absolutely. You own your Google Ads and Meta Ads accounts 100%. We
+                            operate as a manager under your accounts, giving you full transparency at any time.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="cta-section grid-bg">
+        <div class="cta-box">
+            <h2>Ready to grow your business<br>with a team that truly cares?</h2>
+            <p>Book a free consultation and let's talk about where your business is today and where you want to take it.
+                No pressure, no pitch — just an honest conversation.</p>
+            <a href="{% url 'contact_us' %}" class="btn-dark">📅 Book a Free Consultation</a>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo">AiGR0<span class="footer-tagline">AI &amp; DIGITAL MARKETING GROUP</span></div>
+                <p class="footer-blurb">Helping brands grow with AI-powered systems, strategy, and performance marketing that actually moves the needle.</p>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-title">Quick Links</p>
+                <div class="footer-links">
+                    <a href="{% url 'about_us' %}">About AiGR0</a>
+                    <a href="{% url 'services' %}" class="active">Services</a>
+                    <a href="{% url 'career' %}">Careers</a>
+                    <a href="{% url 'contact_us' %}">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-col footer-connect">
+                <p class="footer-col-title">Connect</p>
+                <a href="https://www.linkedin.com/company/aigr0/" class="social-icon" target="_blank" rel="noopener" aria-label="AiGR0 on LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.5V23H.24V8.25zM8.5 8.25h4.31v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.55 0 5.39 3 5.39 6.9V23h-4.5v-6.8c0-1.62-.03-3.7-2.25-3.7-2.26 0-2.6 1.76-2.6 3.58V23H8.5V8.25z" /></svg></a>
+            </div>
+        </div>
+        <div class="ft-bottom">
+            <div class="ft-logo">AiGR0<small> GROUP</small></div>
+            <div class="ft-copy">© Copyright 2026 AiGR0 Group. All rights reserved.</div>
+        </div>
+    </footer>
+    <script src="{% static 'js/services/performance_marketing.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+</body>
+
+</html>

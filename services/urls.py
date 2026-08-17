@@ -3,10 +3,9 @@ from . import views
 
 urlpatterns = [
     path('', views.services, name='services'),
-    path('google_ad-services/', views.googleadservice, name='google_ad_service'),
-    path('public-services/', views.publicservice, name='public_service'),
-    path('seo-services/', views.seoservice, name='seo_service'),
-    path('social-services/', views.socialservice, name='social_service'),
-    path('video-services/', views.videoservice, name='video_service'),
-    path('web-services/', views.webservice, name='web_service'),
+    path('ai-agents-automation/', views.aiagentsautomation, name='ai_agents_automation'),
+    path('ai-chatbots-voice/', views.aichatbotsvoice, name='ai_chatbots_voice'),
+    path('ai-development/', views.aidevelopment, name='ai_development'),
+    path('ai-powered-marketing/', views.aipoweredmarketing, name='ai_powered_marketing'),
+    path('performance-marketing/', views.performancemarketing, name='performance_marketing'),
 ]

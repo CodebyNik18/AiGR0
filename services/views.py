@@ -1,27 +1,22 @@
 from django.shortcuts import render
 
 def services(request):
-    return render(request=request, template_name='services.html')
+    return render(request=request, template_name='service.html')
 
-def googleadservice(request):
-    return render(request=request, template_name='google_ad_service.html')
+def aichatbotsvoice(request):
+    return render(request=request, template_name='ai_chatbots_voice.html')
 
-
-def publicservice(request):
-    return render(request=request, template_name='creative_graphic.html')
-
-
-def seoservice(request):
-    return render(request=request, template_name='seo_service.html')
+def aidevelopment(request):
+    return render(request=request, template_name='ai_development.html')
 
 
-def socialservice(request):
-    return render(request=request, template_name='social_service.html')
+def aiagentsautomation(request):
+    return render(request=request, template_name='ai_agents_automation.html')
 
 
-def videoservice(request):
-    return render(request=request, template_name='video_service.html')
+def aipoweredmarketing(request):
+    return render(request=request, template_name='ai_powered_marketing.html')
 
 
-def webservice(request):
-    return render(request=request, template_name='web_service.html')
+def performancemarketing(request):
+    return render(request=request, template_name='performance_marketing.html')

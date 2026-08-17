@@ -1,0 +1,285 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development – AiGR0 Group</title>
+    <link rel="stylesheet" href="{% static 'css/services/ai_development.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/typography.css' %}">
+</head>
+
+<body>
+    <nav id="navbar">
+        <a href="{% url 'home' %}" class="nav-logo logo-wrap">
+            <img src="{% static 'images/aigro2.png' %}" class="logo-img" />
+            <!-- <span class="logo-ring"></span>
+            <span class="logo-shine"></span> -->
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+            aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <div class="dropdown">
+                <a href="{% url 'services' %}" class="dropdown-title" aria-haspopup="true" aria-expanded="false">
+                    Services
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="{% url 'ai_agents_automation' %}">AI Agents & Automation</a>
+                    <a href="{% url 'ai_chatbots_voice' %}">AI Chatbots & Voice AI</a>
+                    <a href="{% url 'ai_powered_marketing' %}">AI-Powered Marketing</a>
+                    <a href="{% url 'ai_development' %}">AI Development</a>
+                    <a href="{% url 'performance_marketing' %}">Performance Marketing</a>
+                </div>
+            </div>
+            <!-- <a href="#">Portfolio</a> -->
+            <a href="{% url 'contact_us' %}">Contact</a>
+            <a href="{% url 'contact_us' %}" class="btn-cta">Free Consultation</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-inner">
+            <div class="hero-left">
+                <div class="breadcrumb">Services <span>›</span> AI Development</div>
+                <div class="hero-eye">Service 10</div>
+                <h1>Custom AI<br><em>Development</em></h1>
+                <p>We design and build LLM applications, RAG systems, and custom AI products — integrating
+                    OpenAI, Claude, and Gemini into real software that solves your business's actual problems,
+                    not just a demo.</p>
+                <div class="hero-btns"><a href="{% url 'contact_us' %}" class="btn-primary">Get Started →</a><a
+                        href="{% url 'services' %}" class="btn-outline">All Services</a></div>
+            </div>
+            <div class="hero-right">
+                <div class="mockup-window">
+
+                    <div class="mockup-body">
+
+                        <h3 style="color:var(--cyan); margin-bottom:1rem;">
+                            What Our AI Development Includes
+                        </h3>
+
+                        <p style="color:var(--gray); font-size:.9rem; margin-bottom:1rem; line-height:1.7;">
+                            Our AI development work focuses on shipping production-ready applications — grounded
+                            in your data, built on the right model for the job, and engineered to scale past the
+                            prototype stage.
+                        </p>
+
+                        <ul style="color:var(--gray); font-size:.85rem; line-height:1.9;">
+                            <p>✔ LLM applications</p>
+                            <p>✔ RAG systems</p>
+                            <p>✔ Custom AI applications</p>
+                            <p>✔ AI SaaS products</p>
+                            <p>✔ OpenAI / Claude / Gemini integrations</p>
+                            <p>✔ Scalable AI infrastructure</p>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section">
+        <p class="section-label">What's Included</p>
+        <h2 class="section-title">Full-stack AI product development</h2>
+        <p class="section-sub">From the first architecture decision to production deployment — we handle every
+            part of building your AI application so it actually works at real-world scale.</p>
+        <div class="included-grid">
+            <div class="inc-card"><span class="inc-icon">🧠</span>
+                <h4>LLM Applications</h4>
+                <p>Custom applications built around large language models — from internal tools to customer-facing
+                    products — designed around your specific use case.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">📚</span>
+                <h4>RAG Systems</h4>
+                <p>Retrieval-augmented generation pipelines that ground AI responses in your own documents and
+                    data, so answers are accurate instead of generic.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">⚙️</span>
+                <h4>Custom AI Applications</h4>
+                <p>Bespoke AI tools built around your exact workflow — from internal automation to novel
+                    AI-powered features inside your existing product.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">🚀</span>
+                <h4>AI SaaS Products</h4>
+                <p>Full AI-native SaaS products built from the ground up — architecture, billing, and interface,
+                    ready to take to market.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">🔌</span>
+                <h4>OpenAI / Claude / Gemini Integrations</h4>
+                <p>Clean, well-architected integrations with the leading model providers, with the flexibility to
+                    swap or combine models as your needs change.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">☁️</span>
+                <h4>Scalable AI Infrastructure</h4>
+                <p>Production infrastructure — API design, vector databases, monitoring — built to handle real
+                    usage, not just a proof of concept.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="process-bg">
+        <div class="section">
+            <p class="section-label">Our Process</p>
+            <h2 class="section-title">How we build AI products that ship</h2>
+            <p class="section-sub">A structured approach that takes you from idea to a working, reliable AI
+                application.</p>
+            <div class="process-list">
+                <div class="process-step">
+                    <div class="ps-num">01</div>
+                    <div class="ps-body">
+                        <h4>Discovery & Use-Case Scoping</h4>
+                        <p>We dig into the problem you're solving and define exactly what the AI application needs
+                            to do, for whom, and what success looks like.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">02</div>
+                    <div class="ps-body">
+                        <h4>Architecture & Model Selection</h4>
+                        <p>We choose the right model, retrieval strategy, and system design for your use case —
+                            balancing accuracy, cost, and speed.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">03</div>
+                    <div class="ps-body">
+                        <h4>Build & Integration</h4>
+                        <p>We build the application and integrate it with your data sources, APIs, and existing
+                            systems, with careful attention to reliability.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">04</div>
+                    <div class="ps-body">
+                        <h4>Testing & Evaluation</h4>
+                        <p>We evaluate outputs against real scenarios, tuning prompts, retrieval, and logic until
+                            the system performs consistently.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">05</div>
+                    <div class="ps-body">
+                        <h4>Deployment & Scaling</h4>
+                        <p>We deploy to production and set up monitoring, so the application keeps performing
+                            reliably as usage grows.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <p class="section-label">Tools & Platforms</p>
+        <h2 class="section-title">What we use to build your AI products</h2>
+        <div class="tools-flex">
+            <div class="tool-chip">🧠 OpenAI API</div>
+            <div class="tool-chip">🤖 Claude API</div>
+            <div class="tool-chip">✨ Gemini API</div>
+            <div class="tool-chip">🦜 LangChain</div>
+            <div class="tool-chip">📚 Vector Databases</div>
+            <div class="tool-chip">🐍 Python / FastAPI</div>
+            <div class="tool-chip">⚛️ Next.js</div>
+            <div class="tool-chip">☁️ AWS / Docker</div>
+        </div>
+    </div>
+
+    <div class="process-bg">
+        <div class="section">
+            <p class="section-label">Common Questions</p>
+            <h2 class="section-title">AI Development FAQ</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-q">How long does it take to build a custom AI application? <span
+                            class="faq-arrow">▾</span></div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">A focused LLM feature or RAG system typically takes 2–4 weeks. A
+                            full AI SaaS product generally takes 6–12 weeks depending on scope, integrations, and
+                            feedback turnaround.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Will we own the AI application and its IP? <span class="faq-arrow">▾</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Yes — upon final payment you own the full codebase, architecture,
+                            and any custom models or prompts we build. There's no lock-in to us as a vendor.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Can you integrate with our existing product or data? <span
+                            class="faq-arrow">▾</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Absolutely. We regularly build on top of existing codebases and
+                            connect to your existing databases, APIs, and internal tools rather than starting from
+                            scratch.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Which AI models do you work with? <span class="faq-arrow">▾</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">We work across OpenAI, Anthropic's Claude, and Google's Gemini,
+                            and we'll recommend the model (or combination of models) that best fits your accuracy,
+                            cost, and latency needs.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section grid-bg">
+        <div class="cta-box">
+            <h2>Ready to grow your business<br>with a team that truly cares?</h2>
+            <p>Book a free consultation and let's talk about where your business is today and where you want to take it.
+                No pressure, no pitch — just an honest conversation.</p>
+            <a href="{% url 'contact_us' %}" class="btn-dark">📅 Book a Free Consultation</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo">AiGR0<span class="footer-tagline">AI &amp; DIGITAL MARKETING GROUP</span></div>
+                <p class="footer-blurb">Helping brands grow with AI-powered systems, strategy, and performance marketing that actually moves the needle.</p>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-title">Quick Links</p>
+                <div class="footer-links">
+                    <a href="{% url 'about_us' %}">About AiGR0</a>
+                    <a href="{% url 'services' %}" class="active">Services</a>
+                    <a href="{% url 'career' %}">Careers</a>
+                    <a href="{% url 'contact_us' %}">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-col footer-connect">
+                <p class="footer-col-title">Connect</p>
+                <a href="https://www.linkedin.com/company/aigr0/" class="social-icon" target="_blank"
+                    rel="noopener" aria-label="AiGR0 on LinkedIn">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.5V23H.24V8.25zM8.5 8.25h4.31v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.55 0 5.39 3 5.39 6.9V23h-4.5v-6.8c0-1.62-.03-3.7-2.25-3.7-2.26 0-2.6 1.76-2.6 3.58V23H8.5V8.25z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="ft-bottom">
+            <div class="ft-logo">AiGR0<small> GROUP</small></div>
+            <div class="ft-copy">© Copyright 2026 AiGR0 Group. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/services/ai_development.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+</body>
+
+</html>
