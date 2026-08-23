@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% if hero_data %}
-    <title> {{hero_data.page_title}} </title> <!--AiGR0  Group – AI Marketing & Automation Agency-->
+    <title>AiGR0 - AI-Powered Technology & Growth</title>
     {% else %}
     <title> AiGR0 Group – AI Marketing & Automation Agency </title>
     {% endif %}
@@ -40,11 +40,12 @@
                 </a>
 
                 <div class="dropdown-menu">
-                    <a href="{% url 'ai_agents_automation' %}">AI Agents & Automation</a>
-                    <a href="{% url 'ai_chatbots_voice' %}">AI Chatbots & Voice AI</a>
-                    <a href="{% url 'ai_powered_marketing' %}">AI-Powered Marketing</a>
-                    <a href="{% url 'ai_development' %}">AI Development</a>
-                    <a href="{% url 'performance_marketing' %}">Performance Marketing</a>
+                    <a href="{% url 'ai_agents_automation' %}">AI Agents & Agentic Systems</a>
+                    <a href="{% url 'ai_powered_marketing' %}">AI Automation & Integrations</a>
+                    <a href="{% url 'ai_chatbots_voice' %}">AI Chatbots, RAG & Voice AI</a>
+                    <a href="{% url 'ai_development' %}">AI Web & Mobile App Development</a>
+                    <a href="{% url 'performance_marketing' %}">Performance Marketing & Paid Advertising</a>
+                    <a href="{% url 'seo' %}">Search Engine Optimization & Organic Growth</a>
                 </div>
             </div>
             <!-- <a href="#">Portfolio</a> -->
@@ -175,45 +176,57 @@
                 <div class="shine"></div>
                 <div class="service-icon">🤖</div>
                 <div class="service-info">
-                    <h4>AI Agents & Automation</h4>
-                    <p>Autonomous AI agents that handle repetitive workflows, connect your tools, and get work done
-                        around the clock — no manual triggers needed.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="shine"></div>
-                <div class="service-icon">💬</div>
-                <div class="service-info">
-                    <h4>AI Chatbots & Voice AI</h4>
-                    <p>Chatbots and voice agents that answer questions, qualify leads, and book appointments — trained
-                        on your business so every conversation sounds like you.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="shine"></div>
-                <div class="service-icon">🧠</div>
-                <div class="service-info">
-                    <h4>AI-Powered Marketing</h4>
-                    <p>AI tooling combined with proven strategy to plan campaigns faster, personalize content at
-                        scale, and turn data into decisions.</p>
+                    <h4>AI Agents & Agentic Systems</h4>
+                    <p>Intelligent AI systems that can think, act, and automate real business tasks — single-agent
+                        and multi-agent workflows, copilots, and custom automations for sales, support, and
+                        operations.</p>
                 </div>
             </div>
             <div class="service-card">
                 <div class="shine"></div>
                 <div class="service-icon">⚙️</div>
                 <div class="service-info">
-                    <h4>AI Development</h4>
-                    <p>Custom AI-powered software — from internal tools to customer-facing products — with LLMs
-                        integrated directly into the systems you already run on.</p>
+                    <h4>AI Automation & Integrations</h4>
+                    <p>Connect your tools, automate your workflows, and let AI handle repetitive work — from n8n,
+                        Make and Zapier automations to CRM, API, and document processing pipelines.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="shine"></div>
+                <div class="service-icon">💬</div>
+                <div class="service-info">
+                    <h4>AI Chatbots, RAG & Voice AI</h4>
+                    <p>Give your customers and teams an intelligent assistant that is available whenever they need
+                        it — RAG-based knowledge bots, WhatsApp assistants, and voice agents for inbound and
+                        outbound calls.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="shine"></div>
+                <div class="service-icon">📱</div>
+                <div class="service-info">
+                    <h4>AI Web & Mobile App Development</h4>
+                    <p>From idea to production — we build scalable digital products with AI at the core, including
+                        web apps, SaaS platforms, dashboards, and iOS/Android mobile apps.</p>
                 </div>
             </div>
             <div class="service-card">
                 <div class="shine"></div>
                 <div class="service-icon">📈</div>
                 <div class="service-info">
-                    <h4>Performance Marketing</h4>
-                    <p>Paid campaigns built for measurable growth — testing, tracking, and optimizing every dollar you
-                        spend across Google, Meta & YouTube.</p>
+                    <h4>Performance Marketing & Paid Advertising</h4>
+                    <p>Turn advertising budgets into measurable leads, customers, and revenue with data-driven
+                        campaigns across Google Ads, Meta Ads, and YouTube — backed by strong tracking and
+                        conversion optimization.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="shine"></div>
+                <div class="service-icon">🔎</div>
+                <div class="service-info">
+                    <h4>Search Engine Optimization & Organic Growth</h4>
+                    <p>Build long-term search visibility, attract qualified visitors, and grow organically through
+                        technical SEO, keyword strategy, local SEO, and AI-assisted content optimization.</p>
                 </div>
             </div>
         </div>
@@ -375,7 +388,8 @@
         <div class="footer-top">
             <div class="footer-brand">
                 <div class="footer-logo">AiGR0<span class="footer-tagline">AI &amp; DIGITAL MARKETING GROUP</span></div>
-                <p class="footer-blurb">Helping brands grow with AI-powered systems, strategy, and performance marketing that actually moves the needle.</p>
+                <p class="footer-blurb">Helping brands grow with AI-powered systems, strategy, and performance marketing
+                    that actually moves the needle.</p>
             </div>
             <div class="footer-col">
                 <p class="footer-col-title">Quick Links</p>
@@ -388,7 +402,11 @@
             </div>
             <div class="footer-col footer-connect">
                 <p class="footer-col-title">Connect</p>
-                <a href="https://www.linkedin.com/company/aigr0/" class="social-icon" target="_blank" rel="noopener" aria-label="AiGR0 on LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.5V23H.24V8.25zM8.5 8.25h4.31v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.55 0 5.39 3 5.39 6.9V23h-4.5v-6.8c0-1.62-.03-3.7-2.25-3.7-2.26 0-2.6 1.76-2.6 3.58V23H8.5V8.25z" /></svg></a>
+                <a href="https://www.linkedin.com/company/aigr0/" class="social-icon" target="_blank" rel="noopener"
+                    aria-label="AiGR0 on LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.5V23H.24V8.25zM8.5 8.25h4.31v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.55 0 5.39 3 5.39 6.9V23h-4.5v-6.8c0-1.62-.03-3.7-2.25-3.7-2.26 0-2.6 1.76-2.6 3.58V23H8.5V8.25z" />
+                    </svg></a>
             </div>
         </div>
         <div class="footer-bottom">

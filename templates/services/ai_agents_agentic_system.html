@@ -1,0 +1,289 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agents & Agentic Systems – AiGR0 Group</title>
+    <link rel="stylesheet" href="{% static 'css/services/ai_agents_automation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/typography.css' %}">
+</head>
+
+<body>
+    <nav id="navbar">
+        <a href="{% url 'home' %}" class="nav-logo logo-wrap">
+            <img src="{% static 'images/aigro2.png' %}" class="logo-img" />
+            <!-- <span class="logo-ring"></span>
+            <span class="logo-shine"></span> -->
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+            aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <div class="dropdown">
+                <a href="{% url 'services' %}" class="dropdown-title" aria-haspopup="true" aria-expanded="false">
+                    Services
+                </a>
+                <div class="dropdown-menu">
+                    <a href="{% url 'ai_agents_automation' %}">AI Agents & Agentic Systems</a>
+                    <a href="{% url 'ai_chatbots_voice' %}">AI Chatbots & Voice AI</a>
+                    <a href="{% url 'ai_powered_marketing' %}">AI Automation & Integration</a>
+                    <a href="{% url 'ai_development' %}">AI Development</a>
+                    <a href="{% url 'performance_marketing' %}">Performance Marketing</a>
+                    <a href="{% url 'seo' %}">Search Engine Optimization & Organic Growth</a>
+                </div>
+            </div>
+            <!-- <a href="#">Portfolio</a> -->
+            <a href="{% url 'contact_us' %}">Contact</a>
+            <a href="{% url 'contact_us' %}" class="btn-cta">Free Consultation</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-inner">
+            <div class="hero-left">
+                <div class="breadcrumb">Services <span>›</span> AI Agents & Agentic Systems</div>
+                <h1>AI Agents &<br><em>Agentic Systems</em></h1>
+                <p>We design and deploy autonomous AI agents that reason, plan, and take action on their own —
+                    handling multi-step tasks, tool calls, and decisions that used to need a human in the loop, so
+                    your team can focus on higher-value work.</p>
+                <div class="hero-btns">
+                    <a href="{% url 'contact_us' %}" class="btn-primary">Get Started →</a>
+                    <a href="{% url 'services' %}" class="btn-outline">All Services</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="mockup-window">
+                    <div class="mockup-body">
+
+                        <h3 style="color:#00d4ff;margin-bottom:1rem;">
+                            Agentic AI That Thinks and Acts
+                        </h3>
+
+                        <p style="color:#8ba3c0;font-size:.9rem;margin-bottom:1.2rem;line-height:1.7;">
+                            Our agentic AI systems go beyond simple scripts — they reason through multi-step
+                            goals, call your tools and APIs, make decisions, and adapt in real time, working like
+                            an autonomous member of your team.
+                        </p>
+
+                        <ul style="color:var(--gray); font-size:.85rem; line-height:1.9;">
+                            <p>✔ 🤖 Autonomous AI Agents</p>
+                            <p>✔ 🧠 Multi-Step Reasoning & Planning</p>
+                            <p>✔ 🛠️ Tool & API Calling</p>
+                            <p>✔ 🕸️ Multi-Agent Orchestration</p>
+                            <p>✔ 🗂️ CRM & Workflow Integration</p>
+                            <p>✔ ⚙️ Custom Agentic Workflows</p>
+                        </ul>
+                        <div style="font-size:.8rem;color:#8ba3c0;margin-top: .8rem;">
+                            🤖 Agents that reason • 🛠️ Agents that act • ⚡ Systems that scale
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section">
+        <p class="section-label">What's Included</p>
+        <h2 class="section-title">Everything you need to put agentic AI to work</h2>
+        <p class="section-sub">From a single autonomous agent to a fully orchestrated multi-agent system, we
+            build agentic AI that reasons, decides, and takes real action across your business.</p>
+        <div class="included-grid">
+            <div class="inc-card"><span class="inc-icon">🤖</span>
+                <h4>Autonomous AI Agents</h4>
+                <p>Custom agents that reason through tasks and take action independently, rather than just
+                    following a fixed script.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">🕸️</span>
+                <h4>Multi-Agent Orchestration</h4>
+                <p>Specialized agents that hand off tasks and coordinate with each other toward a shared goal,
+                    not just a single bot working alone.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">🛠️</span>
+                <h4>Tool & API Integration</h4>
+                <p>Agents that call your APIs, databases, and internal tools directly, so they can take real
+                    action instead of just generating text.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">🧠</span>
+                <h4>Reasoning & Planning</h4>
+                <p>Agents built with memory and planning loops, so they can break complex, multi-step goals into
+                    action on their own.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">🧍</span>
+                <h4>Human-in-the-Loop Controls</h4>
+                <p>Configurable approval steps and guardrails, so agents act autonomously within the boundaries
+                    you set.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">⚙️</span>
+                <h4>Custom Agentic Workflows</h4>
+                <p>Bespoke agent systems built around your exact processes — from internal operations to
+                    customer-facing tasks.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="process-bg">
+        <div class="section">
+            <p class="section-label">Our Agentic AI Process</p>
+            <h2 class="section-title">How we bring autonomous agents into your business</h2>
+            <p class="section-sub">A structured, safety-conscious process that gets agentic AI reasoning and
+                acting reliably inside your real operations.</p>
+            <div class="process-list">
+                <div class="process-step">
+                    <div class="ps-num">01</div>
+                    <div class="ps-body">
+                        <h4>Discovery & Task Mapping</h4>
+                        <p>We identify which decisions and multi-step tasks in your business are strong
+                            candidates for an autonomous agent, and which still need a human.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">02</div>
+                    <div class="ps-body">
+                        <h4>Agent Architecture & Tool Design</h4>
+                        <p>We design agent roles, memory, and planning logic, and decide exactly which tools and
+                            APIs each agent is allowed to call.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">03</div>
+                    <div class="ps-body">
+                        <h4>Build & Integration</h4>
+                        <p>We build the agents and connect them to your real systems — CRM, internal tools, and
+                            APIs — so their actions are grounded in your actual data.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">04</div>
+                    <div class="ps-body">
+                        <h4>Testing & Guardrails</h4>
+                        <p>We stress-test reasoning paths against edge cases and add approval steps and
+                            guardrails before agents run unsupervised.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">05</div>
+                    <div class="ps-body">
+                        <h4>Deployment & Monitoring</h4>
+                        <p>We launch the system and continuously monitor agent decisions and outcomes, refining
+                            behavior as your business evolves.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <p class="section-label">Tools & Platforms</p>
+        <h2 class="section-title">The frameworks we use to build agentic systems</h2>
+        <div class="tools-flex">
+            <div class="tool-chip">🧠 OpenAI API</div>
+            <div class="tool-chip">🤖 Claude API</div>
+            <div class="tool-chip">🦜 LangChain</div>
+            <div class="tool-chip">🕸️ LangGraph</div>
+            <div class="tool-chip">👥 CrewAI</div>
+            <div class="tool-chip">🔀 AutoGen</div>
+            <div class="tool-chip">🔗 n8n</div>
+            <div class="tool-chip">📚 Vector DB</div>
+        </div>
+    </div>
+
+    <div class="process-bg">
+        <div class="section">
+            <p class="section-label">Common Questions</p>
+            <h2 class="section-title">AI Agents & Agentic Systems FAQ</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-q">What's the difference between an AI agent and simple automation? <span
+                            class="faq-arrow">▾</span></div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Traditional automation follows a fixed, pre-defined path. An
+                            agentic AI system reasons about the task, decides what to do next, and can adapt its
+                            approach — closer to how a person would handle an open-ended job.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Can your agents actually take actions, or just generate text? <span
+                            class="faq-arrow">▾</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">They take real actions. We connect agents to your APIs,
+                            databases, and tools so they can send emails, update records, query data, or trigger
+                            workflows — not just describe what should happen.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">How do you keep autonomous agents safe and controlled? <span
+                            class="faq-arrow">▾</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Every agent is built with clear boundaries — which tools it can
+                            call, what actions require human approval, and logging on every decision — so
+                            autonomy never means unpredictability.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Will we own the agents you build? <span class="faq-arrow">▾</span>
+                    </div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Yes — upon final payment you own the full agent configuration,
+                            prompts, and integrations. There's no lock-in to us as a vendor.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section grid-bg">
+        <div class="cta-box">
+            <h2>Ready to put agentic AI<br>to work in your business?</h2>
+            <p>Book a free consultation and let's talk about which decisions and tasks are ready for an
+                autonomous agent — and which still need a human. No pressure, no pitch — just an honest
+                conversation.</p>
+            <a href="{% url 'contact_us' %}" class="btn-dark">📅 Book a Free Consultation</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo">AiGR0<span class="footer-tagline">AI &amp; DIGITAL MARKETING GROUP</span></div>
+                <p class="footer-blurb">Helping brands grow with AI-powered systems, strategy, and performance marketing that actually moves the needle.</p>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-title">Quick Links</p>
+                <div class="footer-links">
+                    <a href="{% url 'about_us' %}">About AiGR0</a>
+                    <a href="{% url 'services' %}" class="active">Services</a>
+                    <a href="{% url 'career' %}">Careers</a>
+                    <a href="{% url 'contact_us' %}">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-col footer-connect">
+                <p class="footer-col-title">Connect</p>
+                <a href="https://www.linkedin.com/company/aigr0/" class="social-icon" target="_blank"
+                    rel="noopener" aria-label="AiGR0 on LinkedIn">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.5V23H.24V8.25zM8.5 8.25h4.31v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.55 0 5.39 3 5.39 6.9V23h-4.5v-6.8c0-1.62-.03-3.7-2.25-3.7-2.26 0-2.6 1.76-2.6 3.58V23H8.5V8.25z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="ft-bottom">
+            <div class="ft-logo">AiGR0<small> GROUP</small></div>
+            <div class="ft-copy">© Copyright 2026 AiGR0 Group. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/services/ai_agents_automation.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+</body>
+
+</html>

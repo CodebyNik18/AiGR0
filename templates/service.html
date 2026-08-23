@@ -32,11 +32,12 @@
                 </a>
 
                 <div class="dropdown-menu">
-                    <a href="{% url 'ai_agents_automation' %}">AI Agents & Automation</a>
-                    <a href="{% url 'ai_chatbots_voice' %}">AI Chatbots & Voice AI</a>
-                    <a href="{% url 'ai_powered_marketing' %}">AI-Powered Marketing</a>
-                    <a href="{% url 'ai_development' %}">AI Development</a>
-                    <a href="{% url 'performance_marketing' %}">Performance Marketing</a>
+                    <a href="{% url 'ai_agents_automation' %}">AI Agents & Agentic Systems</a>
+                    <a href="{% url 'ai_powered_marketing' %}">AI Automation & Integrations</a>
+                    <a href="{% url 'ai_chatbots_voice' %}">AI Chatbots, RAG & Voice AI</a>
+                    <a href="{% url 'ai_development' %}">AI Web & Mobile App Development</a>
+                    <a href="{% url 'performance_marketing' %}">Performance Marketing & Paid Advertising</a>
+                    <a href="{% url 'seo' %}">Search Engine Optimization & Organic Growth</a>
                 </div>
             </div>
             <!-- <a href="#">Portfolio</a> -->
@@ -59,11 +60,12 @@
         </section>
 
         <div class="service-nav">
-            <a href="#agents" class="snav-pill">AI Agents & Automation</a>
-            <a href="#chatbots" class="snav-pill">AI Chatbots & Voice AI</a>
-            <a href="#ai-marketing" class="snav-pill">AI-Powered Marketing</a>
-            <a href="#ai-dev" class="snav-pill">AI Development</a>
+            <a href="#agents" class="snav-pill">AI Agents & Agentic Systems</a>
+            <a href="#automation" class="snav-pill">AI Automation & Integrations</a>
+            <a href="#chatbots" class="snav-pill">AI Chatbots, RAG & Voice AI</a>
+            <a href="#ai-dev" class="snav-pill">AI Web & Mobile App Dev</a>
             <a href="#performance" class="snav-pill">Performance Marketing</a>
+            <a href="#seo" class="snav-pill">SEO & Organic Growth</a>
         </div>
 
         <div class="services-wrap">
@@ -73,32 +75,73 @@
                     <div class="svc-text">
                         <div class="svc-num">01</div>
                         <div class="svc-label">Service</div>
-                        <h2>AI Agents &amp;<br>Automation</h2>
-                        <p>We build autonomous AI agents that handle repetitive workflows, connect your tools, and get
-                            work done around the clock — freeing your team to focus on what actually needs a human.</p>
+                        <h2>AI Agents &amp;<br>Agentic Systems</h2>
+                        <p>We build intelligent AI agents that can understand goals, make decisions, use tools,
+                            interact with systems, and complete business tasks with minimal human intervention.</p>
                         <div class="svc-features">
-                            <div class="svc-feat">Custom AI agent workflows built for your business</div>
-                            <div class="svc-feat">Integrations with your CRM, email &amp; internal tools</div>
-                            <div class="svc-feat">Multi-step task automation &amp; decision logic</div>
-                            <div class="svc-feat">24/7 autonomous operation, no manual triggers</div>
-                            <div class="svc-feat">Ongoing monitoring &amp; performance tuning</div>
+                            <div class="svc-feat">Single-agent and multi-agent systems</div>
+                            <div class="svc-feat">AI copilots and intelligent assistants</div>
+                            <div class="svc-feat">Tool and API integration</div>
+                            <div class="svc-feat">Task automation and decision-making</div>
+                            <div class="svc-feat">Custom agent workflows for sales, support and operations</div>
                         </div>
-                        <a href="{% url 'contact_us' %}" class="btn-service">Get Started →</a>
+                        <a href="{% url 'contact_us' %}" class="btn-service">Build Your AI Agent →</a>
                     </div>
                     <div class="svc-visual">
                         <div class="svc-card-big">
                             <div class="svc-top">
                                 <div class="svc-icon-big">🤖</div>
-                                <h3>AI Agents &amp; Automation</h3>
-                                <p>Autonomous systems that work your business around the clock.</p>
+                                <h3>AI Agents &amp; Agentic Systems</h3>
+                                <p>Intelligent AI systems that can think, act, and automate real business tasks.</p>
+                            </div>
+                            <div class="tools-grid">
+                                <div class="tool-badge"><span class="ti">🧠</span> OpenAI</div>
+                                <div class="tool-badge"><span class="ti">✨</span> Claude</div>
+                                <div class="tool-badge"><span class="ti">🔗</span> LangChain</div>
+                                <div class="tool-badge"><span class="ti">🕸️</span> LangGraph</div>
+                                <div class="tool-badge"><span class="ti">🚣</span> CrewAI</div>
+                                <div class="tool-badge"><span class="ti">🐍</span> Python</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div id="automation" class="service-section">
+                <div class="service-inner">
+                    <div class="svc-text">
+                        <div class="svc-num">02</div>
+                        <div class="svc-label">Service</div>
+                        <h2>AI Automation &amp;<br>Integrations</h2>
+                        <p>We automate repetitive business processes by connecting AI with your existing tools,
+                            applications, databases, and workflows — helping your team save time and operate more
+                            efficiently.</p>
+                        <div class="svc-features">
+                            <div class="svc-feat">AI-powered business workflow automation</div>
+                            <div class="svc-feat">n8n, Make and Zapier automation</div>
+                            <div class="svc-feat">CRM and lead management automation</div>
+                            <div class="svc-feat">API and third-party integrations</div>
+                            <div class="svc-feat">Email, WhatsApp and notification automation</div>
+                            <div class="svc-feat">Data processing and document automation</div>
+                        </div>
+                        <a href="{% url 'contact_us' %}" class="btn-service">Automate Your Business →</a>
+                    </div>
+                    <div class="svc-visual">
+                        <div class="svc-card-big">
+                            <div class="svc-top">
+                                <div class="svc-icon-big">⚙️</div>
+                                <h3>AI Automation &amp; Integrations</h3>
+                                <p>Connect your tools, automate your workflows, and let AI handle repetitive work.</p>
                             </div>
                             <div class="tools-grid">
                                 <div class="tool-badge"><span class="ti">🔗</span> n8n</div>
-                                <div class="tool-badge"><span class="ti">⚡</span> Zapier</div>
                                 <div class="tool-badge"><span class="ti">🧩</span> Make</div>
-                                <div class="tool-badge"><span class="ti">🧠</span> OpenAI</div>
-                                <div class="tool-badge"><span class="ti">✨</span> Claude</div>
-                                <div class="tool-badge"><span class="ti">🐍</span> Python</div>
+                                <div class="tool-badge"><span class="ti">⚡</span> Zapier</div>
+                                <div class="tool-badge"><span class="ti">🔌</span> APIs</div>
+                                <div class="tool-badge"><span class="ti">🪝</span> Webhooks</div>
+                                <div class="tool-badge"><span class="ti">🧡</span> CRM</div>
                             </div>
                         </div>
                     </div>
@@ -110,73 +153,38 @@
             <div id="chatbots" class="service-section">
                 <div class="service-inner">
                     <div class="svc-text">
-                        <div class="svc-num">02</div>
+                        <div class="svc-num">03</div>
                         <div class="svc-label">Service</div>
-                        <h2>AI Chatbots &amp;<br>Voice AI</h2>
-                        <p>We design and deploy AI chatbots and voice agents that answer questions, qualify leads, and
-                            book appointments — trained on your business so every conversation sounds like you.</p>
+                        <h2>AI Chatbots, RAG<br>&amp; Voice AI</h2>
+                        <p>We create intelligent conversational systems that understand your business, answer
+                            questions, qualify leads, support customers, and interact naturally through text and
+                            voice.</p>
                         <div class="svc-features">
-                            <div class="svc-feat">Website &amp; WhatsApp chatbot deployment</div>
-                            <div class="svc-feat">Voice AI for inbound &amp; outbound calls</div>
-                            <div class="svc-feat">Lead qualification &amp; appointment booking</div>
-                            <div class="svc-feat">Trained on your FAQs, products &amp; tone of voice</div>
-                            <div class="svc-feat">Live handoff to your team when needed</div>
+                            <div class="svc-feat">AI customer support chatbots</div>
+                            <div class="svc-feat">RAG-based knowledge assistants</div>
+                            <div class="svc-feat">Website and internal knowledge bots</div>
+                            <div class="svc-feat">Document and database-connected AI</div>
+                            <div class="svc-feat">WhatsApp and messaging assistants</div>
+                            <div class="svc-feat">AI voice agents for inbound and outbound calls</div>
+                            <div class="svc-feat">Lead qualification and appointment automation</div>
                         </div>
-                        <a href="{% url 'contact_us' %}" class="btn-service">Get Started →</a>
+                        <a href="{% url 'contact_us' %}" class="btn-service">Build Your AI Assistant →</a>
                     </div>
                     <div class="svc-visual">
                         <div class="svc-card-big">
                             <div class="svc-top">
                                 <div class="svc-icon-big">💬</div>
-                                <h3>AI Chatbots &amp; Voice AI</h3>
-                                <p>Conversations that qualify leads and book appointments 24/7.</p>
+                                <h3>AI Chatbots, RAG &amp; Voice AI</h3>
+                                <p>Give your customers and teams an intelligent assistant that is available whenever
+                                    they need it.</p>
                             </div>
                             <div class="tools-grid">
+                                <div class="tool-badge"><span class="ti">📚</span> RAG</div>
                                 <div class="tool-badge"><span class="ti">🧠</span> OpenAI</div>
-                                <div class="tool-badge"><span class="ti">🎙️</span> ElevenLabs</div>
+                                <div class="tool-badge"><span class="ti">✨</span> Claude</div>
+                                <div class="tool-badge"><span class="ti">🌲</span> Pinecone</div>
+                                <div class="tool-badge"><span class="ti">🎙️</span> Retell AI</div>
                                 <div class="tool-badge"><span class="ti">📞</span> Twilio</div>
-                                <div class="tool-badge"><span class="ti">🗣️</span> Vapi</div>
-                                <div class="tool-badge"><span class="ti">💭</span> Dialogflow</div>
-                                <div class="tool-badge"><span class="ti">📲</span> WhatsApp API</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section-divider"></div>
-
-            <div id="ai-marketing" class="service-section">
-                <div class="service-inner">
-                    <div class="svc-text">
-                        <div class="svc-num">03</div>
-                        <div class="svc-label">Service</div>
-                        <h2>AI-Powered<br>Marketing</h2>
-                        <p>We combine AI tooling with proven marketing strategy to plan campaigns faster, personalize
-                            content at scale, and turn data into decisions — so every dollar works harder.</p>
-                        <div class="svc-features">
-                            <div class="svc-feat">AI-driven audience research &amp; targeting</div>
-                            <div class="svc-feat">Automated content generation &amp; personalization</div>
-                            <div class="svc-feat">Predictive analytics &amp; campaign optimization</div>
-                            <div class="svc-feat">AI-assisted email &amp; ad copywriting</div>
-                            <div class="svc-feat">Real-time performance dashboards</div>
-                        </div>
-                        <a href="{% url 'contact_us' %}" class="btn-service">Get Started →</a>
-                    </div>
-                    <div class="svc-visual">
-                        <div class="svc-card-big">
-                            <div class="svc-top">
-                                <div class="svc-icon-big">🧠</div>
-                                <h3>AI-Powered Marketing</h3>
-                                <p>Smarter targeting, faster content, and campaigns that learn.</p>
-                            </div>
-                            <div class="tools-grid">
-                                <div class="tool-badge"><span class="ti">💬</span> ChatGPT</div>
-                                <div class="tool-badge"><span class="ti">🧡</span> HubSpot</div>
-                                <div class="tool-badge"><span class="ti">📘</span> Meta Ads</div>
-                                <div class="tool-badge"><span class="ti">🅶</span> Google Ads</div>
-                                <div class="tool-badge"><span class="ti">📧</span> Klaviyo</div>
-                                <div class="tool-badge"><span class="ti">📊</span> Looker Studio</div>
                             </div>
                         </div>
                     </div>
@@ -190,33 +198,34 @@
                     <div class="svc-text">
                         <div class="svc-num">04</div>
                         <div class="svc-label">Service</div>
-                        <h2>AI <br>Development</h2>
-                        <p>We build custom AI-powered software, from internal tools to customer-facing products,
-                            integrating large language models directly into the systems your business already runs
-                            on.</p>
+                        <h2>AI Web &amp; Mobile<br>App Development</h2>
+                        <p>We build modern web applications, mobile apps, SaaS platforms, and AI-powered digital
+                            products designed around your business goals and customer needs.</p>
                         <div class="svc-features">
-                            <div class="svc-feat">Custom LLM integrations &amp; API development</div>
-                            <div class="svc-feat">Internal tools &amp; AI-powered dashboards</div>
-                            <div class="svc-feat">RAG pipelines &amp; knowledge base search</div>
-                            <div class="svc-feat">Model fine-tuning &amp; prompt engineering</div>
-                            <div class="svc-feat">Secure, scalable cloud deployment</div>
+                            <div class="svc-feat">AI-powered web applications</div>
+                            <div class="svc-feat">iOS and Android mobile applications</div>
+                            <div class="svc-feat">Custom SaaS platforms</div>
+                            <div class="svc-feat">AI-powered dashboards and portals</div>
+                            <div class="svc-feat">LLM and API integration</div>
+                            <div class="svc-feat">Custom backend and database development</div>
+                            <div class="svc-feat">MVP development and product engineering</div>
                         </div>
-                        <a href="{% url 'contact_us' %}" class="btn-service">Get Started →</a>
+                        <a href="{% url 'contact_us' %}" class="btn-service">Build Your AI Product →</a>
                     </div>
                     <div class="svc-visual">
                         <div class="svc-card-big">
                             <div class="svc-top">
-                                <div class="svc-icon-big">⚙️</div>
-                                <h3>AI Development</h3>
-                                <p>Custom-built software with AI baked into how it works.</p>
+                                <div class="svc-icon-big">📱</div>
+                                <h3>AI Web &amp; Mobile App Development</h3>
+                                <p>From idea to production — we build scalable digital products with AI at the core.</p>
                             </div>
                             <div class="tools-grid">
+                                <div class="tool-badge"><span class="ti">⚛️</span> React</div>
+                                <div class="tool-badge"><span class="ti">▲</span> Next.js</div>
+                                <div class="tool-badge"><span class="ti">🟢</span> Node.js</div>
                                 <div class="tool-badge"><span class="ti">🐍</span> Python</div>
-                                <div class="tool-badge"><span class="ti">🧠</span> OpenAI API</div>
-                                <div class="tool-badge"><span class="ti">✨</span> Claude API</div>
-                                <div class="tool-badge"><span class="ti">🔗</span> LangChain</div>
-                                <div class="tool-badge"><span class="ti">☁️</span> AWS</div>
-                                <div class="tool-badge"><span class="ti">🗄️</span> Supabase</div>
+                                <div class="tool-badge"><span class="ti">📱</span> React Native</div>
+                                <div class="tool-badge"><span class="ti">🦋</span> Flutter</div>
                             </div>
                         </div>
                     </div>
@@ -230,32 +239,80 @@
                     <div class="svc-text">
                         <div class="svc-num">05</div>
                         <div class="svc-label">Service</div>
-                        <h2>Performance<br>Marketing</h2>
-                        <p>We run paid campaigns built for measurable growth — testing, tracking, and optimizing every
-                            dollar you spend so acquisition cost goes down and return goes up.</p>
+                        <h2>Performance Marketing<br>&amp; Paid Advertising</h2>
+                        <p>We use data-driven advertising to generate qualified leads, customers, and revenue through
+                            Google Ads, Meta Ads, and other paid channels — supported by strong tracking and
+                            conversion optimization.</p>
                         <div class="svc-features">
-                            <div class="svc-feat">Google, Meta &amp; YouTube ad management</div>
-                            <div class="svc-feat">Conversion tracking &amp; pixel setup</div>
-                            <div class="svc-feat">Landing page strategy &amp; A/B testing</div>
-                            <div class="svc-feat">Retargeting &amp; lookalike audience building</div>
-                            <div class="svc-feat">Weekly performance reporting</div>
+                            <div class="svc-feat">Google Search &amp; Performance Max</div>
+                            <div class="svc-feat">Google Shopping &amp; YouTube Ads</div>
+                            <div class="svc-feat">Meta Facebook &amp; Instagram Ads</div>
+                            <div class="svc-feat">Lead generation campaigns</div>
+                            <div class="svc-feat">Conversion tracking &amp; analytics</div>
+                            <div class="svc-feat">Landing page and conversion optimization</div>
+                            <div class="svc-feat">Remarketing and audience targeting</div>
+                            <div class="svc-feat">Campaign optimization and performance reporting</div>
                         </div>
-                        <a href="{% url 'contact_us' %}" class="btn-service">Get Started →</a>
+                        <a href="{% url 'contact_us' %}" class="btn-service">Grow With Paid Ads →</a>
                     </div>
                     <div class="svc-visual">
                         <div class="svc-card-big">
                             <div class="svc-top">
                                 <div class="svc-icon-big">📈</div>
-                                <h3>Performance Marketing</h3>
-                                <p>Paid campaigns built to bring acquisition cost down.</p>
+                                <h3>Performance Marketing &amp; Paid Advertising</h3>
+                                <p>Turn advertising budgets into measurable leads, customers, and revenue.</p>
                             </div>
                             <div class="tools-grid">
                                 <div class="tool-badge"><span class="ti">🅶</span> Google Ads</div>
                                 <div class="tool-badge"><span class="ti">📘</span> Meta Ads</div>
-                                <div class="tool-badge"><span class="ti">📊</span> GA4</div>
+                                <div class="tool-badge"><span class="ti">▶️</span> YouTube</div>
+                                <div class="tool-badge"><span class="ti">📊</span> Google Analytics</div>
                                 <div class="tool-badge"><span class="ti">🏷️</span> Google Tag Manager</div>
-                                <div class="tool-badge"><span class="ti">🔥</span> Hotjar</div>
-                                <div class="tool-badge"><span class="ti">🐳</span> Triple Whale</div>
+                                <div class="tool-badge"><span class="ti">📉</span> Looker Studio</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div id="seo" class="service-section">
+                <div class="service-inner">
+                    <div class="svc-text">
+                        <div class="svc-num">06</div>
+                        <div class="svc-label">Service</div>
+                        <h2>Search Engine Optimization<br>&amp; Organic Growth</h2>
+                        <p>We improve your search visibility and build sustainable organic growth through technical
+                            SEO, content optimization, keyword strategy, local SEO, and data-driven search
+                            optimization.</p>
+                        <div class="svc-features">
+                            <div class="svc-feat">Technical SEO audits and optimization</div>
+                            <div class="svc-feat">Keyword research and search strategy</div>
+                            <div class="svc-feat">On-page and content optimization</div>
+                            <div class="svc-feat">Local SEO and Google Business optimization</div>
+                            <div class="svc-feat">Internal linking and site architecture</div>
+                            <div class="svc-feat">Search Console and analytics setup</div>
+                            <div class="svc-feat">SEO performance tracking and reporting</div>
+                            <div class="svc-feat">AI-assisted content and search optimization</div>
+                        </div>
+                        <a href="{% url 'contact_us' %}" class="btn-service">Grow Your Organic Traffic →</a>
+                    </div>
+                    <div class="svc-visual">
+                        <div class="svc-card-big">
+                            <div class="svc-top">
+                                <div class="svc-icon-big">🔎</div>
+                                <h3>Search Engine Optimization</h3>
+                                <p>Build long-term search visibility, attract qualified visitors, and grow
+                                    organically.</p>
+                            </div>
+                            <div class="tools-grid">
+                                <div class="tool-badge"><span class="ti">🔍</span> Google Search</div>
+                                <div class="tool-badge"><span class="ti">🖥️</span> Search Console</div>
+                                <div class="tool-badge"><span class="ti">📊</span> GA4</div>
+                                <div class="tool-badge"><span class="ti">🅰️</span> Ahrefs</div>
+                                <div class="tool-badge"><span class="ti">🌐</span> Semrush</div>
+                                <div class="tool-badge"><span class="ti">🐸</span> Screaming Frog</div>
                             </div>
                         </div>
                     </div>
@@ -277,8 +334,10 @@
         <footer class="site-footer">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <div class="footer-logo">AiGR0<span class="footer-tagline">AI &amp; DIGITAL MARKETING GROUP</span></div>
-                    <p class="footer-blurb">Helping brands grow with AI-powered systems, strategy, and performance marketing that actually moves the needle.</p>
+                    <div class="footer-logo">AiGR0<span class="footer-tagline">AI &amp; DIGITAL MARKETING GROUP</span>
+                    </div>
+                    <p class="footer-blurb">Helping brands grow with AI-powered systems, strategy, and performance
+                        marketing that actually moves the needle.</p>
                 </div>
                 <div class="footer-col">
                     <p class="footer-col-title">Quick Links</p>
@@ -291,7 +350,12 @@
                 </div>
                 <div class="footer-col footer-connect">
                     <p class="footer-col-title">Connect</p>
-                    <a href="https://www.linkedin.com/company/aigr0/" class="social-icon" target="_blank" rel="noopener" aria-label="AiGR0 on LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.5V23H.24V8.25zM8.5 8.25h4.31v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.55 0 5.39 3 5.39 6.9V23h-4.5v-6.8c0-1.62-.03-3.7-2.25-3.7-2.26 0-2.6 1.76-2.6 3.58V23H8.5V8.25z" /></svg></a>
+                    <a href="https://www.linkedin.com/company/aigr0/" class="social-icon" target="_blank" rel="noopener"
+                        aria-label="AiGR0 on LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.5V23H.24V8.25zM8.5 8.25h4.31v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.55 0 5.39 3 5.39 6.9V23h-4.5v-6.8c0-1.62-.03-3.7-2.25-3.7-2.26 0-2.6 1.76-2.6 3.58V23H8.5V8.25z" />
+                        </svg></a>
                 </div>
             </div>
             <div class="ft-bottom">

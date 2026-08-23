@@ -1,0 +1,294 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Automation & Integrations – AiGR0 Group</title>
+    <link rel="stylesheet" href="{% static 'css/services/ai_powered_marketing.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/typography.css' %}">
+</head>
+
+<body>
+    <nav id="navbar">
+        <a href="{% url 'home' %}" class="nav-logo logo-wrap">
+            <img src="{% static 'images/aigro2.png' %}" class="logo-img" />
+            <!-- <span class="logo-ring"></span>
+            <span class="logo-shine"></span> -->
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+            aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <div class="dropdown">
+                <a href="{% url 'services' %}" class="dropdown-title" aria-haspopup="true" aria-expanded="false">
+                    Services
+                </a>
+
+                <div class="dropdown-menu">
+                    <a href="{% url 'ai_agents_automation' %}">AI Agents & Agentic System</a>
+                    <a href="{% url 'ai_chatbots_voice' %}">AI Chatbots & Voice AI</a>
+                    <a href="{% url 'ai_powered_marketing' %}">AI Automation & Integrations</a>
+                    <a href="{% url 'ai_development' %}">AI Development</a>
+                    <a href="{% url 'performance_marketing' %}">Performance Marketing</a>
+                    <a href="{% url 'seo' %}">Search Engine Optimization & Organic Growth</a>
+                </div>
+            </div>
+            <!-- <a href="#">Portfolio</a> -->
+            <a href="{% url 'contact_us' %}">Contact</a>
+            <a href="{% url 'contact_us' %}" class="btn-cta">Free Consultation</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <canvas id="hero-canvas"></canvas>
+
+        <div class="hero-inner">
+
+            <div class="hero-left">
+                <div class="breadcrumb">Services <span>›</span> AI Automation & Integrations</div>
+
+                <h1>AI Automation &<br><em>Integrations</em></h1>
+
+                <p>
+                    We automate repetitive business processes by connecting AI with your existing tools,
+                    applications, databases, and workflows — helping your team save time and operate more
+                    efficiently.
+                </p>
+
+                <div class="hero-btns">
+                    <a href="{% url 'contact_us' %}" class="btn-primary">Automate Your Business →</a>
+                    <a href="{% url 'services' %}" class="btn-outline">All Services</a>
+                </div>
+            </div>
+
+
+            <div class="hero-right">
+
+                <div class="mockup-window">
+
+                    <div class="mockup-body">
+
+                        <h3 style="color:var(--cyan); margin-bottom:1rem;">
+                            ⚙️ AI Automation & Integrations
+                        </h3>
+
+                        <p style="color:var(--gray); font-size:.9rem; margin-bottom:1rem; line-height:1.7;">
+                            Connect your tools, automate your workflows, and let AI handle repetitive work.
+                        </p>
+
+                        <ul style="color:var(--gray); font-size:.85rem; line-height:1.9;">
+                            <p>✔ AI-powered business workflow automation</p>
+                            <p>✔ n8n, Make and Zapier automation</p>
+                            <p>✔ CRM and lead management automation</p>
+                            <p>✔ API and third-party integrations</p>
+                            <p>✔ Email, WhatsApp and notification automation</p>
+                            <p>✔ Data processing and document automation</p>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <div class="section">
+        <p class="section-label">What's Included</p>
+        <h2 class="section-title">A complete automation & integration solution, end to end</h2>
+        <p class="section-sub">We handle every part of connecting AI to your tools and workflows — from your
+            first automation to a fully integrated system — so your team spends less time on repetitive work.</p>
+        <div class="included-grid">
+            <div class="inc-card"><span class="inc-icon">⚙️</span>
+                <h4>AI-Powered Business Workflow Automation</h4>
+                <p>Automated workflows that handle repetitive business processes end-to-end, freeing your team to
+                    focus on higher-value work.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">🔗</span>
+                <h4>n8n, Make & Zapier Automation</h4>
+                <p>Visual, no-code automations built across the leading automation platforms, tailored to exactly
+                    how your business operates.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">🗂️</span>
+                <h4>CRM & Lead Management Automation</h4>
+                <p>Automated pipelines inside your CRM — lead routing, follow-ups, and status updates — so
+                    nothing falls through the cracks.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">🔌</span>
+                <h4>API & Third-Party Integrations</h4>
+                <p>Custom API and webhook connections between your tools and platforms, so data flows
+                    automatically between systems.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">📧</span>
+                <h4>Email, WhatsApp & Notification Automation</h4>
+                <p>Automated messaging across email, WhatsApp, and internal notifications, triggered by the
+                    events that actually matter.</p>
+            </div>
+            <div class="inc-card"><span class="inc-icon">📄</span>
+                <h4>Data Processing & Document Automation</h4>
+                <p>Automated data entry, document generation, and processing that eliminates manual copy-paste
+                    work.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="process-bg">
+        <div class="section">
+            <p class="section-label">Our Automation Process</p>
+            <h2 class="section-title">How we connect AI to your business</h2>
+            <p class="section-sub">A structured approach that gets your tools, data, and workflows working
+                together automatically.</p>
+            <div class="process-list">
+                <div class="process-step">
+                    <div class="ps-num">01</div>
+                    <div class="ps-body">
+                        <h4>Process & Systems Audit</h4>
+                        <p>We map your current tools, data flows, and manual processes to find exactly where
+                            automation will save the most time.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">02</div>
+                    <div class="ps-body">
+                        <h4>Automation & Integration Design</h4>
+                        <p>We design the workflow logic and decide which tools, APIs, and integrations will
+                            connect each process end-to-end.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">03</div>
+                    <div class="ps-body">
+                        <h4>Build & Connect</h4>
+                        <p>We build the automations in n8n, Make, or Zapier and connect your CRM, apps, and APIs
+                            into one seamless system.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">04</div>
+                    <div class="ps-body">
+                        <h4>Testing & Refinement</h4>
+                        <p>We test every automation against real scenarios, refining logic and error-handling
+                            until it runs reliably without supervision.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="ps-num">05</div>
+                    <div class="ps-body">
+                        <h4>Deployment & Monitoring</h4>
+                        <p>We launch your automations, hand over documentation, and monitor performance as your
+                            processes evolve.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <p class="section-label">Tools We Use</p>
+        <h2 class="section-title">The tools we use to automate and connect your systems</h2>
+        <p class="section-sub">We use the best automation and integration platforms in the industry to connect,
+            automate, and scale your systems.</p>
+        <div class="tools-flex">
+            <div class="tool-chip">🔗 n8n</div>
+            <div class="tool-chip">⚡ Make</div>
+            <div class="tool-chip">🐝 Zapier</div>
+            <div class="tool-chip">🔌 APIs</div>
+            <div class="tool-chip">🪝 Webhooks</div>
+            <div class="tool-chip">🗂️ CRM</div>
+            <div class="tool-chip">🐍 Python</div>
+            <div class="tool-chip">🟢 Node.js</div>
+        </div>
+    </div>
+
+    <div class="process-bg">
+        <div class="section">
+            <p class="section-label">Common Questions</p>
+            <h2 class="section-title">AI Automation & Integrations FAQ</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-q">How long does it take to build an automation? <span
+                            class="faq-arrow">▾</span></div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">A single workflow automation typically takes 1–2 weeks. A fully
+                            connected multi-tool integration system generally takes 3–5 weeks depending on
+                            complexity.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Will we own the automations and integrations you build? <span
+                            class="faq-arrow">▾</span></div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Yes — upon final payment you own every workflow, integration,
+                            and configuration. Everything lives in your own accounts, with no lock-in.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Can you connect to our existing CRM and tools? <span
+                            class="faq-arrow">▾</span></div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Absolutely. We work with whatever stack you already have — most
+                            CRMs, databases, and any tool with an API or webhook support — and connect them into
+                            one automated system.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">What happens if our processes change later? <span
+                            class="faq-arrow">▾</span></div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Automations are built to be adjusted. As your processes evolve
+                            we can update logic, add new integrations, or extend existing workflows — most
+                            changes are quick since the foundation is already in place.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section grid-bg">
+        <div class="cta-box">
+            <h2>Ready to automate your business<br>with a team that truly cares?</h2>
+            <p>Book a free consultation and let's talk about which manual processes are costing you the most
+                time — and how automation and integrations can take them off your plate. No pressure, no pitch —
+                just an honest conversation.</p>
+            <a href="{% url 'contact_us' %}" class="btn-dark">📅 Book a Free Consultation</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo">AiGR0<span class="footer-tagline">AI &amp; DIGITAL MARKETING GROUP</span></div>
+                <p class="footer-blurb">Helping brands grow with AI-powered systems, strategy, and performance marketing that actually moves the needle.</p>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-title">Quick Links</p>
+                <div class="footer-links">
+                    <a href="{% url 'about_us' %}">About AiGR0</a>
+                    <a href="{% url 'services' %}" class="active">Services</a>
+                    <a href="{% url 'career' %}">Careers</a>
+                    <a href="{% url 'contact_us' %}">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-col footer-connect">
+                <p class="footer-col-title">Connect</p>
+                <a href="https://www.linkedin.com/company/aigr0/" class="social-icon" target="_blank" rel="noopener" aria-label="AiGR0 on LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.5V23H.24V8.25zM8.5 8.25h4.31v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.55 0 5.39 3 5.39 6.9V23h-4.5v-6.8c0-1.62-.03-3.7-2.25-3.7-2.26 0-2.6 1.76-2.6 3.58V23H8.5V8.25z" /></svg></a>
+            </div>
+        </div>
+        <div class="ft-bottom">
+            <div class="ft-logo">AiGR0<small> GROUP</small></div>
+            <div class="ft-copy">© Copyright 2026 AiGR0 Group. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/services/ai_powered_marketing.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+</body>
+
+</html>

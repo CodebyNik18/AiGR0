@@ -11,12 +11,16 @@ def aidevelopment(request):
 
 
 def aiagentsautomation(request):
-    return render(request=request, template_name='ai_agents_automation.html')
+    return render(request=request, template_name='ai_agents_agentic_system.html')
 
 
 def aipoweredmarketing(request):
-    return render(request=request, template_name='ai_powered_marketing.html')
+    return render(request=request, template_name='ai_automation_integration.html')
 
 
 def performancemarketing(request):
     return render(request=request, template_name='performance_marketing.html')
+
+
+def seo(request):
+    return render(request=request, template_name='seo_organic_growth.html')
