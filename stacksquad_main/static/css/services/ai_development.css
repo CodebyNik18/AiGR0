@@ -387,9 +387,10 @@ nav {
     text-align: center;
     padding: .8rem 1.5rem;
     position: relative;
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity .5s, transform .5s;
+
+    /* Always visible */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .stat-item.visible {

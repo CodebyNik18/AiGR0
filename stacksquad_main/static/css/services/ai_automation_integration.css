@@ -2780,6 +2780,7 @@ footer {
     font-size: .88rem;
     color: var(--orange);
 }
+
 .ft-socials {
     display: flex;
     gap: .8rem;
@@ -2932,4 +2933,99 @@ footer {
 .logo-wrap .logo-img,
 .logo-wrap img {
     animation: logoBounceIn .7s .2s cubic-bezier(.34, 1.56, .64, 1) both;
+}
+
+/* ── RANK-CARD WIDGET (same visual used on the SEO page hero) ──────────
+   Add this block to css/services/performance_marketing.css and
+   css/services/ai_development.css ONLY IF these classes are not already
+   defined there (they're already present in your seo.css file). If your
+   typography.css already contains this block globally, skip this file
+   entirely — it will just be an unused duplicate.
+   ─────────────────────────────────────────────────────────────────── */
+
+.rank-card {
+    background: var(--card);
+    border: 1px solid rgba(244, 124, 32, .15);
+    border-radius: 14px;
+    padding: 1.8rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .07);
+}
+
+.rank-title {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gray);
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+
+.rank-row {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    margin-bottom: .7rem;
+}
+
+.rank-pos {
+    font-family: 'Barlow Condensed', system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 24px;
+    color: var(--orange);
+}
+
+.rank-bar-wrap {
+    flex: 1;
+    height: 8px;
+    background: rgba(244, 124, 32, .08);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.rank-bar {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--orange), var(--orange-light));
+    transition: width 1.5s ease;
+}
+
+.rank-label {
+    font-size: .72rem;
+    color: var(--gray);
+    white-space: nowrap;
+}
+
+.rank-up {
+    font-size: .68rem;
+    color: #22c55e;
+    margin-left: .3rem;
+}
+
+.rank-divider {
+    height: 1px;
+    background: rgba(244, 124, 32, .08);
+    margin: 1.2rem 0;
+}
+
+.seo-metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seo-metric span {
+    font-size: .78rem;
+    color: var(--gray);
+}
+
+.seo-metric strong {
+    font-size: .88rem;
+    color: var(--orange);
+}
+
+@media (max-width: 560px) {
+    .rank-label {
+        white-space: normal;
+    }
 }

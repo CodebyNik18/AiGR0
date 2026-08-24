@@ -6,9 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% if hero_data %}
-    <title>AiGR0 - AI-Powered Technology & Growth</title>
+    <title>AiGR0 – AI-Powered Technology & Growth</title>
+    <meta name="description"
+        content="AiGR0 is an AI-powered technology and growth company specializing in AI agents, automation, chatbots, RAG, voice AI, web and mobile apps, paid advertising, and SEO.">
     {% else %}
-    <title> AiGR0 – AI Marketing & Automation Agency </title>
+    <title>AiGR0 – AI-Powered Technology & Growth</title>
+    <meta name="description"
+        content="AiGR0 is an AI-powered technology and growth company specializing in AI agents, automation, chatbots, RAG, voice AI, web and mobile apps, paid advertising, and SEO.">
     {% endif %}
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;600;700&display=swap"
@@ -44,8 +48,8 @@
                     <a href="{% url 'ai_powered_marketing' %}">AI Automation & Integrations</a>
                     <a href="{% url 'ai_chatbots_voice' %}">AI Chatbots, RAG & Voice AI</a>
                     <a href="{% url 'ai_development' %}">AI Web & Mobile App Development</a>
-                    <a href="{% url 'performance_marketing' %}">Performance Marketing & Paid Advertising</a>
-                    <a href="{% url 'seo' %}">Search Engine Optimization & Organic Growth</a>
+                    <a href="{% url 'performance_marketing' %}">Performance Marketing & Paid Ads</a>
+                    <a href="{% url 'seo' %}">SEO & Organic Growth</a>
                 </div>
             </div>
             <!-- <a href="#">Portfolio</a> -->
@@ -59,14 +63,14 @@
         <div class="hero-content">
             <div class="hero-tag">✦ AI Marketing & Automation Agency ✦</div>
             {% if hero_data %}
-            <h1><span> {{hero_data.hero_title}} </span></h1>
-            <!--AI-powered growth partner dedicated to your success.-->
-            <p> {{hero_data.hero_body}} </p>
-            <!--We pride ourselves on staying ahead of the curve, building AI agents, chatbots, and marketing systems that actually move the needle.-->
+            <h1><span>{{ hero_data.hero_title|default:"AI-Powered Technology & Growth Solutions" }}</span></h1>
+            <p>{{ hero_data.hero_body|default:"AiGR0 builds AI agents, automation systems, chatbots, RAG solutions,
+                voice AI, web and mobile applications, and data-driven marketing solutions that help businesses grow."
+                }}</p>
             {% else %}
-            <h1><span> AI-powered growth, built for your success. </span></h1>
-            <p> We pride ourselves on our commitment to staying up-to-date with the latest AI tooling and best
-                practices in automation and digital marketing.</p>
+            <h1><span>AI-Powered Technology & Growth Solutions</span></h1>
+            <p>AiGR0 builds AI agents, automation systems, chatbots, RAG solutions, voice AI, web and mobile
+                applications, and data-driven marketing solutions that help businesses grow.</p>
             {% endif %}
             <div class="btn-wrap">
                 <a href="{% url 'contact_us' %}" class="btn-primary">Get Started →</a>
@@ -118,50 +122,69 @@
     <section class="section grid-bg">
         <p class="section-label">Our Approach</p>
         {% if hero_data %}
-        <h2 class="section-title"> {{approach_data.approach_title}} </h2>
-        <!--Why Choose AiGR0  Group for AI & Marketing Solutions?-->
-        <p class="section-sub"> {{approach_data.approach_body}} </p>
-        <!--At AiGR0  Group, we build AI systems and optimize strategies with top-tier tools, ensuring maximum reach and performance across platforms.-->
+        <h2 class="section-title">{{ approach_data.approach_title|default:"Why Choose AiGR0 for AI & Marketing
+            Solutions?" }}</h2>
+        <p class="section-sub">{{ approach_data.approach_body|default:"AiGR0 is an AI-powered technology and growth
+            company. We build AI systems and optimize strategies with top-tier tools, ensuring maximum reach and
+            performance across platforms." }}</p>
         {% else %}
         <h2 class="section-title">Why Choose AiGR0 for AI & Marketing Solutions?</h2>
-        <p class="section-sub"> {{approach_data.approach_body}} At AiGR0, we build AI systems and optimize
+        <p class="section-sub">AiGR0 is an AI-powered technology and growth company. We build AI systems and optimize
             strategies with top-tier tools, ensuring maximum reach and performance across platforms.</p>
         {% endif %}
         <div class="features-grid">
             <div class="feature">
-                <div class="feature-icon">📊</div>
-                <h4>Data Tracking</h4>
-                <p>Track campaign and agent performance with advanced analytics and real-time data insights across
-                    every automated system and paid channel.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">⚡</div>
-                <h4>Performance Assessment</h4>
-                <p>Analyze AI and campaign data to measure ROI, identify growth opportunities, and improve overall
-                    marketing and automation performance.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🎯</div>
-                <h4>Strategic Targeting</h4>
-                <p>Reach the right audience using data-driven targeting across Google Ads, social media, and
-                    programmatic platforms.</p>
-            </div>
-            <div class="feature">
                 <div class="feature-icon">🤖</div>
-                <h4>AI-First Systems</h4>
-                <p>We build with AI at the core — agents, chatbots, and models that work your business around the
-                    clock, not just campaigns.</p>
+                <h4>AI Agents & Agentic Systems</h4>
+                <p>
+                    Build intelligent AI agents that can reason, use tools, perform tasks,
+                    and automate complex business workflows.
+                </p>
             </div>
+
             <div class="feature">
-                <div class="feature-icon">🔧</div>
-                <h4>Campaign Optimization</h4>
-                <p>Continuously optimize PPC, paid media, and AI workflows using testing, data insights, and
-                    performance monitoring.</p>
+                <div class="feature-icon">⚙️</div>
+                <h4>AI Automation</h4>
+                <p>
+                    Automate repetitive business processes by connecting AI with your
+                    tools, APIs, CRM systems, and everyday workflows.
+                </p>
             </div>
+
             <div class="feature">
-                <div class="feature-icon">🤝</div>
-                <h4>Client Support</h4>
-                <p>Dedicated support ensuring smooth execution, clear reporting, and long-term growth partnership.</p>
+                <div class="feature-icon">🧠</div>
+                <h4>RAG, Chatbots & Voice AI</h4>
+                <p>
+                    Create intelligent chatbots, knowledge-based RAG assistants, and
+                    voice AI solutions that help businesses serve customers faster.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">💻</div>
+                <h4>AI-Powered Applications</h4>
+                <p>
+                    Develop scalable websites, SaaS platforms, and web applications with
+                    AI capabilities built around your business requirements.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🚀</div>
+                <h4>AI + Growth Marketing</h4>
+                <p>
+                    Combine AI, SEO, performance marketing, and paid advertising to
+                    improve customer acquisition and accelerate business growth.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <h4>AI Performance & Optimization</h4>
+                <p>
+                    Use analytics, tracking, testing, and performance data to continuously
+                    improve AI systems, campaigns, and business processes.
+                </p>
             </div>
         </div>
     </section>
