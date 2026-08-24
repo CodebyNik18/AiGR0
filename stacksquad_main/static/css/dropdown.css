@@ -1,0 +1,247 @@
+/* =========================================
+   AIGr0 SERVICES DROPDOWN
+   VISUAL ONLY — NO JS REQUIRED
+========================================= */
+
+.dropdown {
+    position: relative;
+}
+
+/* Services link */
+.dropdown-title {
+    color: #3a2810;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+/* Small arrow */
+.dropdown-title::after {
+    content: "⌄";
+    font-size: 13px;
+    color: #8f7b66;
+    transition: transform 0.25s ease, color 0.25s ease;
+    display: none;
+}
+
+.dropdown:hover .dropdown-title::after {
+    color: #f47c20;
+    transform: rotate(180deg);
+}
+
+
+/* =========================================
+   DROPDOWN BOX
+========================================= */
+
+.dropdown-menu {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    left: 50%;
+
+    width: 305px;
+
+    padding: 8px;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid rgba(244, 124, 32, 0.14);
+    border-radius: 14px;
+
+    box-shadow:
+        0 20px 55px rgba(52, 35, 18, 0.12),
+        0 5px 18px rgba(244, 124, 32, 0.06);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translate(-50%, 8px) scale(0.97);
+    transform-origin: top center;
+
+    transition:
+        opacity 0.22s ease,
+        transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+        visibility 0.22s ease;
+
+    z-index: 1000;
+}
+
+
+/* Small orange accent at top */
+.dropdown-menu::before {
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 42px;
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(90deg,
+            transparent,
+            #f47c20,
+            transparent);
+
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   OPEN
+========================================= */
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translate(-50%, 0) scale(1);
+}
+
+
+/* =========================================
+   MENU ITEMS
+========================================= */
+
+.dropdown-menu a {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 45px;
+
+    padding: 11px 38px 11px 17px;
+
+    color: #3a2810;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.35;
+
+    text-decoration: none;
+
+    border-radius: 9px;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        padding-left 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* Orange left indicator */
+.dropdown-menu a::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    width: 3px;
+    height: 0;
+
+    background: #f47c20;
+
+    border-radius: 0 4px 4px 0;
+
+    transform: translateY(-50%);
+
+    transition: height 0.2s ease;
+}
+
+
+/* Right arrow */
+.dropdown-menu a::after {
+
+    position: absolute;
+
+    right: 14px;
+
+    color: #f47c20;
+
+    opacity: 0;
+    transform: translateX(-5px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.dropdown-menu a:hover {
+    color: #f47c20;
+
+    background: linear-gradient(90deg,
+            rgba(244, 124, 32, 0.09),
+            rgba(244, 124, 32, 0.025));
+
+    padding-left: 22px;
+
+    transform: translateX(2px);
+}
+
+.dropdown-menu a:hover::before {
+    height: 55%;
+}
+
+.dropdown-menu a:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* =========================================
+   MOBILE
+   IMPORTANT: DON'T CHANGE NAV BEHAVIOR
+========================================= */
+
+@media (max-width: 768px) {
+
+    /*
+       Only remove the desktop visual effects.
+       We don't control the mobile dropdown here.
+    */
+
+    .dropdown-title::after {
+        display: none;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        left: 0;
+
+        transform: none;
+
+        border-radius: 10px;
+        box-shadow: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        transform: none;
+    }
+
+    .dropdown-menu a:hover {
+        transform: none;
+        padding-left: 17px;
+    }
+
+    .dropdown-menu a::after {
+        display: none;
+    }
+
+    .dropdown-menu::before {
+        display: none;
+    }
+}
