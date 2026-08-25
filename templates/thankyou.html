@@ -1,0 +1,342 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thank You – AiGR0</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Same typography system as homepage -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="{% static 'images/aigro2.png' %}">
+
+    <link rel="stylesheet" href="{% static 'css/thank_you.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/typography.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dropdown.css' %}">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR — SAME STRUCTURE AS HOMEPAGE
+    ====================================================== -->
+
+    <nav id="navbar">
+
+        <a href="{% url 'home' %}" class="nav-logo logo-wrap">
+            <img src="{% static 'images/aigro2.png' %}" class="logo-img" alt="AiGR0" />
+
+            <span class="logo-ring"></span>
+            <span class="logo-shine"></span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+            aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+
+            <div class="dropdown">
+
+                <a href="{% url 'services' %}" class="dropdown-title" aria-haspopup="true" aria-expanded="false">
+                    Services
+                </a>
+
+                <div class="dropdown-menu">
+
+                    <a href="{% url 'ai_agents_automation' %}">
+                        AI Agents &amp; Agentic Systems
+                    </a>
+
+                    <a href="{% url 'ai_powered_marketing' %}">
+                        AI Automation &amp; Integrations
+                    </a>
+
+                    <a href="{% url 'ai_chatbots_voice' %}">
+                        AI Chatbots, RAG &amp; Voice AI
+                    </a>
+
+                    <a href="{% url 'ai_development' %}">
+                        AI Web &amp; Mobile App Development
+                    </a>
+
+                    <a href="{% url 'performance_marketing' %}">
+                        Performance Marketing &amp; Paid Ads
+                    </a>
+
+                    <a href="{% url 'seo' %}">
+                        SEO &amp; Organic Growth
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a href="{% url 'contact_us' %}">
+                Contact
+            </a>
+
+            <a href="{% url 'contact_us' %}" class="btn-cta">
+                Free Consultation
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         THANK YOU HERO
+    ====================================================== -->
+
+    <main>
+
+        <section class="ty-hero grid-bg">
+
+            <!-- Background animation -->
+            <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+            <div class="ty-glow"></div>
+
+            <div class="ty-content">
+
+                <div class="ty-check">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M4 12.5L9.5 18L20 6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+
+                <div class="ty-eyebrow">
+                    ✦ Consultation Request Received ✦
+                </div>
+
+                <h1 class="ty-title">
+                    Thank You,
+                    <span>You're All Set.</span>
+                </h1>
+
+                <p class="ty-sub">
+                    We've received your consultation request. Our team is
+                    already reviewing the details you shared and will reach
+                    out shortly to schedule a time that works for you.
+                </p>
+
+                <div class="ty-btns">
+
+                    <a href="{% url 'home' %}" class="btn-primary">
+                        Back to Home →
+                    </a>
+
+                    <a href="{% url 'services' %}" class="btn-outline">
+                        Explore Our Services
+                    </a>
+
+                </div>
+
+                <p class="ty-note">
+                    Didn't mean to submit this? No worries — just ignore the
+                    confirmation email, or
+                    <a href="{% url 'contact_us' %}">
+                        reach out to us
+                    </a>
+                    if anything looks off.
+                </p>
+
+            </div>
+
+            <div class="ty-grid-floor"></div>
+
+        </section>
+
+
+        <!-- =================================================
+             WHAT HAPPENS NEXT
+        ================================================== -->
+
+        <section class="ty-process section">
+
+            <p class="section-label">
+                What Happens Next
+            </p>
+
+            <h2 class="section-title">
+                Here's what to expect
+            </h2>
+
+            <p class="section-sub">
+                No spam, no sales pressure — just a straightforward path
+                to your free consultation.
+            </p>
+
+
+            <div class="process-list">
+
+                <div class="process-step">
+
+                    <div class="ps-num">
+                        01
+                    </div>
+
+                    <div class="ps-body">
+                        <h4>
+                            Confirmation Email
+                        </h4>
+
+                        <p>
+                            Check your inbox — a confirmation with a summary
+                            of your request is on its way. If you don't see it
+                            in a few minutes, take a peek in spam or promotions.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <div class="ps-num">
+                        02
+                    </div>
+
+                    <div class="ps-body">
+                        <h4>
+                            We Review Your Details
+                        </h4>
+
+                        <p>
+                            Our team looks over what you shared about your
+                            business and goals so the call is focused on what
+                            actually matters to you.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <div class="ps-num">
+                        03
+                    </div>
+
+                    <div class="ps-body">
+                        <h4>
+                            We Reach Out to Schedule
+                        </h4>
+
+                        <p>
+                            Expect an email or call from us within one
+                            business day to lock in a time for your free
+                            consultation.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    <!-- =====================================================
+         FOOTER — SAME STRUCTURE AS HOMEPAGE
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    AiGR0
+                </div>
+
+                <p class="footer-blurb">
+                    Helping brands grow with AI-powered systems,
+                    strategy, and performance marketing that actually
+                    moves the needle.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <p class="footer-col-title">
+                    Quick Links
+                </p>
+
+                <div class="footer-links">
+
+                    <a href="{% url 'about_us' %}">
+                        About AiGR0
+                    </a>
+
+                    <a href="{% url 'services' %}">
+                        Services
+                    </a>
+
+                    <a href="{% url 'career' %}">
+                        Careers
+                    </a>
+
+                    <a href="{% url 'contact_us' %}">
+                        Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-col footer-connect">
+
+                <p class="footer-col-title">
+                    Connect
+                </p>
+
+                <a href="https://www.linkedin.com/company/aigr0/" class="social-icon" target="_blank" rel="noopener"
+                    aria-label="AiGR0 on LinkedIn">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.25h4.5V23H.24V8.25zM8.5 8.25h4.31v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.55 0 5.39 3 5.39 6.9V23h-4.5v-6.8c0-1.62-.03-3.7-2.25-3.7-2.26 0-2.6 1.76-2.6 3.58V23H8.5V8.25z" />
+                    </svg>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="footer-logo">
+                AiGR0
+            </div>
+
+            <div class="footer-copy">
+                © Copyright 2026 AiGR0. All rights reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="{% static 'js/nav.js' %}"></script>
+
+</body>
+
+</html>

@@ -10,8 +10,11 @@ from brevo.transactional_emails import (
     SendTransacEmailRequestSender,
     SendTransacEmailRequestToItem,
 )
+from dotenv import load_dotenv
 
-brevo_client = Brevo(api_key=os.environ.get('BREVO_API_KEY'))
+load_dotenv()
+
+brevo_client = Brevo(api_key=os.getenv('BREVO_API_KEY'))
 
 def home(request):
     hero_data = Home_HeroSection.objects.first()
@@ -247,8 +250,7 @@ def contactus(request):
                 )]
             )
             
-            messages.success(request, "Your message has been sent successfully. Our team will contact you within 1 business day.")
-            return redirect('contact_us')
+            return redirect('thankyou')
         
         else:
             messages.error(request=request, message="Please check the \"I agree to Anthony Media Group's Terms of Service and Privacy Policy.\" for further contacting")
@@ -258,3 +260,6 @@ def contactus(request):
 
 def careers(request):
     return render(request=request, template_name='career.html')
+
+def thankyou(request):
+    return render(request=request, template_name='thankyou.html')
