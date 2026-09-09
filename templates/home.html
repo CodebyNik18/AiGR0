@@ -258,115 +258,31 @@
         </div>
         <div class="solutions-cta"><a href="{% url 'contact_us' %}" class="btn-primary">Get Started →</a></div>
     </section>
-    <section class="testimonials grid-bg">
-        <div class="testi-layout">
-            <div class="testi-side">
-                <div class="testi-header">
-                    <h2>Don't just take our word for it</h2>
-                    <p>Read what our clients have to say</p>
-                </div>
+    <section class="testi-showcase grid-bg">
+    <div class="ts-grid">
+        <div class="ts-header">
+            <h2>Don't just take our word for it</h2>
+            <p>Read what our clients have to say</p>
 
-                <div class="testi-nav">
-                    <button class="testi-btn" id="testiPrev" aria-label="Previous review">&larr;</button>
-                    <button class="testi-btn" id="testiNext" aria-label="Next review">&rarr;</button>
-                    <div class="testi-dots" id="testiDots"></div>
-                    <span class="testi-counter"><span id="testiCurrent">1</span> / <span id="testiTotal">3</span></span>
-                </div>
+            <div class="ts-progress">
+                <div class="ts-count"><span id="tsCurrent">01</span> / <span id="tsTotal">06</span></div>
+                <div class="ts-bar"><div class="ts-bar-fill" id="tsBarFill"></div></div>
             </div>
 
-            <div class="testi-viewport">
-                <div class="testi-track" id="testiTrack">
-                    <div class="testi-card">
-                        <div class="rv-stars">★★★★★</div>
-                        <p class="quote">He delivers every single one of my projects as soon as possible! I was hesitant
-                            at
-                            first, but they nailed it. AiGR0 is a professional &mdash; I think he may be the best I've
-                            experienced. I will continue using AiGR0 for the rest of my career.</p>
-                        <div class="testi-author">
-                            <div class="avatar" style="background:linear-gradient(135deg,#0d7377,#0d9ba1);">LK</div>
-                            <div>
-                                <div class="author-name">Lara K.</div>
-                                <div class="author-loc">Owner, Shade Hub</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testi-card">
-                        <div class="rv-stars">★★★★★</div>
-                        <p class="quote">Where do I begin? The amazing treatment I got was outstanding! Anuj made it
-                            very
-                            simple showing me the ins and outs, making my website exactly how I wanted it. I just love
-                            how
-                            it was perfectly put together. Thank you tons! Couldn't have done it without you!</p>
-                        <div class="testi-author">
-                            <div class="avatar" style="background:linear-gradient(135deg,#1a6b5a,#27a080);">NZ</div>
-                            <div>
-                                <div class="author-name">Ninya Z.</div>
-                                <div class="author-loc">San Diego, CA</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testi-card">
-                        <div class="rv-stars">★★★★★</div>
-                        <p class="quote">Anuj and his Staff have gone above and beyond in catering to my website needs.
-                            They
-                            have been very accommodating and attentive to customization, making sure fonts, ideas, and
-                            formatting were exactly as desired. I couldn't be happier!</p>
-                        <div class="testi-author">
-                            <div class="avatar" style="background:linear-gradient(135deg,#4a3a8c,#7c5cfc);">AS</div>
-                            <div>
-                                <div class="author-name">American Savings Z.</div>
-                                <div class="author-loc">Sacramento/Roseville, CA</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testi-card">
-                        <div class="rv-stars">★★★★★</div>
-                        <p class="quote">"This agency was super helpful and very responsive to all my questions. I felt
-                            that they heard me and were able to help bring out the best in my business with their social
-                            ads. Arianna set clear goals...</p>
-                        <div class="testi-author">
-                            <div class="avatar" style="background:linear-gradient(135deg,#4a3a8c,#7c5cfc);">AS</div>
-                            <div>
-                                <div class="author-name">John I.</div>
-                                <div class="author-loc">Australia</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testi-card">
-                        <div class="rv-stars">★★★★★</div>
-                        <p class="quote">"I want to thank Anuj for helping me improve my digital IQ and significantly
-                            boosting my sales. Their expertise in digital marketing has been invaluable — from improving
-                            campaigns to better targeting and optimization...</p>
-                        <div class="testi-author">
-                            <div class="avatar" style="background:linear-gradient(135deg,#4a3a8c,#7c5cfc);">AS</div>
-                            <div>
-                                <div class="author-name">Zack</div>
-                                <div class="author-loc">Canada</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testi-card">
-                        <div class="rv-stars">★★★★★</div>
-                        <p class="quote">"One of the most helpful experiences I've ever had working with an agency. True
-                            problem solvers with a kind attitude! Had the best time working through some things. Huge
-                            shoutout and thanks to Anuj and Aditya!"</p>
-                        <div class="testi-author">
-                            <div class="avatar" style="background:linear-gradient(135deg,#4a3a8c,#7c5cfc);">AS</div>
-                            <div>
-                                <div class="author-name">Frank R.</div>
-                                <div class="author-loc">Malaysia</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="ts-controls">
+                <button class="ts-btn" id="tsPrev" aria-label="Previous review">&larr;</button>
+                <button class="ts-btn" id="tsNext" aria-label="Next review">&rarr;</button>
             </div>
         </div>
-    </section>
+
+        <div>
+            <div class="ts-stage-outer">
+                <div class="ts-stage" id="tsStage"></div>
+            </div>
+            <div class="ts-dots" id="tsDots"></div>
+        </div>
+    </div>
+</section>
 
     <!-- <section class="stories">
         <p class="section-label">Case Studies</p>

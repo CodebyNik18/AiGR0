@@ -1246,38 +1246,51 @@ nav.scrolled {
 .testi-nav {
     display: flex;
     align-items: center;
-    gap: .55rem;
+    gap: .7rem;
     flex-wrap: wrap;
 }
 
 .testi-btn {
-    width: 42px;
-    height: 42px;
-    border-radius: 0;
-    border: none;
-    background: transparent;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(244, 124, 32, .22);
+    background: #ffffff;
     color: #3a2810;
     cursor: pointer;
-    font-size: 2.2rem;
-    font-weight: 300;
+    font-size: 1.15rem;
+    font-weight: 400;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     line-height: 1;
-    transition: color .2s;
+    box-shadow: 0 2px 10px rgba(26, 18, 8, .05);
+    transition: background .3s, border-color .3s, color .3s, transform .3s cubic-bezier(.34, 1.56, .64, 1), box-shadow .3s;
 }
 
 #testiNext {
-    border: none;
+    border: 1.5px solid rgba(244, 124, 32, .22);
 }
 
 .testi-btn:hover {
-    color: #f47c20;
+    background: linear-gradient(135deg, #f47c20, #e86c10);
+    border-color: transparent;
+    color: #fff;
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 12px 28px rgba(244, 124, 32, .38);
+}
+
+.testi-btn:active {
+    transform: scale(.92);
 }
 
 .testi-btn:disabled {
-    opacity: .4;
+    opacity: .35;
     cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    background: #fff;
+    color: #3a2810;
 }
 
 .testi-dots {
@@ -1311,27 +1324,64 @@ nav.scrolled {
 .testi-viewport {
     overflow: hidden;
     width: 100%;
+    padding: 6px 4px 26px;
 }
 
 .testi-track {
     display: flex;
     gap: 1.4rem;
-    transition: transform .55s cubic-bezier(.77, 0, .18, 1);
+    transition: transform .6s cubic-bezier(.65, 0, .35, 1);
     will-change: transform;
 }
 
 .testi-card {
+    position: relative;
     flex: 0 0 clamp(380px, 31vw, 450px);
     background: #ffffff;
-    border-radius: 9px;
-    border: 1px solid rgba(0, 0, 0, .07);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, .08);
-    padding: 1.4rem 1.25rem;
+    border-radius: 16px;
+    padding: 1.7rem 1.6rem 1.6rem;
     min-height: 356px;
     color: #1a1208;
+    overflow: hidden;
+    clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%);
+    box-shadow: inset 0 3px 0 0 rgba(244, 124, 32, .32);
+    filter: drop-shadow(0 4px 22px rgba(26, 18, 8, .07));
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity .45s, transform .45s, box-shadow .25s;
+    transition:
+        opacity .5s,
+        transform .5s cubic-bezier(.34, 1.56, .64, 1),
+        filter .4s,
+        box-shadow .4s,
+        background .4s;
+}
+
+.testi-card::before {
+    content: '\201C';
+    position: absolute;
+    top: -.3rem;
+    left: 1.15rem;
+    font-family: Georgia, serif;
+    font-size: 4.6rem;
+    font-weight: 700;
+    color: rgba(244, 124, 32, .08);
+    line-height: 1;
+    pointer-events: none;
+    transition: color .35s, transform .35s;
+}
+
+.testi-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 30px 30px 0;
+    border-color: transparent rgba(244, 124, 32, .14) transparent transparent;
+    transition: border-color .35s;
+    pointer-events: none;
 }
 
 .testi-card.visible {
@@ -1339,9 +1389,59 @@ nav.scrolled {
     transform: translateY(0);
 }
 
-.testi-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+.testi-card:nth-child(1) {
+    transition-delay: 0s, 0s, 0s, 0s, 0s;
+}
+
+.testi-card:nth-child(2) {
+    transition-delay: .06s, .06s, 0s, 0s, 0s;
+}
+
+.testi-card:nth-child(3) {
+    transition-delay: .12s, .12s, 0s, 0s, 0s;
+}
+
+.testi-card:nth-child(4) {
+    transition-delay: .18s, .18s, 0s, 0s, 0s;
+}
+
+.testi-card:nth-child(5) {
+    transition-delay: .24s, .24s, 0s, 0s, 0s;
+}
+
+.testi-card:nth-child(6) {
+    transition-delay: .3s, .3s, 0s, 0s, 0s;
+}
+
+.testi-card:hover,
+.testi-card.active {
+    transform: translateY(-10px) scale(1.015);
+    filter: drop-shadow(0 24px 42px rgba(244, 124, 32, .22));
+    box-shadow: inset 0 3px 0 0 #f47c20;
+    background: linear-gradient(180deg, #fffdfb, #fff6ec);
+}
+
+.testi-card:hover::before,
+.testi-card.active::before {
+    color: rgba(244, 124, 32, .18);
+    transform: scale(1.08) translateY(-2px);
+}
+
+.testi-card:hover::after,
+.testi-card.active::after {
+    border-color: transparent rgba(244, 124, 32, .32) transparent transparent;
+}
+
+@keyframes starPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.16) rotate(-3deg);
+    }
 }
 
 .review-head {
@@ -1353,22 +1453,36 @@ nav.scrolled {
 }
 
 .quote {
+    position: relative;
+    z-index: 1;
     font-size: 1.03rem;
     line-height: 1.55;
     color: #3a2810;
     margin-bottom: 1.8rem;
+    transition: color .3s;
 }
 
 .testi-author {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     gap: .9rem;
 }
 
 .rv-stars {
+    position: relative;
+    z-index: 1;
     color: #f47c20;
     display: flex;
     gap: 2px;
+    margin-bottom: .9rem;
+    transform-origin: left center;
+}
+
+.testi-card:hover .rv-stars,
+.testi-card.active .rv-stars {
+    animation: starPulse .55s ease;
 }
 
 .avatar {
@@ -1384,12 +1498,25 @@ nav.scrolled {
     flex-shrink: 0;
     border: 2px solid rgba(255, 255, 255, .7);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .15);
+    transition: transform .4s cubic-bezier(.34, 1.56, .64, 1), box-shadow .35s;
+}
+
+.testi-card:hover .avatar,
+.testi-card.active .avatar {
+    transform: scale(1.08) rotate(-4deg);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .15), 0 0 0 4px rgba(244, 124, 32, .2);
 }
 
 .author-name {
     font-size: 1.12rem;
     font-weight: 700;
     color: #1a1208;
+    transition: color .3s;
+}
+
+.testi-card:hover .author-name,
+.testi-card.active .author-name {
+    color: #e86c10;
 }
 
 .author-loc {
@@ -2793,4 +2920,934 @@ body.menu-open {
 .logo-wrap .logo-img,
 .logo-wrap img {
     animation: logoBounceIn .7s .2s cubic-bezier(.34, 1.56, .64, 1) both;
+}
+
+/* ═════════════════════════════════════════════
+   TESTIMONIALS SHOWCASE — CSS
+   Uses your existing tokens where names match
+   (--ink, --cyan, --violet, --muted, --card).
+   Extra tokens below are new — rename to fit,
+   or just leave them, they only apply here.
+   ═════════════════════════════════════════════ */
+
+:root {
+    --ink2: #3a2410;
+    --ink3: #5c2f0a;
+    --cyan2: #f9a050;
+    --g-main: linear-gradient(135deg, #f47c20, #e86c10);
+    --g-dark: linear-gradient(150deg, #1a1208 0%, #3a2410 58%, #7a3c10 130%);
+}
+
+.ts-grid {
+    display: grid;
+    grid-template-columns: minmax(230px, 320px) 1fr;
+    gap: 2.4rem;
+    align-items: center;
+}
+
+.ts-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--violet);
+    margin-bottom: 1rem;
+}
+
+.ts-eyebrow::before {
+    content: '';
+    width: 22px;
+    height: 1px;
+    background: var(--violet);
+}
+
+.ts-header h2 {
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -.5px;
+    max-width: 380px;
+    margin-bottom: .85rem;
+}
+
+.ts-header h2 em {
+    font-style: normal;
+    background: var(--g-main);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ts-header p {
+    color: var(--muted);
+    font-size: .98rem;
+    line-height: 1.6;
+    max-width: 300px;
+    margin-bottom: 1.9rem;
+}
+
+.ts-progress {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+}
+
+.ts-count {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: .5px;
+    min-width: 52px;
+}
+
+.ts-count span {
+    color: var(--violet)
+}
+
+.ts-bar {
+    flex: 1;
+    height: 2px;
+    background: rgba(60, 40, 15, .12);
+    border-radius: 2px;
+    max-width: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ts-bar-fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 20%;
+    background: var(--g-main);
+    border-radius: 2px;
+    transition: width .5s cubic-bezier(.65, 0, .35, 1), left .5s cubic-bezier(.65, 0, .35, 1);
+}
+
+.ts-controls {
+    display: flex;
+    gap: .6rem;
+    margin-top: 1.7rem;
+}
+
+.ts-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(60, 40, 15, .18);
+    background: transparent;
+    color: var(--ink);
+    font-size: 1.05rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color .25s, background .25s, color .25s, transform .2s;
+}
+
+.ts-btn:hover {
+    border-color: var(--cyan);
+    background: rgba(244, 124, 32, .08);
+    color: var(--violet);
+    transform: translateY(-2px);
+}
+
+.ts-btn:active {
+    transform: translateY(0) scale(.94)
+}
+
+/* ═════════ STAGE ═════════ */
+.ts-stage-outer {
+    position: relative;
+    height: 460px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, black 60px, black calc(100% - 60px), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, black 60px, black calc(100% - 60px), transparent 100%);
+}
+
+.ts-stage {
+    position: absolute;
+    inset: 0;
+}
+
+.t-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: 1.9rem 1.7rem;
+    border-radius: 16px;
+    background: var(--card);
+    border: 1px solid rgba(0, 0, 0, .07);
+    box-shadow: 0 6px 22px rgba(26, 18, 8, .07);
+    cursor: pointer;
+    transform: translate(-50%, -50%) translateX(var(--off, 0px)) scale(var(--scl, 1));
+    opacity: var(--op, 1);
+    z-index: var(--z, 1);
+    transition:
+        transform .55s cubic-bezier(.65, 0, .35, 1),
+        opacity .5s ease,
+        box-shadow .4s ease,
+        background .45s ease,
+        border-color .4s ease,
+        clip-path .45s ease;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.t-card:not(.is-active):hover {
+    box-shadow: 0 16px 38px rgba(26, 18, 8, .14);
+    border-color: rgba(244, 124, 32, .35);
+    z-index: 6;
+}
+
+.t-card:not(.is-active):hover .t-shine {
+    left: 130%
+}
+
+.t-card:not(.is-active):hover .t-avatar {
+    transform: scale(1.08) rotate(-4deg)
+}
+
+.t-shine {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.t-shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(244, 124, 32, .10), transparent);
+    transform: skewX(-18deg);
+    transition: left .65s ease;
+}
+
+.t-card:hover .t-shine::before {
+    left: 130%
+}
+
+.t-stars {
+    color: var(--cyan);
+    font-size: .85rem;
+    letter-spacing: 2px;
+    margin-bottom: .9rem;
+    transition: color .4s ease;
+}
+
+.t-quote {
+    font-size: .92rem;
+    line-height: 1.62;
+    color: #3a2810;
+    margin-bottom: 1.6rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: color .4s ease;
+}
+
+.t-person {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+}
+
+.t-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .85rem;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+    transition: transform .35s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+.t-name {
+    font-size: .92rem;
+    font-weight: 700;
+    color: var(--ink);
+    transition: color .4s ease
+}
+
+.t-role {
+    font-size: .76rem;
+    color: var(--muted);
+    margin-top: .1rem;
+    transition: color .4s ease
+}
+
+.t-mark {
+    position: absolute;
+    top: 1.3rem;
+    right: 1.5rem;
+    font-family: Georgia, serif;
+    font-size: 2.6rem;
+    line-height: 1;
+    color: rgba(244, 124, 32, .12);
+    pointer-events: none;
+    transition: color .4s ease;
+}
+
+/* ═══ ACTIVE CARD ═══ */
+.t-card.is-active {
+    width: 360px;
+    padding: 2.5rem 2.2rem 2.3rem;
+    background: var(--g-dark);
+    border-color: transparent;
+    clip-path: polygon(0 0, calc(100% - 34px) 0, 100% 34px, 100% 100%, 0 100%);
+    box-shadow:
+        0 26px 60px rgba(26, 18, 8, .35),
+        0 8px 22px rgba(244, 124, 32, .22);
+}
+
+.t-card.is-active .t-inner {
+    animation: cardFloat 4.5s ease-in-out infinite;
+}
+
+@keyframes cardFloat {
+
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-7px)
+    }
+}
+
+.t-card.is-active .t-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 34px;
+    height: 34px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .14), rgba(255, 255, 255, .02));
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
+
+.t-card.is-active .t-stars {
+    color: var(--cyan2)
+}
+
+.t-card.is-active .t-quote {
+    color: #f3ece2;
+    font-size: .98rem;
+    -webkit-line-clamp: 6;
+}
+
+.t-card.is-active .t-name {
+    color: #fff
+}
+
+.t-card.is-active .t-role {
+    color: rgba(255, 255, 255, .6)
+}
+
+.t-card.is-active .t-mark {
+    color: rgba(255, 255, 255, .1);
+    font-size: 3.2rem
+}
+
+.t-card.is-active .t-avatar {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .16), 0 6px 18px rgba(0, 0, 0, .3);
+}
+
+.t-card.is-active:hover {
+    box-shadow:
+        0 30px 70px rgba(26, 18, 8, .4),
+        0 10px 28px rgba(244, 124, 32, .32);
+}
+
+.t-card.is-active:hover .t-inner {
+    animation-play-state: paused
+}
+
+/* ambient glow ring pulsing behind active card */
+.t-card.is-active::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 16px;
+    padding: 2px;
+    background: linear-gradient(135deg, rgba(244, 124, 32, .55), rgba(232, 108, 16, 0) 60%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: .8;
+    animation: ringPulse 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes ringPulse {
+
+    0%,
+    100% {
+        opacity: .5
+    }
+
+    50% {
+        opacity: 1
+    }
+}
+
+/* ═════════ DOTS ═════════ */
+.ts-dots {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    margin-top: 1.8rem;
+}
+
+.ts-dot {
+    width: 22px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgba(60, 40, 15, .16);
+    border: none;
+    cursor: pointer;
+    transition: background .3s ease, width .3s ease;
+}
+
+.ts-dot.active {
+    background: var(--g-main);
+    width: 34px;
+}
+
+@media (max-width:900px) {
+    .ts-grid {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+        text-align: center
+    }
+
+    .ts-header h2,
+    .ts-header p {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .ts-eyebrow {
+        justify-content: center
+    }
+
+    .ts-progress {
+        justify-content: center
+    }
+
+    .ts-controls {
+        justify-content: center
+    }
+
+    .ts-stage-outer {
+        height: 400px
+    }
+
+    .t-card {
+        width: 250px;
+        padding: 1.5rem 1.4rem
+    }
+
+    .t-card.is-active {
+        width: 290px;
+        padding: 2rem 1.7rem
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    .t-card,
+    .t-inner,
+    .t-shine::before,
+    .ts-bar-fill,
+    .t-avatar {
+        animation: none !important;
+        transition: none !important
+    }
+}
+
+/* ═════════════════════════════════════════════
+   TESTIMONIALS SHOWCASE — CSS
+   Uses your existing tokens where names match
+   (--ink, --cyan, --violet, --muted, --card).
+   Extra tokens below are new — rename to fit,
+   or just leave them, they only apply here.
+   ═════════════════════════════════════════════ */
+
+:root {
+    --ink2: #3a2410;
+    --ink3: #5c2f0a;
+    --cyan2: #f9a050;
+    --g-main: linear-gradient(135deg, #f47c20, #e86c10);
+    --g-dark: linear-gradient(150deg, #1a1208 0%, #3a2410 58%, #7a3c10 130%);
+}
+
+.ts-grid {
+    display: grid;
+    grid-template-columns: minmax(230px, 320px) 1fr;
+    gap: 2.4rem;
+    align-items: center;
+}
+
+.ts-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--violet);
+    margin-bottom: 1rem;
+}
+
+.ts-eyebrow::before {
+    content: '';
+    width: 22px;
+    height: 1px;
+    background: var(--violet);
+}
+
+.ts-header h2 {
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -.5px;
+    max-width: 380px;
+    margin-bottom: .85rem;
+}
+
+.ts-header h2 em {
+    font-style: normal;
+    background: var(--g-main);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ts-header p {
+    color: var(--muted);
+    font-size: .98rem;
+    line-height: 1.6;
+    max-width: 300px;
+    margin-bottom: 1.9rem;
+}
+
+.ts-progress {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+}
+
+.ts-count {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: .5px;
+    min-width: 52px;
+}
+
+.ts-count span {
+    color: var(--violet)
+}
+
+.ts-bar {
+    flex: 1;
+    height: 2px;
+    background: rgba(60, 40, 15, .12);
+    border-radius: 2px;
+    max-width: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ts-bar-fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 20%;
+    background: var(--g-main);
+    border-radius: 2px;
+    transition: width .5s cubic-bezier(.65, 0, .35, 1), left .5s cubic-bezier(.65, 0, .35, 1);
+}
+
+.ts-controls {
+    display: flex;
+    gap: .6rem;
+    margin-top: 1.7rem;
+}
+
+.ts-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(60, 40, 15, .18);
+    background: transparent;
+    color: var(--ink);
+    font-size: 1.05rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color .25s, background .25s, color .25s, transform .2s;
+}
+
+.ts-btn:hover {
+    border-color: var(--cyan);
+    background: rgba(244, 124, 32, .08);
+    color: var(--violet);
+    transform: translateY(-2px);
+}
+
+.ts-btn:active {
+    transform: translateY(0) scale(.94)
+}
+
+/* ═════════ STAGE ═════════ */
+.ts-stage-outer {
+    position: relative;
+    height: 460px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, black 60px, black calc(100% - 60px), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, black 60px, black calc(100% - 60px), transparent 100%);
+}
+
+.ts-stage {
+    position: absolute;
+    inset: 0;
+}
+
+.t-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: 1.9rem 1.7rem;
+    border-radius: 16px;
+    background: var(--card);
+    border: 1px solid rgba(0, 0, 0, .07);
+    box-shadow: 0 6px 22px rgba(26, 18, 8, .07);
+    cursor: pointer;
+    transform: translate(-50%, -50%) translateX(var(--off, 0px)) scale(var(--scl, 1));
+    opacity: var(--op, 1);
+    z-index: var(--z, 1);
+    transition:
+        transform .55s cubic-bezier(.65, 0, .35, 1),
+        opacity .5s ease,
+        box-shadow .4s ease,
+        background .45s ease,
+        border-color .4s ease,
+        clip-path .45s ease;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.t-card:not(.is-active):hover {
+    box-shadow: 0 16px 38px rgba(26, 18, 8, .14);
+    border-color: rgba(244, 124, 32, .35);
+    z-index: 6;
+}
+
+.t-card:not(.is-active):hover .t-shine {
+    left: 130%
+}
+
+.t-card:not(.is-active):hover .t-avatar {
+    transform: scale(1.08) rotate(-4deg)
+}
+
+.t-shine {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.t-shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(244, 124, 32, .10), transparent);
+    transform: skewX(-18deg);
+    transition: left .65s ease;
+}
+
+.t-card:hover .t-shine::before {
+    left: 130%
+}
+
+.t-stars {
+    color: var(--cyan);
+    font-size: .85rem;
+    letter-spacing: 2px;
+    margin-bottom: .9rem;
+    transition: color .4s ease;
+}
+
+.t-quote {
+    font-size: .92rem;
+    line-height: 1.62;
+    color: #3a2810;
+    margin-bottom: 1.6rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: color .4s ease;
+}
+
+.t-person {
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+}
+
+.t-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .85rem;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+    transition: transform .35s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+.t-name {
+    font-size: .92rem;
+    font-weight: 700;
+    color: var(--ink);
+    transition: color .4s ease
+}
+
+.t-role {
+    font-size: .76rem;
+    color: var(--muted);
+    margin-top: .1rem;
+    transition: color .4s ease
+}
+
+.t-mark {
+    position: absolute;
+    top: 1.3rem;
+    right: 1.5rem;
+    font-family: Georgia, serif;
+    font-size: 2.6rem;
+    line-height: 1;
+    color: rgba(244, 124, 32, .12);
+    pointer-events: none;
+    transition: color .4s ease;
+}
+
+/* ═══ ACTIVE CARD ═══ */
+.t-card.is-active {
+    width: 360px;
+    padding: 2.5rem 2.2rem 2.3rem;
+    background: var(--g-dark);
+    border-color: transparent;
+    clip-path: polygon(0 0, calc(100% - 34px) 0, 100% 34px, 100% 100%, 0 100%);
+    box-shadow:
+        0 26px 60px rgba(26, 18, 8, .35),
+        0 8px 22px rgba(244, 124, 32, .22);
+}
+
+.t-card.is-active .t-inner {
+    animation: cardFloat 4.5s ease-in-out infinite;
+}
+
+@keyframes cardFloat {
+
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-7px)
+    }
+}
+
+.t-card.is-active .t-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 34px;
+    height: 34px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .14), rgba(255, 255, 255, .02));
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
+
+.t-card.is-active .t-stars {
+    color: var(--cyan2)
+}
+
+.t-card.is-active .t-quote {
+    color: #f3ece2;
+    font-size: .98rem;
+    -webkit-line-clamp: 6;
+}
+
+.t-card.is-active .t-name {
+    color: #fff
+}
+
+.t-card.is-active .t-role {
+    color: rgba(255, 255, 255, .6)
+}
+
+.t-card.is-active .t-mark {
+    color: rgba(255, 255, 255, .1);
+    font-size: 3.2rem
+}
+
+.t-card.is-active .t-avatar {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .16), 0 6px 18px rgba(0, 0, 0, .3);
+}
+
+.t-card.is-active:hover {
+    box-shadow:
+        0 30px 70px rgba(26, 18, 8, .4),
+        0 10px 28px rgba(244, 124, 32, .32);
+}
+
+.t-card.is-active:hover .t-inner {
+    animation-play-state: paused
+}
+
+/* ambient glow ring pulsing behind active card */
+.t-card.is-active::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 16px;
+    padding: 2px;
+    background: linear-gradient(135deg, rgba(244, 124, 32, .55), rgba(232, 108, 16, 0) 60%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: .8;
+    animation: ringPulse 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes ringPulse {
+
+    0%,
+    100% {
+        opacity: .5
+    }
+
+    50% {
+        opacity: 1
+    }
+}
+
+/* ═════════ DOTS ═════════ */
+.ts-dots {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    margin-top: 1.8rem;
+}
+
+.ts-dot {
+    width: 22px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgba(60, 40, 15, .16);
+    border: none;
+    cursor: pointer;
+    transition: background .3s ease, width .3s ease;
+}
+
+.ts-dot.active {
+    background: var(--g-main);
+    width: 34px;
+}
+
+@media (max-width:900px) {
+    .ts-grid {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+        text-align: center
+    }
+
+    .ts-header h2,
+    .ts-header p {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .ts-eyebrow {
+        justify-content: center
+    }
+
+    .ts-progress {
+        justify-content: center
+    }
+
+    .ts-controls {
+        justify-content: center
+    }
+
+    .ts-stage-outer {
+        height: 400px
+    }
+
+    .t-card {
+        width: 250px;
+        padding: 1.5rem 1.4rem
+    }
+
+    .t-card.is-active {
+        width: 290px;
+        padding: 2rem 1.7rem
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    .t-card,
+    .t-inner,
+    .t-shine::before,
+    .ts-bar-fill,
+    .t-avatar {
+        animation: none !important;
+        transition: none !important
+    }
+}
+
+.testi-showcase {
+    padding: 116px 5%;
+}
+
+@media (max-width:992px) {
+    .testi-showcase {
+        padding: 92px 5%;
+    }
+}
+
+@media (max-width:768px) {
+    .testi-showcase {
+        padding: 80px 16px;
+    }
 }

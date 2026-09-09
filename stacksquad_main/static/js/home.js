@@ -238,3 +238,143 @@ document.querySelectorAll('a[href="#"]').forEach((a) => {
     a.addEventListener('click', (event) => event.preventDefault());
 });
 
+/* ═════════════════════════════════════════════
+   TESTIMONIALS SHOWCASE — JS
+   Needs the ts-* HTML skeleton already on the
+   page (see testimonials-section.html).
+   ═════════════════════════════════════════════ */
+(function () {
+    const data = [
+        {
+            name: "Lara K.", role: "Owner, Shade Hub",
+            quote: "He delivers every single one of my projects as soon as possible! I was hesitant at first, but they nailed it. AiGR0 is a professional — I think he may be the best I've experienced. I will continue using AiGR0 for the rest of my career.",
+            initials: "LK", gradient: "linear-gradient(135deg,#0d7377,#0d9ba1)"
+        },
+        {
+            name: "Ninya Z.", role: "San Diego, CA",
+            quote: "Where do I begin? The amazing treatment I got was outstanding! Anuj made it very simple showing me the ins and outs, making my website exactly how I wanted it. I just love how it was perfectly put together. Thank you tons! Couldn't have done it without you!",
+            initials: "NZ", gradient: "linear-gradient(135deg,#1a6b5a,#27a080)"
+        },
+        {
+            name: "American Savings Z.", role: "Sacramento/Roseville, CA",
+            quote: "Anuj and his Staff have gone above and beyond in catering to my website needs. They have been very accommodating and attentive to customization, making sure fonts, ideas, and formatting were exactly as desired. I couldn't be happier!",
+            initials: "AS", gradient: "linear-gradient(135deg,#4a3a8c,#7c5cfc)"
+        },
+        {
+            name: "John I.", role: "Australia",
+            quote: "This agency was super helpful and very responsive to all my questions. I felt that they heard me and were able to help bring out the best in my business with their social ads. Arianna set clear goals from the start and kept us updated every step of the way.",
+            initials: "JI", gradient: "linear-gradient(135deg,#4a3a8c,#7c5cfc)"
+        },
+        {
+            name: "Zack", role: "Canada",
+            quote: "I want to thank Anuj for helping me improve my digital IQ and significantly boosting my sales. Their expertise in digital marketing has been invaluable — from improving campaigns to better targeting and optimization.",
+            initials: "Z", gradient: "linear-gradient(135deg,#4a3a8c,#7c5cfc)"
+        },
+        {
+            name: "Frank R.", role: "Malaysia",
+            quote: "One of the most helpful experiences I've ever had working with an agency. True problem solvers with a kind attitude! Had the best time working through some things. Huge shoutout and thanks to Anuj and Aditya!",
+            initials: "FR", gradient: "linear-gradient(135deg,#4a3a8c,#7c5cfc)"
+        }
+    ];
+
+    const stage = document.getElementById('tsStage');
+    const dotsWrap = document.getElementById('tsDots');
+    const currentEl = document.getElementById('tsCurrent');
+    const totalEl = document.getElementById('tsTotal');
+    const barFill = document.getElementById('tsBarFill');
+
+    let active = 2;
+    let autoplayTimer = null;
+
+    totalEl.textContent = String(data.length).padStart(2, '0');
+
+    const cards = data.map((t, i) => {
+        const card = document.createElement('div');
+        card.className = 't-card';
+        card.innerHTML = `
+      <div class="t-corner"></div>
+      <div class="t-mark">&#8221;</div>
+      <div class="t-inner">
+        <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="t-quote">${t.quote}</p>
+        <div class="t-person">
+          <div class="t-avatar" style="background:${t.gradient}">${t.initials}</div>
+          <div>
+            <div class="t-name">${t.name}</div>
+            <div class="t-role">${t.role}</div>
+          </div>
+        </div>
+      </div>
+      <div class="t-shine"></div>
+    `;
+        card.addEventListener('click', () => setActive(i, true));
+        stage.appendChild(card);
+        return card;
+    });
+
+    const dots = data.map((_, i) => {
+        const d = document.createElement('button');
+        d.className = 'ts-dot';
+        d.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
+        d.addEventListener('click', () => setActive(i, true));
+        dotsWrap.appendChild(d);
+        return d;
+    });
+
+    function layout() {
+        const n = data.length;
+        cards.forEach((card, i) => {
+            let diff = i - active;
+            if (diff > n / 2) diff -= n;
+            if (diff < -n / 2) diff += n;
+
+            const abs = Math.abs(diff);
+            const off = diff * 235;
+            let scl = 1, op = 1, z = 10 - abs;
+
+            if (diff === 0) { scl = 1; op = 1; }
+            else if (abs === 1) { scl = .82; op = .55; }
+            else if (abs === 2) { scl = .68; op = .22; }
+            else { scl = .6; op = 0; }
+
+            card.style.setProperty('--off', off + 'px');
+            card.style.setProperty('--scl', scl);
+            card.style.setProperty('--op', op);
+            card.style.setProperty('--z', z);
+            card.classList.toggle('is-active', diff === 0);
+            card.style.pointerEvents = op < .08 ? 'none' : 'auto';
+        });
+
+        dots.forEach((d, i) => d.classList.toggle('active', i === active));
+        currentEl.textContent = String(active + 1).padStart(2, '0');
+        barFill.style.width = (100 / data.length) + '%';
+        barFill.style.left = ((100 / data.length) * active) + '%';
+    }
+
+    function setActive(i, userTriggered) {
+        active = (i + data.length) % data.length;
+        layout();
+        if (userTriggered) restartAutoplay();
+    }
+
+    function next() { setActive(active + 1); }
+    function prev() { setActive(active - 1); }
+
+    document.getElementById('tsNext').addEventListener('click', () => { next(); restartAutoplay(); });
+    document.getElementById('tsPrev').addEventListener('click', () => { prev(); restartAutoplay(); });
+
+    function startAutoplay() {
+        autoplayTimer = setInterval(next, 4800);
+    }
+    function restartAutoplay() {
+        clearInterval(autoplayTimer);
+        startAutoplay();
+    }
+
+    const outer = document.querySelector('.ts-stage-outer');
+    outer.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
+    outer.addEventListener('mouseleave', startAutoplay);
+
+    layout();
+    startAutoplay();
+})();
