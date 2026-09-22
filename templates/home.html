@@ -23,7 +23,13 @@
     <link rel="stylesheet" href="{% static 'css/typography.css' %}">
     <link rel="stylesheet" href="{% static 'css/dropdown.css' %}">
     <style>
-        /* --- Tech logo styling: move into home.css whenever convenient --- */
+        #hero-canvas {
+            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+        }
     </style>
 </head>
 
@@ -322,7 +328,8 @@
         <p class="section-sub">We work with leading AI, automation, development, analytics, and advertising
             platforms to build solutions that integrate seamlessly with your existing technology stack.</p>
         <div class="tech-stack-grid">
-            <div class="tech-stack-item"><img src="{% static 'images/openai.svg' %}" alt="OpenAI" class="tech-logo-img"><span>OpenAI</span></div>
+            <div class="tech-stack-item"><img src="{% static 'images/openai.svg' %}" alt="OpenAI"
+                    class="tech-logo-img"><span>OpenAI</span></div>
             <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/anthropic/f47c20" alt="Claude"
                     class="tech-logo-img" onerror="this.style.display='none'"><span>Claude</span></div>
             <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/googlegemini/f47c20" alt="Gemini"
@@ -350,7 +357,8 @@
             <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/googleanalytics/f47c20"
                     alt="Google Analytics" class="tech-logo-img" onerror="this.style.display='none'"><span>Google
                     Analytics</span></div>
-            <div class="tech-stack-item"><img src="{% static 'images/aws.svg' %}" alt="OpenAI" class="tech-logo-img"><span>AWS</span></div>
+            <div class="tech-stack-item"><img src="{% static 'images/aws.svg' %}" alt="OpenAI"
+                    class="tech-logo-img"><span>AWS</span></div>
         </div>
     </section>
 
