@@ -3971,3 +3971,38 @@ body.menu-open {
 .logo-item .tech-logo-img {
     filter: none !important;
 }
+
+/* =========================================================
+   EMERGENCY HERO CANVAS FIX
+   Prevents the canvas animation from rendering giant shapes.
+   ========================================================= */
+
+#hero-canvas {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Keep technology logos strictly constrained */
+.trusted .tech-logo-img,
+.tech-stack .tech-logo-img {
+    width: 22px !important;
+    height: 22px !important;
+    min-width: 22px !important;
+    min-height: 22px !important;
+    max-width: 22px !important;
+    max-height: 22px !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+/* Keep navbar logo separate from tech logos */
+.logo-wrap .logo-img {
+    width: auto !important;
+    max-width: 110px !important;
+    height: auto !important;
+    max-height: 70px !important;
+    object-fit: contain !important;
+}
