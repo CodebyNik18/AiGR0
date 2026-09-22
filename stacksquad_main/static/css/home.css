@@ -3851,3 +3851,123 @@ body.menu-open {
         padding: 80px 16px;
     }
 }
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tech-logo-img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    opacity: .85;
+    filter: grayscale(15%);
+}
+
+/* ══════════ TECH STACK — LIGHT THEME FIX ══════════ */
+.tech-stack {
+    padding: 96px 24px 110px;
+    text-align: center;
+}
+
+.tech-stack-grid {
+    max-width: 1100px;
+    margin: 42px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.tech-stack-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-width: 132px;
+    padding: 11px 17px;
+    border: 1px solid rgba(244, 124, 32, .16);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .82);
+    box-shadow: 0 5px 18px rgba(60, 40, 15, .045);
+    font-size: .84rem;
+    font-weight: 600;
+    color: #3a2810;
+    transition:
+        background .22s ease,
+        border-color .22s ease,
+        transform .22s ease,
+        box-shadow .22s ease;
+}
+
+.tech-stack-item:hover {
+    background: #ffffff;
+    border-color: rgba(244, 124, 32, .42);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px rgba(244, 124, 32, .12);
+}
+
+.tech-stack-item .tech-logo-img {
+    width: 19px;
+    height: 19px;
+    object-fit: contain;
+    opacity: 1;
+    filter: none;
+    flex: 0 0 19px;
+}
+
+/* Keep the marquee logos visible on the light background too. */
+.logo-item .tech-logo-img {
+    width: 21px;
+    height: 21px;
+    opacity: .72;
+    filter: none;
+}
+
+.logo-item {
+    color: rgba(60, 40, 15, .62);
+}
+
+.logo-item:hover {
+    color: #f47c20;
+}
+
+
+/* ================================================================
+   FINAL LIGHT-THEME OVERRIDES
+   Fixes white-on-white technology badges/icons.
+   ================================================================ */
+.tech-stack {
+    background: transparent;
+}
+
+.tech-stack .section-label,
+.tech-stack .section-title,
+.tech-stack .section-sub {
+    position: relative;
+    z-index: 2;
+}
+
+.tech-stack-grid {
+    position: relative;
+    z-index: 2;
+}
+
+.tech-stack-item {
+    color: #3a2810 !important;
+    background: rgba(255, 255, 255, .86) !important;
+    border-color: rgba(244, 124, 32, .18) !important;
+}
+
+.tech-stack-item:hover {
+    color: #1a1208 !important;
+    background: #fff !important;
+    border-color: rgba(244, 124, 32, .45) !important;
+}
+
+.tech-stack-item .tech-logo-img,
+.logo-item .tech-logo-img {
+    filter: none !important;
+}

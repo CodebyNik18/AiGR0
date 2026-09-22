@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     <link rel="stylesheet" href="{% static 'css/typography.css' %}">
     <link rel="stylesheet" href="{% static 'css/dropdown.css' %}">
+    <style>
+        /* --- Tech logo styling: move into home.css whenever convenient --- */
+    </style>
 </head>
 
 <body>
@@ -62,19 +65,21 @@
     <section class="hero grid-bg">
         <canvas id="hero-canvas"></canvas>
         <div class="hero-content">
-            <div class="hero-tag">✦ AI Marketing & Automation Agency ✦</div>
+            <div class="hero-tag">✦ AI • AUTOMATION • DIGITAL GROWTH ✦</div>
             {% if hero_data %}
             <h1><span>AI-Powered Technology & Growth Solutions</span></h1>
             <p>AiGR0 builds AI agents, automation systems, chatbots, RAG solutions,
-                voice AI, web and mobile applications, and data-driven marketing solutions that help businesses grow.
+                Voice AI, web and mobile applications, and data-driven marketing solutions that help businesses
+                generate leads, automate operations, and grow.
             </p>
             {% else %}
             <h1><span>AI-Powered Technology & Growth Solutions</span></h1>
-            <p>AiGR0 builds AI agents, automation systems, chatbots, RAG solutions, voice AI, web and mobile
-                applications, and data-driven marketing solutions that help businesses grow.</p>
+            <p>AiGR0 builds AI agents, automation systems, chatbots, RAG solutions, Voice AI, web and mobile
+                applications, and data-driven marketing solutions that help businesses generate leads, automate
+                operations, and grow.</p>
             {% endif %}
             <div class="btn-wrap">
-                <a href="{% url 'contact_us' %}" class="btn-primary">Get Started →</a>
+                <a href="{% url 'contact_us' %}" class="btn-primary">Book a Strategy Call →</a>
                 <div class="btn-pulse"></div>
             </div>
         </div>
@@ -82,21 +87,68 @@
     </section>
 
     <section class="trusted">
-        <p class="trusted-label">Trusted by the best in the industry.</p>
+        <p class="trusted-label">Built With Leading AI, Automation & Growth Technologies</p>
         <div class="logos-wrap">
             <div class="logos-track">
-                <div class="logo-item">Donnée Im Dieu</div>
-                <div class="logo-item" style="font-size:1.2rem;">Prus Pasta</div>
-                <div class="logo-item" style="letter-spacing:5px;">TOPIKAL</div>
-                <div class="logo-item">🚗 CARWASH</div>
-                <div class="logo-item">SK KHACHIKYAN</div>
-                <div class="logo-item" style="color:rgba(255,255,255,.4);">◆</div>
-                <div class="logo-item">Donnée Im Dieu</div>
-                <div class="logo-item" style="font-size:1.2rem;">Prus Pasta</div>
-                <div class="logo-item" style="letter-spacing:5px;">TOPIKAL</div>
-                <div class="logo-item">🚗 CARWASH</div>
-                <div class="logo-item">SK KHACHIKYAN</div>
-                <div class="logo-item" style="color:rgba(255,255,255,.4);">◆</div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/openai/f47c20" alt="OpenAI"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>OpenAI</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/anthropic/f47c20" alt="Claude"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>Claude</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/googlegemini/f47c20" alt="Gemini"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>Gemini</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/n8n/f47c20" alt="n8n" class="tech-logo-img"
+                        onerror="this.style.display='none'"><span>n8n</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/make/f47c20" alt="Make"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>Make</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/langchain/f47c20" alt="LangChain"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>LangChain</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/python/f47c20" alt="Python"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>Python</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/react/f47c20" alt="React"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>React</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/nextdotjs/f47c20" alt="Next.js"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>Next.js</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/nodedotjs/f47c20" alt="Node.js"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>Node.js</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/googleads/f47c20" alt="Google Ads"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>Google Ads</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/meta/f47c20" alt="Meta Ads"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>Meta Ads</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/googleanalytics/f47c20"
+                        alt="Google Analytics" class="tech-logo-img" onerror="this.style.display='none'"><span>Google
+                        Analytics</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/amazonaws/f47c20" alt="AWS"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>AWS</span></div>
+                <!-- duplicate set for seamless marquee loop -->
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/openai/f47c20" alt="OpenAI"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>OpenAI</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/anthropic/f47c20" alt="Claude"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>Claude</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/googlegemini/f47c20" alt="Gemini"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>Gemini</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/n8n/f47c20" alt="n8n" class="tech-logo-img"
+                        onerror="this.style.display='none'"><span>n8n</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/make/f47c20" alt="Make"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>Make</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/langchain/f47c20" alt="LangChain"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>LangChain</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/python/f47c20" alt="Python"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>Python</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/react/f47c20" alt="React"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>React</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/nextdotjs/f47c20" alt="Next.js"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>Next.js</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/nodedotjs/f47c20" alt="Node.js"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>Node.js</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/googleads/f47c20" alt="Google Ads"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>Google Ads</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/meta/f47c20" alt="Meta Ads"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>Meta Ads</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/googleanalytics/f47c20"
+                        alt="Google Analytics" class="tech-logo-img" onerror="this.style.display='none'"><span>Google
+                        Analytics</span></div>
+                <div class="logo-item"><img src="https://cdn.simpleicons.org/amazonaws/f47c20" alt="AWS"
+                        class="tech-logo-img" onerror="this.style.display='none'"><span>AWS</span></div>
             </div>
         </div>
     </section>
@@ -123,15 +175,16 @@
     <section class="section grid-bg">
         <p class="section-label">Our Approach</p>
         {% if hero_data %}
-        <h2 class="section-title">Why Choose AiGR0 for AI & Marketing
+        <h2 class="section-title">Why Choose AiGR0 for AI & Growth
             Solutions?</h2>
-        <p class="section-sub">AiGR0 is an AI-powered technology and growth
-            company. We build AI systems and optimize strategies with top-tier tools, ensuring maximum reach and
-            performance across platforms.</p>
+        <p class="section-sub">AiGR0 combines AI, automation, software development, and digital growth to build
+            practical solutions around real business goals. From generating leads to automating operations, we
+            connect technology with measurable business outcomes.</p>
         {% else %}
-        <h2 class="section-title">Why Choose AiGR0 for AI & Marketing Solutions?</h2>
-        <p class="section-sub">AiGR0 is an AI-powered technology and growth company. We build AI systems and optimize
-            strategies with top-tier tools, ensuring maximum reach and performance across platforms.</p>
+        <h2 class="section-title">Why Choose AiGR0 for AI & Growth Solutions?</h2>
+        <p class="section-sub">AiGR0 combines AI, automation, software development, and digital growth to build
+            practical solutions around real business goals. From generating leads to automating operations, we
+            connect technology with measurable business outcomes.</p>
         {% endif %}
         <div class="features-grid">
             <div class="feature">
@@ -192,9 +245,9 @@
 
     <section class="section solutions">
         <p class="section-label">What We Offer</p>
-        <h2 class="section-title">Solutions Tailored to your Business</h2>
-        <p class="section-sub">At AiGR0, we empower your business to grow with AI-powered systems and
-            performance marketing strategies designed for success.</p>
+        <h2 class="section-title">AI & Growth Solutions Built for Your Business</h2>
+        <p class="section-sub">From AI agents and automation to software development, paid advertising, and SEO,
+            AiGR0 builds technology and growth solutions around your business goals.</p>
         <div class="services-grid">
             <div class="service-card">
                 <div class="shine"></div>
@@ -258,31 +311,74 @@
         </div>
         <div class="solutions-cta"><a href="{% url 'contact_us' %}" class="btn-primary">Get Started →</a></div>
     </section>
+
+    <section class="tech-stack grid-bg">
+        <p class="section-label">Our Technology Stack</p>
+        <h2 class="section-title">Built With the AI & Growth Stack You Already Use</h2>
+        <p class="section-sub">We work with leading AI, automation, development, analytics, and advertising
+            platforms to build solutions that integrate seamlessly with your existing technology stack.</p>
+        <div class="tech-stack-grid">
+            <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/openai/f47c20" alt="OpenAI"
+                    class="tech-logo-img" onerror="this.style.display='none'"><span>OpenAI</span></div>
+            <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/anthropic/f47c20" alt="Claude"
+                    class="tech-logo-img" onerror="this.style.display='none'"><span>Claude</span></div>
+            <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/googlegemini/f47c20" alt="Gemini"
+                    class="tech-logo-img" onerror="this.style.display='none'"><span>Gemini</span></div>
+            <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/n8n/f47c20" alt="n8n"
+                    class="tech-logo-img" onerror="this.style.display='none'"><span>n8n</span></div>
+            <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/make/f47c20" alt="Make"
+                    class="tech-logo-img" onerror="this.style.display='none'"><span>Make</span></div>
+            <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/zapier/f47c20" alt="Zapier"
+                    class="tech-logo-img" onerror="this.style.display='none'"><span>Zapier</span></div>
+            <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/langchain/f47c20" alt="LangChain"
+                    class="tech-logo-img" onerror="this.style.display='none'"><span>LangChain</span></div>
+            <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/python/f47c20" alt="Python"
+                    class="tech-logo-img" onerror="this.style.display='none'"><span>Python</span></div>
+            <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/react/f47c20" alt="React"
+                    class="tech-logo-img" onerror="this.style.display='none'"><span>React</span></div>
+            <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/nextdotjs/f47c20" alt="Next.js"
+                    class="tech-logo-img" onerror="this.style.display='none'"><span>Next.js</span></div>
+            <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/nodedotjs/f47c20" alt="Node.js"
+                    class="tech-logo-img" onerror="this.style.display='none'"><span>Node.js</span></div>
+            <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/googleads/f47c20" alt="Google Ads"
+                    class="tech-logo-img" onerror="this.style.display='none'"><span>Google Ads</span></div>
+            <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/meta/f47c20" alt="Meta Ads"
+                    class="tech-logo-img" onerror="this.style.display='none'"><span>Meta Ads</span></div>
+            <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/googleanalytics/f47c20"
+                    alt="Google Analytics" class="tech-logo-img" onerror="this.style.display='none'"><span>Google
+                    Analytics</span></div>
+            <div class="tech-stack-item"><img src="https://cdn.simpleicons.org/amazonaws/f47c20" alt="AWS"
+                    class="tech-logo-img" onerror="this.style.display='none'"><span>AWS</span></div>
+        </div>
+    </section>
+
     <section class="testi-showcase grid-bg">
-    <div class="ts-grid">
-        <div class="ts-header">
-            <h2>Don't just take our word for it</h2>
-            <p>Read what our clients have to say</p>
+        <div class="ts-grid">
+            <div class="ts-header">
+                <h2>Don't Just Take Our Word for It</h2>
+                <p>See what businesses and founders have experienced working with AiGR0.</p>
 
-            <div class="ts-progress">
-                <div class="ts-count"><span id="tsCurrent">01</span> / <span id="tsTotal">06</span></div>
-                <div class="ts-bar"><div class="ts-bar-fill" id="tsBarFill"></div></div>
+                <div class="ts-progress">
+                    <div class="ts-count"><span id="tsCurrent">01</span> / <span id="tsTotal">06</span></div>
+                    <div class="ts-bar">
+                        <div class="ts-bar-fill" id="tsBarFill"></div>
+                    </div>
+                </div>
+
+                <div class="ts-controls">
+                    <button class="ts-btn" id="tsPrev" aria-label="Previous review">&larr;</button>
+                    <button class="ts-btn" id="tsNext" aria-label="Next review">&rarr;</button>
+                </div>
             </div>
 
-            <div class="ts-controls">
-                <button class="ts-btn" id="tsPrev" aria-label="Previous review">&larr;</button>
-                <button class="ts-btn" id="tsNext" aria-label="Next review">&rarr;</button>
+            <div>
+                <div class="ts-stage-outer">
+                    <div class="ts-stage" id="tsStage"></div>
+                </div>
+                <div class="ts-dots" id="tsDots"></div>
             </div>
         </div>
-
-        <div>
-            <div class="ts-stage-outer">
-                <div class="ts-stage" id="tsStage"></div>
-            </div>
-            <div class="ts-dots" id="tsDots"></div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- <section class="stories">
         <p class="section-label">Case Studies</p>
@@ -318,11 +414,10 @@
 
     <section class="cta-section grid-bg">
         <div class="cta-box">
-            <h2>Ready to elevate your business and<br>unlock new growth?</h2>
-            <p>AiGR0 offers a comprehensive suite of AI and marketing services to help you establish
-                a
-                strong online presence, attract and retain customers, and achieve your growth goals.</p>
-            <a href="{% url 'contact_us' %}" class="btn-dark">📅 Read Our Growth Report — Get Started</a>
+            <h2>Ready to Build Your Next Growth System?</h2>
+            <p>Whether you need an AI agent, automated workflow, AI application, lead generation system, or complete
+                digital growth strategy, AiGR0 can help turn your business goals into scalable solutions.</p>
+            <a href="{% url 'contact_us' %}" class="btn-dark">Book a Strategy Call →</a>
         </div>
     </section>
 
@@ -330,8 +425,8 @@
         <div class="footer-top">
             <div class="footer-brand">
                 <div class="footer-logo">AiGR0</div>
-                <p class="footer-blurb">Helping brands grow with AI-powered systems, strategy, and performance marketing
-                    that actually moves the needle.</p>
+                <p class="footer-blurb">Helping businesses generate leads, automate operations, and grow with
+                    AI-powered technology.</p>
             </div>
             <div class="footer-col">
                 <p class="footer-col-title">Quick Links</p>
